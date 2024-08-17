@@ -1,12 +1,12 @@
 ---
+date: 2023-09-06
+image: /assets/img/post1/knn1.png
 title: k-Nearest Neighbours from Scratch 
 categories: [Machine Learning, Algorithm]
 tag: [Supervised Learning, Machine Learning, Algorithms, From Scratch]
-date: 2023-09-06
-image: /assets/img/post1/knn1.png
-pin: true 
+#pin: true 
 ---
----
+
 
 I am sure many of us have heard the following expression in our daily life; Tell me about your friend and I will tell you who you are. Likewise, the k-nearest neighbor algorithm uses other points around it to define data points.
 k-Nearest Neighbours (KNN) algorithm is one of the supervised learning algorithms. It works with labeled data just like any other supervised algorithm. It establishes a relationship between labeled data and unlabeled data through their neighborhood and distance to them. The KNN algorithm can be diversified in three different ways:
