@@ -1,7 +1,7 @@
 ---
 date: 2023-09-06
-image: /assets/img/post1/knn1.png
 title: k-Nearest Neighbours from Scratch 
+image: /assets/img/post1/knn1.png
 categories: [Machine Learning, Algorithm]
 tag: [Supervised Learning, Machine Learning, Algorithms, From Scratch]
 #pin: true 
