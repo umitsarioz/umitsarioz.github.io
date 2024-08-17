@@ -297,6 +297,6 @@ Despite the name, logistic regression should not be confused with regression met
 
 ## Conclusion
 
-<blockquote style="font-size:24px;font-style:italic;text-align:justify;"> 
+<blockquote style="font-size:20px;font-style:italic;text-align:justify;"> 
 "If you’re tackling a new problem and need a quick and effective tool, linear models are worth considering. They might not be the fanciest option, but they often provide a solid foundation for more complex models."
 </blockquote>

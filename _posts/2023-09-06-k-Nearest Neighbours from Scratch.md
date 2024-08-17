@@ -1,12 +1,13 @@
 ---
 date: 2023-09-06
-title: k-Nearest Neighbours from Scratch 
+title: Your Friendly Neighborhood Algorithm is KNN
 image: /assets/img/post1/knn1.png
 categories: [Machine Learning, Algorithm]
 tag: [Supervised Learning, Machine Learning, Algorithms, From Scratch]
 #pin: true 
 ---
 
+## Introduction 
 
 I am sure many of us have heard the following expression in our daily life; Tell me about your friend and I will tell you who you are. Likewise, the k-nearest neighbor algorithm uses other points around it to define data points.
 k-Nearest Neighbours (KNN) algorithm is one of the supervised learning algorithms. It works with labeled data just like any other supervised algorithm. It establishes a relationship between labeled data and unlabeled data through their neighborhood and distance to them. The KNN algorithm can be diversified in three different ways:
@@ -17,7 +18,7 @@ Equal Relationship Instant Decision Method: What method will the relationship be
 ![knn2.gif](/assets/img/post1/knn2.gif) 
 _Image 1. KNN Algorithm Demo for a Single White Dot.Image by <a href="https://images.datacamp.com/image/upload/v1686762755/Gif_from_eunsukim_me_2a1fc85ad5.gif"> Datacamp</a>_
 
-## Steps
+## Algorithm Steps
 A demo of the KNN Algorithm for a single point is performed on Figure 1. Before we move on to this demo, it would be helpful to know algorithm:
 - Step 1 --- While creating the algorithm, definitions are made with which method the algorithm will calculate the distances between the points and how many nearby points it will look at.
 - Step 2 --- Labeled data and unlabeled data to be predicted are loaded into or trained by the algorithm, which we call the fit step.
@@ -242,4 +243,9 @@ predictions = knn.predict(X_test=X_test.values)
 acc = np.sum(predictions == y_test.values) / len(y_test)
 ``` 
 
-Thanks for reading,
+## Conclusion
+
+<blockquote style="font-size:20px;font-style:italic;text-align:justify;"> 
+The k-Nearest Neighbors (KNN) algorithm is like the friendly neighbor who knows everyone in the neighborhood. By examining the closest "neighbors" to a data point, KNN makes predictions based on the characteristics of these nearby data points. This approach offers several advantages, such as simplicity and ease of implementation. However, it’s essential to be aware of its limitations, including sensitivity to noisy data and the computational cost associated with large datasets. Despite these challenges, KNN remains a valuable tool when used with care.
+
+</blockquote>
