@@ -15,7 +15,7 @@ Distance Calculation Method: With which distance method can we examine the relat
 Equal Relationship Instant Decision Method: What method will the relationship be terminated when the relationship rate with the surrounding points is equal? ​​(randomness or select first etc.)
 
 ![knn2.gif](/assets/img/post1/knn2.gif) 
-_Image 1. KNN Algorithm Demo for a Single White Dot.Image by <a href="https://medium.com/r/?url=https%3A%2F%2Fimages.datacamp.com%2Fimage%2Fupload%2Fv1686762755%2FGif_from_eunsukim_me_2a1fc85ad5.gif"> Datacamp</a>_
+_Image 1. KNN Algorithm Demo for a Single White Dot.Image by <a href="https://images.datacamp.com/image/upload/v1686762755/Gif_from_eunsukim_me_2a1fc85ad5.gif"> Datacamp</a>_
 
 ## Steps
 A demo of the KNN Algorithm for a single point is performed on Figure 1. Before we move on to this demo, it would be helpful to know algorithm:
