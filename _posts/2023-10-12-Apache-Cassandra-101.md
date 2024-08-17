@@ -1,7 +1,7 @@
 ---
 date: 2023-10-12
-title: Apache Cassandra - 101 
 image: /assets/img/post6/cassandra.webp
+title: Apache Cassandra - 101 
 categories: [Data]
 tags: [Databases, Apache, NoSQL]
 ---
