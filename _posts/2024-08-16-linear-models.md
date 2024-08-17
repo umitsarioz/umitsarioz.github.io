@@ -126,7 +126,7 @@ Linear models are best used when:
 _Simple Linear Regression Test Results_
 
 ```python
-def test_simple_linear_regression(X_train,X_test,y_train,y_test):
+def test_simple_linear_regression(X_train,X_test,y_train,y_test,save_file=False):
     simple_reg = LinearRegressionCustom()
     simple_reg.fit(X_train[:, [0]], y_train)  
 
@@ -138,7 +138,8 @@ def test_simple_linear_regression(X_train,X_test,y_train,y_test):
     y_pred_train_sklearn = sklearn_simple_reg.predict(X_train[:, [0]])
     y_pred_test_sklearn = sklearn_simple_reg.predict(X_test[:, [0]])
     
-    evaluate_plot_results(y_train,y_pred_custom_train,y_pred_custom_test,y_test,y_pred_train_sklearn,y_pred_test_sklearn,title='Simple Linear Regression')
+    evaluate_plot_results(X_train,y_train,y_pred_custom_train,y_pred_custom_test,X_test,y_test,y_pred_train_sklearn,y_pred_test_sklearn,title='Simple Linear Regression',save_file=save_file)
+
 ```
 
 <hr>
@@ -149,7 +150,7 @@ def test_simple_linear_regression(X_train,X_test,y_train,y_test):
 _Multi Linear Regression Test Results_
 
 ```python
-def test_multi_linear_regression(X_train,X_test,y_train,y_test):
+def test_multi_linear_regression(X_train,X_test,y_train,y_test,save_file=False):
     multi_reg = LinearRegressionCustom()
     multi_reg.fit(X_train, y_train)
 
@@ -161,7 +162,7 @@ def test_multi_linear_regression(X_train,X_test,y_train,y_test):
     y_pred_train_sklearn = sklearn_multi_reg.predict(X_train)
     y_pred_test_sklearn = sklearn_multi_reg.predict(X_test)
 
-    evaluate_plot_results(y_train,y_pred_custom_train,y_pred_custom_test,y_test,y_pred_train_sklearn,y_pred_test_sklearn,title='Multi Linear Regression')
+    evaluate_plot_results(X_train,y_train,y_pred_custom_train,y_pred_custom_test,X_test,y_test,y_pred_train_sklearn,y_pred_test_sklearn,title='Multi Linear Regression',save_file=save_file)
 ```
 
 <hr>
@@ -172,7 +173,7 @@ def test_multi_linear_regression(X_train,X_test,y_train,y_test):
 _Lasso Linear Regression Test Results_
 
 ```python
-def test_lasso_linear_regression(X_train,X_test,y_train,y_test):
+def test_lasso_linear_regression(X_train,X_test,y_train,y_test,save_file=False):
     lasso_reg = LinearRegressionCustom(alpha=0.1, lasso=True)
     lasso_reg.fit(X_train, y_train)
     # Predictions (Custom Implementation)
@@ -186,7 +187,7 @@ def test_lasso_linear_regression(X_train,X_test,y_train,y_test):
     y_pred_train_sklearn = sklearn_lasso_reg.predict(X_train)
     y_pred_test_sklearn = sklearn_lasso_reg.predict(X_test)
 
-    evaluate_plot_results(y_train,y_pred_custom_train,y_pred_custom_test,y_test,y_pred_train_sklearn,y_pred_test_sklearn,title='Lasso Linear Regression')
+    evaluate_plot_results(X_train,y_train,y_pred_custom_train,y_pred_custom_test,X_test,y_test,y_pred_train_sklearn,y_pred_test_sklearn,title='Lasso Linear Regression',save_file=save_file)
 ```
 <hr>
 
@@ -196,7 +197,7 @@ def test_lasso_linear_regression(X_train,X_test,y_train,y_test):
 _Ridge Linear Regression Test Results_
 
 ```python
-def test_ridge_linear_regression(X_train,X_test,y_train,y_test):
+def test_ridge_linear_regression(X_train,X_test,y_train,y_test,save_file=False):
     ridge_reg = LinearRegressionCustom(alpha=0.1, ridge=True)
     ridge_reg.fit(X_train, y_train)
         
@@ -207,7 +208,7 @@ def test_ridge_linear_regression(X_train,X_test,y_train,y_test):
 
     y_pred_train_sklearn = sklearn_ridge_reg.predict(X_train)
     y_pred_test_sklearn = sklearn_ridge_reg.predict(X_test)
-    evaluate_plot_results(y_train,y_pred_custom_train,y_pred_custom_test,y_test,y_pred_train_sklearn,y_pred_test_sklearn,title='Ridge Linear Regression')
+    evaluate_plot_results(X_train,y_train,y_pred_custom_train,y_pred_custom_test,X_test,y_test,y_pred_train_sklearn,y_pred_test_sklearn,title='Ridge Linear Regression',save_file=save_file)
 ```
 <hr>
 
@@ -221,33 +222,39 @@ def create_dataset() -> tuple:
     return X_train,X_test,y_train,y_test
 
 
-def evaluate_plot_results(y_train, y_pred_train_custom, y_pred_test_custom,y_test, y_pred_train_sklearn, y_pred_test_sklearn,title):
-
+def evaluate_plot_results(x_train,y_train, y_pred_train_custom, y_pred_test_custom, x_test,y_test, y_pred_train_sklearn, y_pred_test_sklearn,title,feature_idx=0,save_file=False):
+    # Default check for first feature on features, because feature index parameter is 0. 
+    
     # Calculate MSE
     mse_custom_train = mean_squared_error(y_train, y_pred_train_custom)
     mse_sklearn_train = mean_squared_error(y_train, y_pred_train_sklearn)
     mse_custom_test = mean_squared_error(y_test, y_pred_test_custom)
     mse_sklearn_test = mean_squared_error(y_test, y_pred_test_sklearn)
     
-    #fig, axs = plt.subplots(nrows=2, ncols=3, figsize=(18, 10))
-    fig = plt.figure(figsize=(20, 12))
+    fig = plt.figure(figsize=(30, 20))
     gs = GridSpec(2, 3, figure=fig)
     ax1 = fig.add_subplot(gs[0, 0])
+
+    
+    x_train_line = np.linspace(x_train[:,feature_idx].min(), x_train[:,feature_idx].max(), len(y_train)).reshape(-1, 1)
     
     # Scatter plot for train predictions
-    ax1.scatter(y_train, y_pred_train_custom, color='cyan', label='Custom Model Predictions')
-    ax1.scatter(y_train, y_pred_train_sklearn, color='magenta', marker='x', label='Scikit-Learn Predictions')
-    ax1.plot([y_train.min(), y_train.max()], [y_train.min(), y_train.max()], color='red', linestyle='--')
+    ax1.scatter(x_train_line, y_train, color='blue', label='Real Values')
+    ax1.plot(x_train_line,y_pred_train_custom, color='red', label=title + 'Custom Model',linestyle='--')
+    ax1.plot(x_train_line,y_pred_train_sklearn, color='green', label=title + 'Scikit-Learn Model',linestyle=':')
+
     ax1.set_title(title + ' on Train Dataset',fontweight='bold')
     ax1.set_xlabel("True Values",fontweight='bold')
     ax1.set_ylabel("Predictions",fontweight='bold')
     ax1.legend()
 
     # Scatter plot for test predictions
+    x_test_line = np.linspace(x_test[:,feature_idx].min(), x_test[:,feature_idx].max(),  len(y_test)).reshape(-1, 1)
+    
     ax2 = fig.add_subplot(gs[0, 2])
-    ax2.scatter(y_test, y_pred_test_custom, color='cyan', label='Custom Model Predictions')
-    ax2.scatter(y_test, y_pred_test_sklearn, color='magenta', marker='x', label='Scikit-Learn Predictions')
-    ax2.plot([y_test.min(), y_test.max()], [y_test.min(), y_test.max()], color='red', linestyle='--')
+    ax2.scatter(x_test_line, y_test, color='blue', label='Real Values')
+    ax2.plot(x_test_line,y_pred_test_custom, color='red', label=title + 'Custom Model',linestyle='--')
+    ax2.plot(x_test_line,y_pred_test_sklearn, color='green', label=title + 'Scikit-Learn Model',linestyle=':')
     ax2.set_title(title + ' on Test Dataset',fontweight='bold')
     ax2.set_xlabel("True Values",fontweight='bold')
     ax2.set_ylabel("Predictions",fontweight='bold')
@@ -278,8 +285,8 @@ def evaluate_plot_results(y_train, y_pred_train_custom, y_pred_test_custom,y_tes
     ax3.legend()
     
     gs.update(hspace=.3, wspace=.3)
-    plt.show()
-
+    if save_file:plt.savefig(title+'.png',dpi=300, bbox_inches='tight')
+    else:plt.show()  
 ```
 
 ## Classification
