@@ -6,20 +6,20 @@ categories: [Data]
 tags: [Databases, Apache, NoSQL]
 ---
 
-Cassandra is distributed, de-centralized and fault-tolerant NoSQL database. Since Cassandra is distributed, it can be scaled horizontally with high performance. Apart from that, it has a decentralized structure, that is, it has a structure where there are nodes that can continue this role in case a single controller / master node crashes. This gives Cassandra high availability. Lastly, I would like to mention in this short introduction, it is also fault-tolerant thanks to its replication feature.
+Cassandra is **distributed, de-centralized and fault-tolerant** NoSQL database. Since Cassandra is distributed, it can be scaled horizontally with high performance. Apart from that, it has a decentralized structure, that is, it has a structure where there are nodes that can continue this role in case a single controller / master node crashes. This gives Cassandra **high availability**. Lastly, I would like to mention in this short introduction, it is also **fault-tolerant** thanks to its replication feature.
 
 # Data Model
 
-Cassandra is a column-based database is formed nested maps. When we compare with traditional databases, they use keyspace instead of databases and column-family structures instead of tables. Due to their column-based structure, they cause more costly transaction operations than RDBMS. Therefore, they are not very suitable for OLTP, but they can do the reading effectively in terms of quickly accessing the information in the desired columns. In this respect, it is a very suitable database alternative for OLAP.
+Cassandra is a **column-based** database is formed **nested maps**. When we compare with traditional databases, they use **keyspace** instead of databases and **column-family** structures instead of tables. Due to their column-based structure, they cause more costly transaction operations than RDBMS. Therefore, they are not very suitable for <a href="https://en.wikipedia.org/wiki/Online_transaction_processing">**OLTP**</a>, but they can do the reading effectively in terms of quickly accessing the information in the desired columns. In this respect, it is a very suitable database alternative for <a href="https://en.wikipedia.org/wiki/Online_analytical_processing">**OLAP**</a>.
 
 # Keys & Indexes
 
-Cassandra has a primary key as in RDBMS, but does not have a foreign key. Similarly, it has the concept of secondary index. However, the secondary index is not as efficient as the foreign key. At the primary key point, the RDBMS consists of a unique token and is different for each row. In addition, primary keys have a special importance in Cassandra. Because the distribution and storage of data is determined by them.
+Cassandra has a **primary key** as in RDBMS, but does not have a foreign key. Similarly, it has the concept of secondary index. However, the secondary index is not as efficient as the foreign key. At the primary key point, the RDBMS consists of a unique token and is different for each row. **In addition, primary keys have a special importance in Cassandra. Because the distribution and storage of data is determined by them.**
 
 ![PrimaryKey](/assets/img/post6/primary_key.png)
 _Primary Key Definition_
 
-The primary key has the Partition Key, which contains information about how the data will be distributed, and the Clustering Key, which contains information about how this data will be sorted/stored in a node. A Partition function and hashing algorithm are used when creating the Partition Key. This partition algorithm is used to generate a value in the range [-2⁶³, 2⁶³-1]. Today, there are two partitioners that are used most frequently, they differ according to the hashing algorithm they use.
+The primary key has the **Partition Key**, which contains information about how the data will be distributed, and the **Clustering Key**, which contains information about how this data will be sorted/stored in a node. A Partition function and hashing algorithm are used when creating the Partition Key. This partition algorithm is used to generate a value in the range $$[-2^{63}, 2^{63} - 1]$$. Today, there are two partitioners that are used most frequently, they differ according to the hashing algorithm they use.
 
 - **RandomPartitioner:** Generates tokens with MD5 hashing
 - **Murmur3Partitioner:** Generates tokens by Murmur hashing and this is Cassandra’s default setting.
@@ -28,7 +28,7 @@ These two methods are often used, but tokens cannot be specifically assigned at 
 
 # Basic Structure
 
-The servers running any instance in Cassandra are called Nodes. One or more nodes come together to form data centers. One or more data centers come together to form the cluster. Each node communicates with other nodes around it. During this communication, it transmits information such as its current activity status, whether it is operable or not. This communication protocol is called Gossip Protocol.
+The servers running any instance in Cassandra are called **Nodes.** One or more nodes come together to form **data centers**. One or more data centers come together to form the **cluster.** Each node communicates with other nodes around it. During this communication, it transmits information such as its current activity status, whether it is operable or not. This communication protocol is called **Gossip Protocol.**
 
 # Hinted Hand-off
 
