@@ -41,7 +41,7 @@ These are fancier versions of multiple linear regression that include something 
 
 **Lasso regression (Least Absolute Shrinkage and Selection Operator)** adds an L1 penalty term to the loss function, which can lead to sparse solutions where some coefficients are exactly zero. L1 pentaly term is equal to the absolute value of the coefficients.
 
-<p> $$ \text{Cost Function} = \text{Sum of Squared Errors} + \lambda \sum_{i=1}^{n} \left w_i \right $$ </p>
+<p> $$ \text{Cost Function} = \text{Sum of Squared Errors} + \lambda \sum_{i=1}^{n} \left | w_i \right | $$ </p>
 
 <u><b>Key Points:</b></u>
 - Feature Selection: Lasso can shrink some coefficients to zero, effectively selecting a subset of features.
