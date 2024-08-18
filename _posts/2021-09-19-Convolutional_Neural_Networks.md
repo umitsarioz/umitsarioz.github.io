@@ -1,5 +1,5 @@
 ---
-date: 2020-11-19
+date: 2021-09-19
 title: Convolutional Neural Networks
 image: /assets/img/post4/conv_1.jpeg
 categories: [Machine Learning,Supervised Learning]
