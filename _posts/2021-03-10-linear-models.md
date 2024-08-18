@@ -10,7 +10,7 @@ tags: [Algorithms, Supervised Learning, From Scratch]
 ## Getting Started with Linear Models: When Simplicity Meets Power
 
 If you’re dipping your toes into machine learning, you’ve likely come across linear models. They’re one of the simplest and most intuitive tools in the data scientist’s toolkit, but don’t let their simplicity fool you—they can pack a powerful punch when used correctly. In this post, we’ll explore what linear models are, why they’re so popular, and when you might want to reach for them in your own projects.
-What Are Linear Models?
+## What Are Linear Models?
 
 At their core, linear models are all about making predictions by drawing straight lines. Imagine you’re trying to predict someone’s height based on their shoe size. A linear model would help you draw a straight line through your data points—like connecting the dots—and use that line to predict heights for new shoe sizes. It’s as simple as it sounds.
 
@@ -41,7 +41,7 @@ These are fancier versions of multiple linear regression that include something 
 
 **Lasso regression (Least Absolute Shrinkage and Selection Operator)** adds an L1 penalty term to the loss function, which can lead to sparse solutions where some coefficients are exactly zero. L1 pentaly term is equal to the absolute value of the coefficients.
 
-<p> $$ \text{Cost Function} = \text{Sum of Squared Errors} + \lambda \sum_{i=1}^{n} w_i^2 $$ </p>
+<p> $$ \text{Cost Function} = \text{Sum of Squared Errors} + \lambda \sum_{i=1}^{n} \left w_i \right $$ </p>
 
 <u><b>Key Points:</b></u>
 - Feature Selection: Lasso can shrink some coefficients to zero, effectively selecting a subset of features.
