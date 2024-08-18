@@ -19,12 +19,12 @@ In more scientific terms, linear models are mathematical models used to predict 
 
 Where:
 
-- $$y$$ is the predicted value (dependent variable),
+- $$\hat{y}$$ is the predicted value (dependent variable),
 - $$x_1,x_2,\ldots,x_n$$​ are the independent variables (features),
 - $$w_1,w_2,\ldots,w_n$$ ​ are the coefficients (weights) associated with the features,
 - $$b$$ is the bias (intercept) term.
 
-But don’t worry about the math too much. The key idea is that the model tries to predict the target value yy (like someone’s height) by combining the input features $$x_1,x_2, \ldots,x_n$$​ (like shoe size and other measurements) in a straight-line fashion.
+But don’t worry about the math too much. The key idea is that the model tries to predict the target value $$y$$ (like someone’s height) by combining the input features $$x_1,x_2, \ldots,x_n$$​ (like shoe size and other measurements) in a straight-line fashion.
 ## Types of Linear Models
 
 Linear models come in a few different flavors, depending on how many inputs you have and how you want to handle them. Here are the most common types:
