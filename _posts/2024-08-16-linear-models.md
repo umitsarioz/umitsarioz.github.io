@@ -2,8 +2,8 @@
 date: 2024-07-17
 title: When Simplicity Meets Power | Linear Models
 image: /assets/img/post7/lineer_denklem.jpg
-categories: [Machine Learning]
-tags: [Algorithms, Supervised Learning]
+categories: [Machine Learning,Supervised Learning]
+tags: [Algorithms, Supervised Learning, From Scratch]
 ---
 
 ## Getting Started with Linear Models: When Simplicity Meets Power

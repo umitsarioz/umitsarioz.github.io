@@ -2,8 +2,8 @@
 date: 2020-11-19
 title: Convolutional Neural Networks
 image: /assets/img/post4/conv_1.jpeg
-categories: [Machine Learning]
-tags: [Algorithms, Neural Networks]
+categories: [Machine Learning,Supervised Learning]
+tags: [Machine Learning,Algorithms, Neural Networks]
 ---
 
 Convolutional Neural Networks (CNNs) are a type of artificial neural network designed to perform feature extraction from image data. The term "convolution" comes from the mathematical operation applied between matrices. When humans encounter an object, they distinguish it by relying on previously learned features. Since neural network structures are inspired by the human brain, CNNs have been developed to emulate this capability successfully. The CNN architecture is composed of several layers:
