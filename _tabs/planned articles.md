@@ -3,7 +3,9 @@ icon: fa-solid fa-pencil
 order: 4
 ---
 
-> I plan to create blog content around the following topics. New additions and deletions will be made here over time.
+> I am planning to create blog content around the following topics. New additions and deletions will be made here over time.
+
+# IN 2024
 
 - [ ] From Scratch Algorithms
   - [ ] Decision Trees
