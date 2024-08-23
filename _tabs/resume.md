@@ -42,13 +42,13 @@ operations and database design, and created RESTful Api with Python.
 
 ## Projects
 - Location Based Risk Clustering           <span style='float:right;'>   at Innova (Jul 2024)</span>
-- Mobile Cell Tower Battery Life Prediction            <span style='float:right;'>               at İnnova (Aug 2023 )  </span>
-- 100G Traffic Anomaly Detection                       <span style='float:right;'>        at İnnova (Feb 2023)</span>
-- 100G ISIS Traffic Saturation     <span style='float:right;'>   at İnnova (Jun 2023)   </span>
-- Carvakpedia    <span style='float:right;'>  at Kavak.com (Jun 2023) </span>
-- Automobilist   <span style='float:right;'>  at Kavak.com (Sep 2022)</span>
-- Vehicle Recommender          <span style='float:right;'>     at Kavak.com (Feb 2022) </span>
-
+- Mobile Cell Tower Battery Life Prediction            <span style='float:right;'>               at Innova (Aug 2023 )  </span>
+- 100G Traffic Anomaly Detection                       <span style='float:right;'>        at Innova (Feb 2023)</span>
+- 100G ISIS Traffic Saturation     <span style='float:right;'>   at Innova (Jun 2023)   </span>
+- Carvakpedia    <span style='float:right;'>  at Kavak.com (Aug 2022) </span>
+- Vehicle Recommender          <span style='float:right;'>     at Kavak.com (May 2022) </span>
+- Automobilist   <span style='float:right;'>  at Kavak.com (Feb 2022) </span>
+  
 ---
 
 ## Certifications
