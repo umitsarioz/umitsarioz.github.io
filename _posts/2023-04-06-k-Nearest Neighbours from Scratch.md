@@ -1,5 +1,5 @@
 ---
-date: 2021-04-06
+date: 2023-04-06
 title: Your Friendly Neighborhood Algorithm is KNN
 image: /assets/img/post1/knn1.png
 categories: [Machine Learning,Supervised Learning]

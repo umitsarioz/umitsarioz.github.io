@@ -1,5 +1,5 @@
 ---
-date: 2021-03-10
+date: 2023-03-10
 title: When Simplicity Meets Power | Linear Models
 image: /assets/img/post7/lineer_denklem.jpg
 categories: [Machine Learning,Supervised Learning]
