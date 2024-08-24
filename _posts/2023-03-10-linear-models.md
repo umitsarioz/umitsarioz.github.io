@@ -127,6 +127,8 @@ Linear models are best used when:
 _Simple Linear Regression Test Results_
 
 ```python
+from sklearn.linear_model import LinearRegression as SklearnLR
+
 def test_simple_linear_regression(X_train,X_test,y_train,y_test,save_file=False):
     simple_reg = LinearRegressionCustom()
     simple_reg.fit(X_train[:, [0]], y_train)  
@@ -151,6 +153,8 @@ def test_simple_linear_regression(X_train,X_test,y_train,y_test,save_file=False)
 _Multi Linear Regression Test Results_
 
 ```python
+from sklearn.linear_model import LinearRegression as SklearnLR
+
 def test_multi_linear_regression(X_train,X_test,y_train,y_test,save_file=False):
     multi_reg = LinearRegressionCustom()
     multi_reg.fit(X_train, y_train)
@@ -174,6 +178,8 @@ def test_multi_linear_regression(X_train,X_test,y_train,y_test,save_file=False):
 _Lasso Linear Regression Test Results_
 
 ```python
+from sklearn.linear_model import Lasso
+
 def test_lasso_linear_regression(X_train,X_test,y_train,y_test,save_file=False):
     lasso_reg = LinearRegressionCustom(alpha=0.1, lasso=True)
     lasso_reg.fit(X_train, y_train)
@@ -198,6 +204,8 @@ def test_lasso_linear_regression(X_train,X_test,y_train,y_test,save_file=False):
 _Ridge Linear Regression Test Results_
 
 ```python
+from sklearn.linear_model import Ridge
+
 def test_ridge_linear_regression(X_train,X_test,y_train,y_test,save_file=False):
     ridge_reg = LinearRegressionCustom(alpha=0.1, ridge=True)
     ridge_reg.fit(X_train, y_train)
@@ -216,6 +224,12 @@ def test_ridge_linear_regression(X_train,X_test,y_train,y_test,save_file=False):
 ## Dataset & Evaluation Codes 
 
 ```python
+from sklearn.datasets import make_regression
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import mean_squared_error
+import matplotlib.pyplot as plt 
+from matplotlib.gridspec import GridSpec
+
 def create_dataset() -> tuple:
     np.random.seed(0)
     X, y = make_regression(n_samples=100, n_features=3, noise=10, random_state=0)
