@@ -28,8 +28,8 @@ A common example of linearity is **predicting income based on years of experienc
 $$ Income = w ⋅ Experience + β $$ 
 Where:
 
-- $w$ is the slope, representing how much income increases per year of experience.
-- $β$ is the intercept, representing the starting income with zero experience.
+- $$w$$ is the slope, representing how much income increases per year of experience.
+- $$β$$ is the intercept, representing the starting income with zero experience.
 
 This simple relationship can often approximate real-world data surprisingly well.
 
