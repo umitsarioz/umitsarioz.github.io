@@ -1,11 +1,11 @@
 ---
 date: 2023-03-10
 title: When Simplicity Meets Power | Linear Models
-image: /assets/img/post7/lineer_denklem.jpg
+image: /assets/img/ss/2023-03-10-linear-models/lineer_denklem.jpg
 categories: [Machine Learning,Supervised Learning]
 tags: [algorithms, from-scratch]
-#pin: true
 published: true
+math: true
 ---
 
 ## Getting Started with Linear Models: When Simplicity Meets Power
@@ -16,14 +16,15 @@ If you’re dipping your toes into machine learning, you’ve likely come across
 At their core, linear models are all about making predictions by drawing straight lines. Imagine you’re trying to predict someone’s height based on their shoe size. A linear model would help you draw a straight line through your data points—like connecting the dots—and use that line to predict heights for new shoe sizes. It’s as simple as it sounds.
 
 In more scientific terms, linear models are mathematical models used to predict a dependent variable (the target) based on one or more independent variables (features). These models estimate the target variable as a linear combination of the independent variables. Mathematically, a linear model can be expressed as:  
-<p> $$\hat{y} = w_1 x_1 + w_2 x_2 + \ldots + w_n x_n + b$$ </p>
 
-Where:
-
+> $$\hat{y} = w_1 x_1 + w_2 x_2 + \ldots + w_n x_n + b $$ 
+{: .prompt-info} 
+>
 - $$\hat{y}$$ is the predicted value (dependent variable),
 - $$x_1,x_2,\ldots,x_n$$​ are the independent variables (features),
 - $$w_1,w_2,\ldots,w_n$$ ​ are the coefficients (weights) associated with the features,
 - $$b$$ is the bias (intercept) term.
+{: .prompt-info}
 
 But don’t worry about the math too much. The key idea is that the model tries to predict the target value $$y$$ (like someone’s height) by combining the input features $$x_1,x_2, \ldots,x_n$$​ (like shoe size and other measurements) in a straight-line fashion.
 ## Types of Linear Models
@@ -42,19 +43,21 @@ These are fancier versions of multiple linear regression that include something 
 
 **Lasso regression (Least Absolute Shrinkage and Selection Operator)** adds an L1 penalty term to the loss function, which can lead to sparse solutions where some coefficients are exactly zero. L1 pentaly term is equal to the absolute value of the coefficients.
 
-<p> $$ \text{Cost Function} = \text{Sum of Squared Errors} + \lambda \sum_{i=1}^{n} \left | w_i \right | $$ </p>
+>$$ \text{Cost Function} = \text{Sum of Squared Errors} + \lambda \sum_{i=1}^{n} \left | w_i \right | $$
+{: .prompt-info}
 
 <u><b>Key Points:</b></u>
-- Feature Selection: Lasso can shrink some coefficients to zero, effectively selecting a subset of features.
-- Interpretability: Useful when you have many features, as it helps in identifying the most important ones.
+- **Feature Selection:** Lasso can shrink some coefficients to zero, effectively selecting a subset of features.
+- **Interpretability:** Useful when you have many features, as it helps in identifying the most important ones.
 
 **Ridge regression** adds an L2 penalty term to the loss function to prevent overfitting by shrinking coefficients. L2 penalty term is  equal to the square of the coefficients.
 
-<p>$$ \text{Cost Function} = \text{Sum of Squared Errors} + \lambda \sum_{i=1}^{n} w_i^2 $$ </p>
+>$$ \text{Cost Function} = \text{Sum of Squared Errors} + \lambda \sum_{i=1}^{n} w_i^2 $$
+{: .prompt-info}
 
 <u><b>Key Points:</b></u>
-- Shrinking Coefficients: It shrinks coefficients but doesn’t necessarily set them to zero, keeping all features in the model.
-- Useful for Multicollinearity: Helps when features are highly correlated, stabilizing the coefficient estimates.
+- **Shrinking Coefficients:** It shrinks coefficients but doesn’t necessarily set them to zero, keeping all features in the model.
+- **Useful for Multicollinearity:** Helps when features are highly correlated, stabilizing the coefficient estimates.
 
 ## Building a Linear Model from Scratch
 
@@ -124,7 +127,7 @@ Linear models are best used when:
 
 ### Simple Linear Regression Test Results
 
-![simpleregression](/assets/img/post7/simple_linear_regression.png)
+![simpleregression](/assets/img/ss/2023-03-10-linear-models/simple_linear_regression.png)
 _Simple Linear Regression Test Results_
 
 ```python
@@ -150,7 +153,7 @@ def test_simple_linear_regression(X_train,X_test,y_train,y_test,save_file=False)
 
 ### Multi-Linear Regression Test Results
 
-![multipleregression](/assets/img/post7/multiple_linear_regression.png)
+![multipleregression](/assets/img/ss/2023-03-10-linear-models/multiple_linear_regression.png)
 _Multi Linear Regression Test Results_
 
 ```python
@@ -175,7 +178,7 @@ def test_multi_linear_regression(X_train,X_test,y_train,y_test,save_file=False):
 
 ### Lasso Regression Test Results
 
-![lassoregression](/assets/img/post7/lasso_linear_regression.png)
+![lassoregression](/assets/img/ss/2023-03-10-linear-models/lasso_linear_regression.png)
 _Lasso Linear Regression Test Results_
 
 ```python
@@ -201,7 +204,7 @@ def test_lasso_linear_regression(X_train,X_test,y_train,y_test,save_file=False):
 
 ### Ridge Regression Test Results
 
-![ridgeregression](/assets/img/post7/ridge_linear_regression.png)
+![ridgeregression](/assets/img/ss/2023-03-10-linear-models/ridge_linear_regression.png)
 _Ridge Linear Regression Test Results_
 
 ```python
@@ -310,13 +313,15 @@ def evaluate_plot_results(x_train,y_train, y_pred_train_custom, y_pred_test_cust
 For binary classification, for example, we can set up a linear model as follows:
 
 > $$\hat{y} = w_0 x_0 + w_1 x_1 + \ldots + w_n x_n + b > 0$$
+{: .prompt-info}
 
 As seen, this formula closely resembles linear regression. However, it includes a threshold value. If the computed value is greater than 0, the model returns +1; otherwise, it returns -1. Linear models can be classified into different types based on the regularization algorithms and measurement metrics they use. The same applies to classification tasks. Two well-known methods are Logistic Regression and Support Vector Machines (SVMs).
 Logistic Regression
 
 Despite the name, logistic regression should not be confused with regression methods. Logistic regression is a classification algorithm.
 
-> <b>Note:</b><i> In problems with multiple features, one feature may be selected and the others separated for solving the problem.</i>
+> Problems have multiple features, one feature may be selected and the others separated for solving the problem.
+{: .prompt-tip}
 
 ## Conclusion
 

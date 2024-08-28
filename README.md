@@ -23,6 +23,7 @@ mermaid: true # mermaid is need  <br>
 description: Short summary of the post.  <br>
 toc: false # toc menu is false, default is true   <br>
 comments: false # comments area is false, default is true   <br>
+math: true # for latex, use default is false <br>
   
 prompts: 
 - {: .prompt-tip }

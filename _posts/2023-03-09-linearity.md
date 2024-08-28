@@ -1,10 +1,11 @@
 ---
 date: 2023-03-09
 title: A Modern Guide | Linearity and Non-Linearity in Machine Learning  
-image: /assets/img/post11/first.jpg
+image: /assets/img/ss/2023-03-09-linearity/first.jpg
 categories: [Basics]
 tags: [basics, from-scratch, tutorials]
 published: true
+math: true
 #pin: true
 ---
 
@@ -26,15 +27,17 @@ $$ Distance = Speed × Time = 60 × t $$
 ### Real Life Example: Predicting Income
 
 A common example of linearity is **predicting income based on years of experience.** Let’s assume that for every year of experience, income increases by a fixed amount:
-$$ Income = w ⋅ Experience + β $$ 
-Where:
 
+>$$ Income = w ⋅ Experience + β $$ 
+{: .prompt-info}
+>Where:
 - $$w$$ is the slope, representing how much income increases per year of experience.
 - $$β$$ is the intercept, representing the starting income with zero experience.
+{: .prompt-info}
 
 This simple relationship can often approximate real-world data surprisingly well.
 
-![linearity](/assets/img/post11/image.png)
+![linearity](/assets/img/ss/2023-03-09-linearity/image.png)
 _Figure 1_
 
 ## What is Non-Linearity ? 
@@ -43,7 +46,8 @@ Non-linearity, on the other hand, represents relationships that cannot be expres
 
 Imagine you're driving, but this time you’re navigating hills, valleys, and sharp turns. Your speed will vary depending on whether you're going uphill, downhill, or turning sharply. The relationship between your speed and time won’t be a straight line anymore, but rather a curve. Here’s a formula that might capture that:
 
-$$ Speed = w_1 ⋅ Slope + w_2 ⋅ Turn Sharpness + β$$ 
+>$$ Speed = w_1 ⋅ Slope + w_2 ⋅ Turn Sharpness + β$$ 
+{: .prompt-info}
 
 This non-linear relationship reflects the fact that the speed isn’t constant—it depends on complex factors like the slope of the road and how sharp the turns are.
 
@@ -51,7 +55,7 @@ This non-linear relationship reflects the fact that the speed isn’t constant�
 
 In real estate, house prices often exhibit non-linear relationships with features like size, location, and age. For instance, doubling the size of a house doesn’t necessarily double its price. Instead, the price might increase exponentially as the house gets larger or is located in a prime area.
 
-![non linearity](/assets/img/post11/image-1.png)
+![non linearity](/assets/img/ss/2023-03-09-linearity/image-1.png)
 _Figure 2_
 **The graph on the left** shows the relationship between the dependencies of the speed variable on slope and sharpness values. As can be seen, there is no linear increase or decrease, that is, there is a non-linear situation. Although the data was not prepared very well because the data was generated randomly, I think I was able to explain the subject. **In the graph on the right**, if we consider the problem of house price estimation, which may have a non-linear relationship in real life, it can be seen that there is a non-linear but increasing relationship between the size of the house and its price.
 
@@ -59,12 +63,12 @@ _Figure 2_
 
 If we assume that speed has linear relations with other values. Then you will see a 3D Plot like that: 
 
-![3d plot linear](/assets/img/post11/image-2.png)
+![3d plot linear](/assets/img/ss/2023-03-09-linearity/image-2.png)
 _Figure 3_
 
 ### More real life example:
 
-![more real life examples](/assets/img/post11/image-3.png)
+![more real life examples](/assets/img/ss/2023-03-09-linearity/image-3.png)
 _Figure 4_
 
 Model calculations were made and visualized by assuming that there was a linear or non-linear relationship between the two features on the above graphs. The dataset has been prepared intuitively by hand and will be shared with all plot codes at the end of the article. For the example on the left, a scenario between salary and years of experience is considered. In the example on the right, the scenario of house prices and sizes is taken as an example.

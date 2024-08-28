@@ -1,10 +1,11 @@
 ---
 date: 2023-11-12
 title: Apache Cassandra - 101 
-image: /assets/img/post6/cassandra.webp
+image: /assets/img/ss/2023-11-12-apache-cassandra-101/cassandra.webp
 categories: [Big Data]
 tags: [basics, nosql, apache, big-data]
 published: true
+math: true
 ---
 
 ## Introduction 
@@ -19,7 +20,7 @@ Cassandra is a **column-based** database is formed **nested maps**. When we comp
 
 Cassandra has a **primary key** as in RDBMS, but does not have a foreign key. Similarly, it has the concept of secondary index. However, the secondary index is not as efficient as the foreign key. At the primary key point, the RDBMS consists of a unique token and is different for each row. **In addition, primary keys have a special importance in Cassandra. Because the distribution and storage of data is determined by them.**
 
-![PrimaryKey](/assets/img/post6/primary_key.png)
+![PrimaryKey](/assets/img/ss/2023-11-12-apache-cassandra-101/primary_key.png)
 _Primary Key Definition_
 
 The primary key has the **Partition Key**, which contains information about how the data will be distributed, and the **Clustering Key**, which contains information about how this data will be sorted/stored in a node. A Partition function and hashing algorithm are used when creating the Partition Key. This partition algorithm is used to generate a value in the range $$[-2^{63}, 2^{63} - 1]$$. Today, there are two partitioners that are used most frequently, they differ according to the hashing algorithm they use.
@@ -53,21 +54,22 @@ While the consistency levels in the read state are similar to the write action, 
 - **Quorum:** As in writing, a minimum number of successful results are expected. Unlike here, the fastest result is read and the hash is kept. Then the hash of the replicas is taken according to the quorum number. Then all hashes are compared and if the hashes are the same, the first read data is returned.
 
 > If the hashes do not match, or if a different result is returned, the most recent timestamp is returned and the outdated data is updated according to the last timestamp.
+{: .prompt-tip}
 
 ## Replicas & Consistency
 
 The replicas, that is, the copied data in Cassandra, are basically implemented according to two important features. One of them is the **replication strategy**; If there is only one data center, the **Simple Strategy** is used, but if there is more than one data center, the **Network Topology** strategy is used. Another important feature is the **replication factor**. This factor indicates how many copies will be made of a replica. Also, this feature affects Cassandra’s consistency. In general, if consistency with the quorum is to be ensured, it is recommended to be as follows:
 
-![replication_factor](/assets/img/post6/replication_factor.png)
+![replication_factor](/assets/img/ss/2023-11-12-apache-cassandra-101/replication_factor.png)
 
 For this, the following values ​​can be used or the quorum number can be adjusted with a formula like below.
 
 
-![replication_factor_definition](/assets/img/post6/replication_factor_definition.webp)
+![replication_factor_definition](/assets/img/ss/2023-11-12-apache-cassandra-101/replication_factor_definition.webp)
 _Read Quorum & Write Quorum Definition_
 
 > $$\text{quorum} = \left\lceil \frac{\text{sum of all replication factor} + 1}{2} \right\rceil $$
-
+{: .prompt-info}
 
 ## Storage Systems
 
@@ -94,6 +96,7 @@ In the memory, there are memtables, row cache, key cache, summary of index and b
 - **Row Cache:** A certain number of rows are kept as cache. There can be three different parameters; the situation we never held, none; where we give a numeric value where all are kept, all or a certain number of rows are kept.
 
 > A node can have a certain number of SSTables. This number was specified with the `min_threshold` parameter when creating the column family. If it occurs more than the specified number of SSTables, then these SSTables are made into a single SSTable by applying **compaction** operation. SSTable compaction is performed by grouping **partition keys and keeping last timestamp** data, and if there are **tombstones** associated with these rows/columns, they are **deleted.**
+{: .prompt-tip}
 
 <hr>
 

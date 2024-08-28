@@ -1,7 +1,7 @@
 ---
 date: 2024-01-24
-title: Logging instead of Print Statements!
-image: /assets/img/post5/hello_world.png
+title: Sample post!
+image: /assets/img/sample-post.png
 categories: [Python]
 tags: [tricks, python]
 published: true
@@ -10,6 +10,7 @@ mermaid : true
 toc: true 
 comments: true
 description: Short summary of the post.
+math: true
 ---
 
 # Sample Post 1 
