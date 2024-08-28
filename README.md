@@ -1,13 +1,13 @@
 # umitsarioz.github.io
 
-++ 
-
 Personal blog website codes. 
 
 This repo is generated from <a href="https://github.com/cotes2020/chirpy-starter"> Chirpy</a> Thanks for this awesome repository!
 
-- first run `bundle exec jekyll s`
-- to preview your site with drafts, run `jekyll serve` or `jekyll build` with the `--drafts` switch.  
+- `bundle`
+- `bundle exec jekyll s`
+- `jekyll s`
+- `jekyll s --drafts`
 
 ## post guide line
 
