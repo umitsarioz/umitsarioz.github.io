@@ -24,3 +24,13 @@ description: Short summary of the post.  <br>
 toc: false # toc menu is false, default is true   <br>
 comments: false # comments area is false, default is true   <br>
   
+prompts: 
+- {: .prompt-tip }
+- {: .prompt-info }
+- {: .prompt-warning }
+- {: .prompt-danger }
+- usage: 
+```md
+> sample sentence
+{: .prompt-type } 
+```

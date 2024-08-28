@@ -1,9 +1,9 @@
 ---
-date: 2023-10-12
+date: 2023-11-12
 title: Apache Cassandra - 101 
 image: /assets/img/post6/cassandra.webp
-categories: [Data]
-tags: [database, apache, nosql]
+categories: [Big Data]
+tags: [basics, nosql, apache, big-data]
 published: true
 ---
 

@@ -4,7 +4,8 @@ order: 5
 ---
 
 ## Core Competencies
-> Python, SQL & NoSQL, Big Data Analysis & Visualization, Machine Learning, Deep Learning, Forecasting, Clustering
+> **Python, SQL & NoSQL, Big Data Analysis & Visualization, Machine Learning, Deep Learning, Forecasting, Clustering**
+{: .prompt-info}
 
 ## Technical Skills
 - `Frameworks:` PyTorch, Spark, FastAPI, Flask
@@ -41,6 +42,7 @@ operations and database design, and created RESTful Api with Python.
 ---
 
 ## Projects
+
 - Location Based Risk Clustering           <span style='float:right;'>   at Innova (Jul 2024)</span>
 - Mobile Cell Tower Battery Life Prediction            <span style='float:right;'>               at Innova (Aug 2023 )  </span>
 - 100G Traffic Anomaly Detection                       <span style='float:right;'>        at Innova (Feb 2023)</span>

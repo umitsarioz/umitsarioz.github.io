@@ -3,7 +3,7 @@ date: 2023-03-10
 title: When Simplicity Meets Power | Linear Models
 image: /assets/img/post7/lineer_denklem.jpg
 categories: [Machine Learning,Supervised Learning]
-tags: [algorithms, from scratch]
+tags: [algorithms, from-scratch]
 #pin: true
 published: true
 ---
