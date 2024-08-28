@@ -3,7 +3,7 @@ date: 2023-03-09
 title: A Modern Guide | Linearity and Non-Linearity in Machine Learning  
 image: /assets/img/post11/first.jpg
 categories: [Basic Concepts]
-tags: [Linear, From Scratch]
+tags: [from scratch]
 published: true
 #pin: true
 ---

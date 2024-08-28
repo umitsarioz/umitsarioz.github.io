@@ -3,7 +3,7 @@ date: 2023-04-06
 title: Your Friendly Neighborhood Algorithm is KNN
 image: /assets/img/post1/knn1.png
 categories: [Machine Learning,Supervised Learning]
-tag: [Supervised Learning, Machine Learning, Algorithms, From Scratch]
+tag: [algorithms, from scratch]
 #pin: true 
 published: true
 ---

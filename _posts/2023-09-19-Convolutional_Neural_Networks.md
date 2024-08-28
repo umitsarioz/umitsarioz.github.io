@@ -3,7 +3,7 @@ date: 2023-09-19
 title: Deep Dive into Convolutional Neural Networks (CNNs)
 image: /assets/img/post4/conv_1.jpeg
 categories: [Machine Learning,Supervised Learning]
-tags: [Machine Learning,Algorithms, Neural Networks]
+tags: [architectures]
 mermaid: true
 published: true
 ---
