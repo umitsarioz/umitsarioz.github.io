@@ -5,6 +5,7 @@ image: /assets/img/post4/conv_1.jpeg
 categories: [Machine Learning,Supervised Learning]
 tags: [Machine Learning,Algorithms, Neural Networks]
 mermaid: true
+published: true
 ---
 
 Convolutional Neural Networks (CNNs) have become a cornerstone of deep learning, particularly in the field of computer vision. From image recognition to object detection, CNNs have transformed the way machines interpret visual data.

@@ -4,6 +4,7 @@ title: A Modern Guide | Linearity and Non-Linearity in Machine Learning
 image: /assets/img/post11/first.jpg
 categories: [Basic Concepts]
 tags: [Linear, From Scratch]
+published: true
 #pin: true
 ---
 

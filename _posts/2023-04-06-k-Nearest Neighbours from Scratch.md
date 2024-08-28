@@ -5,6 +5,7 @@ image: /assets/img/post1/knn1.png
 categories: [Machine Learning,Supervised Learning]
 tag: [Supervised Learning, Machine Learning, Algorithms, From Scratch]
 #pin: true 
+published: true
 ---
 
 ## Introduction 

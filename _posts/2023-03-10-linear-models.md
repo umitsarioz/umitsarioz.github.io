@@ -5,6 +5,7 @@ image: /assets/img/post7/lineer_denklem.jpg
 categories: [Machine Learning,Supervised Learning]
 tags: [Algorithms, Supervised Learning, From Scratch]
 #pin: true
+published: true
 ---
 
 ## Getting Started with Linear Models: When Simplicity Meets Power
