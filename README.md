@@ -6,7 +6,8 @@ Personal blog website codes.
 
 This repo is generated from <a href="https://github.com/cotes2020/chirpy-starter"> Chirpy</a> Thanks for this awesome repository!
 
-- run : bundle exec jekyll s
+- first run `bundle exec jekyll s`
+- to preview your site with drafts, run `jekyll serve` or `jekyll build` with the `--drafts` switch.  
 
 ## post guide line
 
