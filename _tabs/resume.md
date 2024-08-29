@@ -3,16 +3,53 @@ icon: fa-solid fa-file
 order: 5
 ---
 
-## Core Competencies
-> **Python, SQL & NoSQL, Big Data Analysis & Visualization, Machine Learning, Deep Learning, Forecasting, Clustering**
-{: .prompt-info}
+## Skills
 
-## Technical Skills
-- `Frameworks:` PyTorch, Spark, FastAPI, Flask
-- `Developer Tools:` Git, Linux, Docker, HDFS, Kafka, Sqoop, Cassandra, PostgreSQL, Mongo, Redis, Dbeaver, Jupyter Notebook, PyCharm
-- `Libraries:` PySpark, Pandas, NumPy, Scikit-learn, Plotly, Matplotlib, BeautifulSoup, Requests, Networkx
-- `Languages:` English (Professional Working Proficiency), Turkish (Native)
+- **Core:** Python, SQL & NoSQL, Big Data Analysis & Visualization, Machine Learning, Deep Learning, Forecasting,Time-Series Prediction, Clustering, Natural Language Processing (NLP), Large Language Models (LLMs)
+- **Developer Tools:** Git, Linux, Docker, HDFS, Kafka, Sqoop, Cassandra, PostgreSQL, Mongo, Redis, Dbeaver, Jupyter Notebook, PyCharm
+- **Libraries & Frameworks:** PySpark, Pandas, NumPy, Scikit-learn, Plotly, Matplotlib, PyTorch, FastAPI, Flask, BeautifulSoup, Requests, Networkx
+- **Languages:** English (Professional Working Proficiency), Turkish (Native)
 
+---
+
+## Professional Experience
+
+>  [**Innova Bilişim**](https://www.innova.com.tr/en/about)     <span style='float:right;'> Ankara, Turkey (Remote)</span><br>
+_Data Scientist_     <span style='float:right;'> Dec 2022 - Present</span>
+<ul style='text-align:justify';>
+<li>
+Served as a core code review committee member for an AI team of 30 engineers at TürkTelekom, a company with nearly 50 million customers. Conducted reviews across multiple projects, leading to an 80% reduction in bug occurrence and a 90% improvement in bug resolution times, resulting in enhanced system reliability and increased customer satisfaction.
+</li>
+<li>
+Developed a battery life prediction system with 92% accuracy for mobile cell towers, impacting over 50 million customers. Enhanced data processing and real-time analysis, reducing retrieval time by 40%. This project generated over $18 million in additional revenue for investors.
+</li>
+<li>
+Developed a forecasting model to predict traffic saturation states for 100G MPLS devices using artificial neural networks with 82% accuracy. Processed 3 days of data to generate 6-hour traffic predictions, enhancing network performance for over 50 million customers. This project led to more efficient field operations, reduced downtime, and improved customer satisfaction, ultimately driving significant cost savings and operational efficiency for TürkTelekom.
+</li>
+<li>
+Developed an anomaly detection system for 100G MPLS devices using Z-score analysis, processing 5 days of historical data to identify and report anomalies. Enabled proactive metric adjustments to prevent saturation issues, improving customer satisfaction. Leveraged PySpark and HDFS for efficient data management, resulting in enhanced operational efficiency and service reliability for over 50 million customers.
+</li>
+<li>
+Developed an AI-driven network clustering system to optimize investments across 12,000+ devices, benefiting 50 million customers. Implemented graph neural network embeddings and clustering. Achieved a silhouette score of 72%, with F1 and accuracy scores improving from 69% to 87% and 81% to 92%, respectively, with error tolerance. Visualized results for enhancing network management and boosting customer satisfaction.
+</li>
+</ul>
+
+> [**KAVAK TR | CARVAK**](https://www.kavak.com/ae/about-us)     <span style='float:right;'> İstanbul, Turkey (Remote)</span><br>
+_Software Engineer I_     <span style='float:right;'> Dec 2021 - Dec 2022</span>
+
+<ul style='text-align:justify';>
+<li>
+Developed an internal tool to get vehicle information retrieval using chassis numbers. Implemented an intuitive interface and a robust backend, resulting in rapid, accurate information delivery. This improvement allowed field personnel to quickly provide vehicle details, significantly boosting operational efficiency and customer satisfaction.
+</li>
+<li>
+Developed an AI-driven recommendation system for Carvak.com to deliver personalized vehicle listings and boost user engagement. Designed and implemented a sophisticated model for dynamic recommendations. Enhanced performance by caching queries, reducing request times from over 1 second to milliseconds. This project led to a 20% increase in user engagement and longer time spent on the website.
+</li>
+<li>
+Developed the Automobilist tool to scrape vehicle offers from various sources, extracting key data for analysis. Automated data collection and storage, and integrated results with Google Sheets. This tool provides valuable insights into industry and market pricing trends, supporting pricing and planning teams with actionable information.
+</li>
+</ul>
+
+---
 
 ## Education
 ### [Gazi University](https://mf-bm.gazi.edu.tr/)
@@ -20,37 +57,6 @@ order: 5
 <i>Thesis: [Radyolojik Görüntülerin Self-Attention Modelleriyle Otomatik Raponlanması](https://github.com/umitsarioz/ChestX-AI)</i><br>
 <i>Instructor: [Dr.Duygu SARIKAYA](https://scholar.google.com/citations?user=66F5AnAAAAAJ&hl=en)</i>
 
----
-
-## Professional Experience
->  [**Innova Bilişim**](https://www.innova.com.tr/en/about)     <span style='float:right;'> Ankara, Turkey (Remote)</span><br>
-_Data Scientist_     <span style='float:right;'> Dec 2022 - Present</span>
-
-Data Scientist for Artificial Intelligence in Network Operations for <a href="https://www.turktelekom.com.tr/en/about-us/details?p=tab8">TürkTelekom</a>. Code Review Committee Member and is responsible for creating Data ETL pipelines, creating solutions for problems such as forecasting, anomaly detection and clustering using supervised and unsupervised machine learning algorithms.
-
-<i>**Stack:** Git, Docker, Linux, Python, PySpark, HDFS, Cassandra, PostgreSQL, Pandas, PyTorch, Scikit-learn,
-NumPy, Plotly, Matplotlib, Networkx</i>
-
-> [**KAVAK TR | CARVAK**](https://www.kavak.com/ae/about-us)     <span style='float:right;'> İstanbul, Turkey (Remote)</span><br>
-_Software Engineer I_     <span style='float:right;'> Dec 2021 - Dec 2022</span>
-
-Responsible for creating Data ETL pipelines, NoSQL(Mongo) database management like crud
-operations and database design, and created RESTful Api with Python.
-
-<i>**Stack:** Git, Docker, Linux, Python, Flask, Pandas, BeautifulSoup, Requests, Mongo, PostgreSQL</i>
-
----
-
-## Projects
-
-- Location Based Risk Clustering           <span style='float:right;'>   at Innova (Jul 2024)</span>
-- Mobile Cell Tower Battery Life Prediction            <span style='float:right;'>               at Innova (Aug 2023 )  </span>
-- 100G Traffic Anomaly Detection                       <span style='float:right;'>        at Innova (Feb 2023)</span>
-- 100G ISIS Traffic Saturation     <span style='float:right;'>   at Innova (Jun 2023)   </span>
-- Carvakpedia    <span style='float:right;'>  at Kavak.com (Aug 2022) </span>
-- Vehicle Recommender          <span style='float:right;'>     at Kavak.com (May 2022) </span>
-- Automobilist   <span style='float:right;'>  at Kavak.com (Feb 2022) </span>
-  
 ---
 
 ## Certifications
