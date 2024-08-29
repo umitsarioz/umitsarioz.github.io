@@ -217,8 +217,8 @@ i {
     line-height: 1.05rem;
     font-size: 0.85rem;
     border-radius: 0.8rem;
-    padding: 0.3rem 0.5rem;
-    margin: 0 0.35rem 0.5rem 0;
+    padding: 0.3rem 0.5rem; /*0.3rem 0.5rem;*/
+    margin: 0 0.35rem 0.5rem 0; /* 0 0.35rem 0.5rem 0;*/
 
     &:hover {
       transition: all 0.3s ease-in;
@@ -682,15 +682,17 @@ $btn-mb: 0.5rem;
 #sidebar {
   @include pl-pr(0);
 
-  position: fixed;
-  top: 0;
+  position: fixed; /*fixed*/
+  top: 0%; /* 0*/
   left: 0;
-  height: 100%;
-  overflow-y: auto;
-  width: $sidebar-width;
+  height: 100%; /* 100%  */
+  overflow-y: hidden; /*auto*/
+  width: $sidebar-width; /*$sidebar-width*/
   z-index: 99;
   background: var(--sidebar-bg);
   border-right: 1px solid var(--sidebar-border-color);
+  border-top-right-radius: 2rem; /* ben ekledim*/
+  border-bottom-right-radius: 2rem; /* ben ekledim*/
 
   /* Hide scrollbar for IE, Edge and Firefox */
   -ms-overflow-style: none; /* IE and Edge */
@@ -713,6 +715,8 @@ $btn-mb: 0.5rem;
 
   #avatar {
     display: block;
+    margin-top:0.5rem;
+    margin-left: 2.5rem; /*ben ekledim*/
     width: 7rem;
     height: 7rem;
     overflow: hidden;
@@ -721,9 +725,8 @@ $btn-mb: 0.5rem;
 
     img {
       transition: transform 0.5s;
-
       &:hover {
-        transform: scale(1.2);
+        transform: scale(1.1);
       }
     }
   }
@@ -731,7 +734,7 @@ $btn-mb: 0.5rem;
   .profile-wrapper {
     @include mt-mb(2.5rem);
     @extend %clickable-transition;
-
+    text-align: center; /*ben ekledim*/
     padding-left: 2.5rem;
     padding-right: 1.25rem;
     width: 100%;
@@ -745,7 +748,6 @@ $btn-mb: 0.5rem;
     letter-spacing: 0.25px;
     margin-top: 1.25rem;
     margin-bottom: 0.5rem;
-
     a {
       @extend %clickable-transition;
       @extend %sidebar-link-hover;
@@ -757,7 +759,7 @@ $btn-mb: 0.5rem;
   .site-subtitle {
     font-size: 95%;
     color: var(--site-subtitle-color);
-    margin-top: 0.25rem;
+    margin-top: 0.5rem;
     word-spacing: 1px;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -766,6 +768,7 @@ $btn-mb: 0.5rem;
   }
 
   ul {
+    margin-top: 5rem; /*ben ekledim profile-wrapper kapatınca. Onu acarsan burayı kapat*/
     margin-bottom: 2rem;
 
     li.nav-item {
@@ -784,6 +787,7 @@ $btn-mb: 0.5rem;
 
         &:hover {
           background-color: var(--sidebar-hover-bg);
+          margin-left: 0.25rem; /*ben ekledim*/
         }
 
         i {
@@ -1495,6 +1499,7 @@ search {
   }
 
   #main-wrapper > .container {
+    text-align:justify; /* ben ekledim*/
     max-width: $main-content-max-width;
     padding-left: 1.75rem !important;
     padding-right: 1.75rem !important;
