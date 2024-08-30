@@ -248,6 +248,8 @@ Here is an example to illustrate the **working order** in the Kafka pipeline:
 
 ## Install Kafka & Python Usage
 
+You can install kafka two ways, first you can install manually;<a href="https://kafka.apache.org/quickstart">download kafka, zookeeper and java open jdk</a>. Second way is you can install kafka with docker. In this post, i will use docker version because it is easier than manual version. 
+
 ### Kafka with Zookeeper
 
 ![zookeeper](/assets/img/ss/2024-08-30-apache-kafka/second.webp)
