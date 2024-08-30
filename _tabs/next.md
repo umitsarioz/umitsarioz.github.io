@@ -43,7 +43,7 @@ order: 4
 - [ ] mongodb `#basics` `#tutorials` `#setup` `#nosql`
 - [ ] cassandra `#basics` `#tutorials` `#setup` `#nosql` `#apache`, `#big-data`
 - [ ] hadoop `#basics` `#tutorials` `#setup` `#big-data`  `#apache`
-- [ ] kafka `#basics` `#tutorials` `#setup` `#big-data` `#streaming` `#apache`
+- [x] kafka `#basics` `#tutorials` `#setup` `#big-data` `#streaming` `#apache`
 - [ ] flink `#basics` `#tutorials` `#setup` `#big-data` `#streaming` `#apache`
 - [ ] airflow `#basics` `#tutorials` `#setup` `#big-data` `#ci-cd` `#apache`
 - [ ] regression `#basics` `#tutorials` `#projects`

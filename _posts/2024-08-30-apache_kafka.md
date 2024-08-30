@@ -14,7 +14,6 @@ math: true
 ---
 
 ## Introduction
-
 Apache Kafka has become one of the most powerful tools for distributed streaming and messaging in large-scale data ecosystems. Whether you're working with real-time data processing, event-driven architectures, or data pipelines, **Kafka offers a reliable, scalable, and fault-tolerant platform** that integrates seamlessly into modern architectures.
 
 Kafka was originally developed by LinkedIn, later open-sourced in 2011, and is now maintained by the Apache Software Foundation. **Kafka is designed to handle vast amounts of data and distribute it across multiple systems efficiently**, making it a key player in big data environments.
