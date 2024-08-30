@@ -7,6 +7,7 @@ tags: [basics, from-scratch, tutorials]
 published: true
 math: true
 #pin: true
+description: Understanding linearity and non-linearity in machine learning is like learning the alphabet before reading a book—they're fundamental concepts that guide how we model data. Linearity involves relationships that can be represented by straight lines, such as how driving at a constant speed leads to proportional increases in distance traveled.
 ---
 
 ## Linearity and Non-Linearity in Machine Learning: A Modern Guide

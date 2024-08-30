@@ -7,6 +7,7 @@ tags: [deep-learning, architectures, paper,projects]
 mermaid: true
 published: true
 math: true
+description: Convolutional Neural Networks (CNNs) are fundamental to deep learning, revolutionizing computer vision tasks like image recognition and object detection by enhancing how machines interpret visual data.
 ---
 
 Convolutional Neural Networks (CNNs) have become a cornerstone of deep learning, particularly in the field of computer vision. From image recognition to object detection, CNNs have transformed the way machines interpret visual data.

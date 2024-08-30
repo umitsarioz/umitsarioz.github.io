@@ -6,6 +6,7 @@ categories: [Python]
 tags: [python, tricks]
 published: true
 math: true
+description: Print statements are handy for logging and debugging, but they have some limitations and risks.
 ---
 
 Many of us started writing code by printing a hello world. **Print statements are useful in many places such as logging and debugging while writing code, but they also have some limits.** Print statements print an output to the console screen at the end of the day. Depending on the system used and default stdout buffer size settings, your code will unintentionally throw an error when the output in the console reaches the **maximum stdout buffer size.** In this case, while you are looking for the cause of the error in the general functioning of your code, you will be very surprised when you see that it actually comes from the print statement. In addition, reviewing an output with **long print statements** is a very difficult task, and as time goes by, you will realize that it makes you very tired. In summary, although print statements make our job much easier in small projects and rapid development, **we must be very careful about the places we use when we go to productization.** To deal with this situation, you can use some logging tools or modules written to keep logs.

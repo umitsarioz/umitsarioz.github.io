@@ -6,6 +6,7 @@ categories: [Machine Learning,Supervised Learning]
 tags: [algorithms, from-scratch]
 published: true
 math: true
+description: Linear models in machine learning are like the "basic" setting on your coffee machine—simple but surprisingly powerful. They predict outcomes by drawing straight lines through your data, making them a handy tool for many projects.
 ---
 
 ## Getting Started with Linear Models: When Simplicity Meets Power

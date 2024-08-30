@@ -7,6 +7,7 @@ tag: [algorithms, from-scratch]
 #pin: true 
 published: true
 math: true
+description: The k-Nearest Neighbors (KNN) algorithm is like asking your friends for advice based on who’s closest to you. It figures out your data's category by looking at its nearest neighbors and deciding which ones matter most.
 ---
 
 ## Introduction 
