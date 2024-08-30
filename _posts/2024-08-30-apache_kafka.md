@@ -235,7 +235,7 @@ graph TB
 <hr>
 
 ![example.gif](/assets/img/ss/2024-08-30-apache-kafka/fifth.gif)
-_Message order may guarantee only per partition, but not for all messages within all topic. Image by<a href="https://medium.com/geekculture/essential-kafka-overview-with-pictures-bffd84c7f6ac">Vladimir Topolev</a>_
+_Message order may guarantee only per partition, but not for all messages within all topic. Image by <a href="https://medium.com/geekculture/essential-kafka-overview-with-pictures-bffd84c7f6ac">Vladimir Topolev</a>_
 
 ### **Kafka Pipeline Example**
 Here is an example to illustrate the **working order** in the Kafka pipeline:
@@ -251,7 +251,7 @@ Here is an example to illustrate the **working order** in the Kafka pipeline:
 ### Kafka with Zookeeper
 
 ![zookeeper](/assets/img/ss/2024-08-30-apache-kafka/second.webp)
-_Apache Kafka with Zookeeper. Image by <a href="https://medium.com/geekculture/essential-kafka-overview-with-pictures-bffd84c7f6ac">Vladimir Topolev</a>_
+_Apache Kafka with Zookeeper. Image by <a href="https://medium.com/geekculture essential-kafka-overview-with-pictures-bffd84c7f6ac">Vladimir Topolev</a>_
 First, you'll need a Docker setup to run Kafka with zookeeper. I installed kafka with zookeeper because KRaft configurations raise exception, and i did not figure out. In time i am planning to another blog post KRaft vs Zookeeper. 
 
 Use the following `docker-compose.yml` file to install kafka with zookeeper:
@@ -452,7 +452,7 @@ if __name__ == "__main__":
 
 Finally, let’s open 5 bash terminal and test it. Type in terminals with order : 
 
-```python
+```bash
 > docker-compose up -d 
 > python create_topics.py 
 > python producer.py
@@ -463,7 +463,7 @@ Finally, let’s open 5 bash terminal and test it. Type in terminals with order 
 > If you run `consumer1.py` and `consumer2.py` files at the same time, you can observe that some messages read from consumer1 and rest of messages read from consumer2. Because we set same group-id . I mean, it is queue formatted kafka example.
 {: .prompt-tip}
 
->If you want to check topics etc. you can use codes below or look this [documentation](https://kafka-python.readthedocs.io/en/master/usage.html) 
+>If you want to check topics etc. you can use codes below or look this <a href="https://kafka-python.readthedocs.io/en/master/usage.html">documentation</a>
 {: .prompt-info}
 
 ```python
@@ -478,9 +478,9 @@ admin_client.delete_topics(topics=['user-events']) # delete topics
 
 Kafka is widely used in scenarios like **ETL pipelines, event streaming, real-time analytics, log aggregation, and microservices communication**.
 
-## **Advantages and Disadvantages**
+## Advantages and Disadvantages
 
-### **Advantages:**
+### Advantages:
 
 - **Scalability**: Kafka’s architecture allows you to easily scale producers, consumers, and brokers to handle growing workloads.
 - **Fault Tolerance**: With **replication and partitioning**, Kafka can survive broker failures without data loss.
@@ -488,7 +488,7 @@ Kafka is widely used in scenarios like **ETL pipelines, event streaming, real-ti
 - **Durability**: Kafka persists messages to disk, ensuring data reliability.
 - **Flexibility**: Kafka supports **both streaming and batch processing**, making it adaptable to many use cases.
 
-### **Disadvantages:**
+### Disadvantages:
 
 - **Complex Setup**: Kafka clusters can be complex to deploy, configure, and manage, particularly for beginners.
 - **Zookeeper Dependency**: Zookeeper can introduce operational complexity as it requires additional setup and management. `(it is solved with KRaft)`
@@ -520,9 +520,9 @@ Kafka continues to stand out because of its **flexibility in integrating with st
 
 ### Blog Posts 
 - <a href="https://rohithsankepally.github.io/Kafka-Storage-Internals/">Kafka Storage Internals </a> by Rohith Sankepally. 
-- <a href="https://medium.com/geekculture/essential-kafka-overview-with-pictures-bffd84c7f6ac">Kafka Overview with pictures</a> by Vladimir Topolev. 
+- <a href="https://medium.com/geekculture/essential-kafka-overview-with-pictures-bffd84c7f6ac">Kafka Overview with pictures </a> by Vladimir Topolev. 
 
 ### Videos
 - <a href="https://www.youtube.com/watch?v=aj9CDZm0Glc"> What is Kafka? </a> by IBM Technology
-- <a href=""> Apache Kafka in 6 minutes</a> by James Cutajar
-- <a href="">  1 Videoda #Apache Kafka Nedir? Apache Kafka Neden Kullanılır? Apache Kafka Nasıl Kurulur? </a> by kablosuzkedi.
+- <a href="https://www.youtube.com/watch?v=Ch5VhJzaoaI"> Apache Kafka in 6 minutes</a> by James Cutajar
+- <a href="https://www.youtube.com/watch?v=ZphPT3r6fnU&t=136s">  1 Videoda #Apache Kafka Nedir? Apache Kafka Neden Kullanılır? Apache Kafka Nasıl Kurulur? </a> by kablosuzkedi.
