@@ -347,7 +347,7 @@ if __name__ == "__main__":
 > Replication factor must not be bigger than number of our kafka replicas. In this example max. is 3.
 {: .prompt-warning}
 
-Then we need to send some messages with producers. So let’s create [`producer.py`](http://producer.py) file.
+Then we need to send some messages with producers. So let’s create `producer.py` file.
 
 ```python
 from kafka import KafkaProducer
@@ -381,7 +381,7 @@ if __name__ == "__main__":
 > Partition must not be bigger than number of our kafka topic partition number. In this example max. is 3.
 {: .prompt-warning}
 
-Last but not least, we will create some consumers to read data from the topic are sended from producers. Let’s create [`consumer1.py`](http://consumer1.py) and [`consumer2.py`](http://consumer2.py) files.
+Last but not least, we will create some consumers to read data from the topic are sended from producers. Let’s create `consumer1.py` and `consumer2.py` files.
 
 ```python
 from kafka import KafkaConsumer
@@ -416,7 +416,7 @@ if __name__ == "__main__":
 
 ```
 
-Let’s create [`consumer2.py`](http://consumer2.py) file:
+Let’s create `consumer2.py` file:
 
 ```python
 from kafka import KafkaConsumer
