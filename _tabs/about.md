@@ -17,7 +17,6 @@ order: 4
         align-items: center;
         border-radius: 10px;
         padding: 5px; /*20px*/
-        max-width: 800px;
         width: 100%;
         box-sizing: border-box;
     ">
@@ -35,25 +34,16 @@ order: 4
             padding: 20px 20px; /* Ensures padding on both sides top-left*/
             box-sizing: border-box; /* Prevents padding from affecting the width */
             /*font-style: italic;  Italicizes the text */
-        "> <p>### About Me
+        "> <p> Hi, I’m Ümit! </p>
+<p>My journey into technology began with a fascination for Atari games and their intriguing hardware. The thrill of playing these classic games sparked a deep curiosity about how such systems worked behind the scenes. This early interest in gaming hardware laid the groundwork for my future explorations in technology.In 2008, this curiosity evolved into hands-on experimentation with HTML on my first computer. Creating my own web pages and delving into the world of coding opened up a new realm of possibilities and solidified my passion for technology. What started as a hobby soon became a driving force in my life.</p>
 
-Hi, I’m Ümit!
+<p>I decided to formalize my interest by enrolling in the Computer Engineering program at Gazi University. I <b>graduated with a BSc in 2021,</b> having built a strong foundation in data structures, algorithms, and mathematics. These academic achievements provided me with the skills and knowledge to further explore data science and artificial intelligence.<b>Since 2019,</b> I’ve been deeply involved in the fields of data science and AI. My expertise spans Python programming and both supervised and unsupervised machine learning algorithms. I’ve worked on projects involving time series forecasting, clustering, graph structures, anomaly detection, and classification. </p>
 
-My journey into technology began with a fascination for Atari games and their intriguing hardware. The thrill of playing these classic games sparked a deep curiosity about how such systems worked behind the scenes. This early interest in gaming hardware laid the groundwork for my future explorations in technology.
+<p>Currently, I’m focused on research in advanced clustering methods, evaluation techniques, and large language models (LLMs). I’m also exploring natural language processing (NLP) with projects involving LLMs, QA chatbots, and document information extraction. My thesis on image captioning with self-attention, completed in 2021, stands out as a significant milestone in my academic and professional journey.</p>
 
-In 2008, this curiosity evolved into hands-on experimentation with HTML on my first computer. Creating my own web pages and delving into the world of coding opened up a new realm of possibilities and solidified my passion for technology. What started as a hobby soon became a driving force in my life.
+<p>Outside of my work, I enjoy experimenting with new technologies, staying updated with the latest advancements, and sharing my insights through my blog. My enthusiasm for machine learning and deep learning drives my continuous quest for knowledge and innovation.</p>
 
-In 2014, I decided to formalize my interest by enrolling in the Computer Engineering program at Gazi University. I graduated with a BSc in 2021, having built a strong foundation in data structures, algorithms, and mathematics. These academic achievements provided me with the skills and knowledge to further explore data science and artificial intelligence.
-
-Since 2019, I’ve been deeply involved in the fields of data science and AI. My expertise spans Python programming and both supervised and unsupervised machine learning algorithms. I’ve worked on projects involving time series forecasting, clustering, graph structures, anomaly detection, and classification. I’m also skilled in big data tools like Apache Spark, Kafka, and Hadoop (HDFS), and proficient with libraries and frameworks such as Pandas, Numpy, NetworkX, Scikit-learn, Plotly, Matplotlib, and Airflow. My experience with databases includes MongoDB, Cassandra, and PostgreSQL.
-
-My passion for technology extends to a commitment to open-source projects. I’ve worked on various personal projects across web development, backend systems, data management, databases, and artificial intelligence. These projects reflect my dedication to innovation and my desire to contribute to the tech community.
-
-Currently, I’m focused on research in advanced clustering methods, evaluation techniques, and large language models (LLMs). I’m also exploring natural language processing (NLP) with projects involving LLMs, QA chatbots, and document information extraction. My thesis on image captioning with self-attention, completed in 2021, stands out as a significant milestone in my academic and professional journey.
-
-Outside of my work, I enjoy experimenting with new technologies, staying updated with the latest advancements, and sharing my insights through my blog. My enthusiasm for machine learning and deep learning drives my continuous quest for knowledge and innovation.
-
-Thank you for visiting my blog! I hope you find my journey and insights as fascinating as I do. And yes, this "About" page has been beautifully summarized with a little help from ChatGPT! 😊</p>
+<p>Thank you for visiting my blog! I hope you find my journey and insights as fascinating as I do. And yes, this "About" page has been beautifully summarized with a little help from ChatGPT! 😊</p>
         </div>
     </div>
 </section>
