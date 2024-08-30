@@ -41,7 +41,7 @@ order: 4
 - [ ] docker `#basics` `#tutorials` `#setup`
 - [ ] postgresql `#basics` `#tutorials` `#setup` `#sql`
 - [ ] mongodb `#basics` `#tutorials` `#setup` `#nosql`
-- [ ] cassandra `#basics` `#tutorials` `#setup` `#nosql` `#apache`, `#big-data`
+- [x] cassandra `#basics` `#tutorials` `#setup` `#nosql` `#apache`, `#big-data`
 - [ ] hadoop `#basics` `#tutorials` `#setup` `#big-data`  `#apache`
 - [x] kafka `#basics` `#tutorials` `#setup` `#big-data` `#streaming` `#apache`
 - [ ] flink `#basics` `#tutorials` `#setup` `#big-data` `#streaming` `#apache`
