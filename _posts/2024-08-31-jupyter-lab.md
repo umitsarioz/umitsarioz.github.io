@@ -87,8 +87,8 @@ You can login Jupyter Lab [localhost:8888](http://localhost:8888) . If you chang
         c.ServerApp.port = 8888 # default port is 8888
         ```
         
-        ![image.png](/assets/img/ss/2024-08-31-jupyter-lab/image4.png)
-        _Figure 5_ 
+![image.png](/assets/img/ss/2024-08-31-jupyter-lab/image4.png)
+_Figure 5_ 
 
 - Step 9 — Create a service for Jupyter Lab,
     - Step 9.1 — Create a services file with `sudo nano /etc/systemd/system/jupyter-lab.service`
@@ -111,15 +111,15 @@ You can login Jupyter Lab [localhost:8888](http://localhost:8888) . If you chang
     WantedBy = multi-user.target
     ```
     
-    ![image.png](/assets/img/ss/2024-08-31-jupyter-lab/image5.png)
-    _Figure 6_ 
+![image.png](/assets/img/ss/2024-08-31-jupyter-lab/image5.png)
+_Figure 6_ 
 
     - Step 9.3 — Reload system daemon `sudo systemctl daemon-reload`
     - Step 9.4 — Start your new Jupyter Lab Service `sudo systemctl start jupyter-lab.service`
     - Step 9.5 — Check your service status is running `sudo systemctl status jupyter-lab.service`
         
-        ![image.png](/assets/img/ss/2024-08-31-jupyter-lab/image6.png)
-        _Figure 7_ 
+![image.png](/assets/img/ss/2024-08-31-jupyter-lab/image6.png)
+_Figure 7_ 
         
 
 Voila! Another milestone is completed, I think this installation is enough for local development/projects. If you want to work remotely with your team/organization, you should add SSL certifi files and do remote port forwarding with nginx etc. There are many resources on the web 🙂 I might be update this post like included with them in the future. 
