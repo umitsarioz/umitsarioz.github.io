@@ -49,10 +49,12 @@ order: 4
 - [ ] airflow `#basics` `#tutorials` `#setup` `#big-data` `#ci-cd` `#apache`
 - [ ] regression `#basics` `#tutorials` `#projects`
 - [ ] classification `#basics` `#tutorials` `#projects`
-- [ ] association `#unsupervised-learning` `#algorithms` `#from-scratch`
-- [ ] pca `#unsupervised-learning` `#algorithms` `#from-scratch`
-- [ ] svd `#unsupervised-learning` `#algorithms` `#from-scratch` 
+- [ ] apriori `#unsupervised-learning` `#algorithms` `#from-scratch` `assosication`
+- [ ] principal component analysis `#unsupervised-learning` `#algorithms` `#from-scratch` `dimensionality-reduction`
+- [ ] singular value decomposition `#unsupervised-learning` `#algorithms` `#from-scratch` `dimensionality-reduction`
+- [ ] hierarchial clustering `#unsupervised-learning` `#algorithms` `#from-scratch` `#clustering`
+- [ ] independent component analysis  `#unsupervised-learning` `#algorithms` `#from-scratch` `dimensionality-reduction`
 - [ ] elk `#devops` `#big-data` `#setup`
 - [ ] grafana `#devops` `#setup` 
-
+- [ ] naive bayes `#supervised-learning` `#algorithms` `#from-scratch`
 
