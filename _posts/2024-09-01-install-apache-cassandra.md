@@ -13,7 +13,7 @@ description: Installation of apache cassandra on linux(ubuntu) machine with dock
 math: false
 ---
 
-In this tutorial, we will try to follow <a href=”https://cassandra.apache.org/doc/stable/cassandra/getting_started/installing.html”> original documentation </a>. There still might be different codes a bit :) According to documentation you can install cassandra three different ways. In this post dockerize version and debiand package version is shown.
+In this tutorial, we will try to follow <a href="https://cassandra.apache.org/doc/stable/cassandra/getting_started/installing.html">original documentation</a>![original documentation].There still might be different codes a bit 🙂 According to documentation you can install cassandra three different ways. In this post dockerize version and debiand package version is shown.
 
 ## Method 1 - Docker Installation
 
