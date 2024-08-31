@@ -13,7 +13,7 @@ description: Installation of apache cassandra on linux(ubuntu) machine with dock
 math: false
 ---
 
-In this tutorial, we will try to follow <a href="https://cassandra.apache.org/doc/stable/cassandra/getting_started/installing.html">original documentation</a>![original documentation].There still might be different codes a bit 🙂 According to documentation you can install cassandra three different ways. In this post dockerize version and debiand package version is shown.
+In this tutorial, we will try to follow <a href="https://cassandra.apache.org/doc/stable/cassandra/getting_started/installing.html">original documentation</a>.There still might be different codes a bit 🙂 According to documentation you can install cassandra three different ways. In this post dockerize version and debiand package version is shown.
 
 ## Method 1 - Docker Installation
 
@@ -155,6 +155,8 @@ To enable service for cassandra `sudo systemctl enable cassandra` should be run.
 > If cluster names are different, then nodes can not be connected each other properly when seeds are same.
 {: .prompt-warning}
 
-
-
+## Challenges
+- Your server locale should be en_US.UTF-8, `locale` 
+- Ports should be unused, you can check eg. `netstat -tulnp | grep 7199` 
+- Ports can be allowed, `ufw allow 7199/tcp` 
 
