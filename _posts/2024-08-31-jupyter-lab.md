@@ -13,38 +13,34 @@ description: JupyterLab is like a magic lab for data scientists, researchers, an
 math: false
 ---
 
-<style>
-  body .tablelines table, 
-  body .tablelines td, 
-  body .tablelines th {
-      border: 1px solid black; padding:10px;
-      white-space : pre-wrap !important;
-      word-break: break-word;
-  }
-
-  code {
-    white-space : pre-wrap !important;
-    word-break: break-word;
-  }
-  mark{
-    white-space : pre-wrap !important;
-    word-break: break-word;
-  }
-</style>
 
 ## Introduction
 
 JupyterLab is your go-to environment for interactive data analysis, blending notebooks, text editors, and terminals into one seamless workspace. It’s like having a digital laboratory where you can experiment, visualize, and document all in real-time. Firstly, this guide will walk you through a hard setup, then we will move on easy setup to get you started swiftly. Using Docker Compose, you can quickly set up JupyterLab on Ubuntu without the usual setup headaches. 
 
-| **Feature/Aspect** | **Benefits** | **Limitations & Challenges** |
-|--------------------|--------------|------------------------------|
-| **Multi-Language Support** | JupyterLab enables seamless multi-language workflows, making it ideal for diverse data science and research needs. | Managing multiple kernels can be complex, with some languages having limited support compared to Python. |
-| **Integrated Workspace** | Combines code, visualization, and text into one environment, facilitating interactive and efficient workflows. | The interface can become cluttered with larger projects, and lacks the advanced features of traditional IDEs. |
-| **Extensibility and Plugins** | A vast ecosystem of plugins allows for a highly customizable and extendable environment, enhancing productivity. | Extensions may not always be well-maintained or compatible, requiring ongoing updates and developer intervention. |
-| **Interactive Data Visualizations** | Enables real-time, interactive visualizations that improve exploratory data analysis and prototyping. | Large visualizations or datasets can impact performance, leading to slowdowns in the notebook. |
-| **Scalability & Performance** | Easily scalable using Docker or cloud services, ensuring consistent environments across platforms. | Performance degrades with very large datasets, and scaling requires additional infrastructure setup. |
+## JupyterLab: The Ultimate Workspace for Data Science
+### A Versatile Workspace for Every Language
 
-**Let’s continue with installation approaches..**
+Imagine JupyterLab as your go-to lab for data science and research—a place where you can code, visualize data, and jot down notes all in one spot. It supports multiple programming languages like Python, R, and Julia, making it incredibly flexible for different tasks. But, juggling between these languages can get tricky, especially since some have better support than others.
+
+### An Integrated Environment for Smooth Workflows
+
+One of the best things about JupyterLab is how it brings everything together. You can write code, see your data visualizations, and take notes all in the same workspace. This integration helps you work more efficiently, but if your project gets big, the interface can start to feel a bit crowded, and you might miss out on some of the advanced features you get with traditional IDEs.
+
+### Customizable with Extensions
+
+JupyterLab’s extensibility is a real game-changer. You can add various plugins to tailor the environment to your needs, whether it’s for version control, enhancing visualizations, or other functionalities. However, not all plugins are perfectly maintained, and some might not work with newer versions of JupyterLab, so you might need to tweak things yourself.
+
+### Interactive Visualizations Made Easy
+
+One of the coolest features of JupyterLab is its ability to create interactive visualizations. You can use libraries like Plotly or Bokeh to make your data come alive right in the notebook. Just keep in mind that if you’re working with very large datasets or complex visualizations, things might slow down a bit, which can affect your workflow.
+
+### Scalability and Performance
+
+JupyterLab is also great for scaling up. Whether you’re using Docker or running it in the cloud, it helps ensure that your setup remains consistent across different environments. However, while it scales well, handling massive datasets might cause performance issues, and setting up the necessary infrastructure can require some extra work.
+
+>Overall, JupyterLab is a fantastic tool that simplifies data science and research, making complex tasks feel more manageable and engaging. After examine pros cons of jupyter lab **let’s continue with installation approaches..**
+{: .prompt-info}
 
 ---
 
@@ -152,18 +148,31 @@ services:
 
 ```
 
-## Installation Types Pros & Cons
+## JupyterLab Installation: Manual vs. Dockerized
 
-| **Installation Method** | **Pros** | **Cons** |
-|------------------------ |--------- |--------- |
-| **Manual Installation** |• Full control over environment<br>•Direct access to system resources<br>• No additional overhead (e.g., Docker layer) |• Dependency management can be complex<br>• Higher risk of conflicts between packages<br>• Harder to isolate different environments |
-| **Dockerized Setup** |• Isolated environment prevents dependency conflicts<br>• Easy to share and deploy across different machines<br>• Simple to manage versions and updates<br>•Can easily scale with multiple containers |• Slight performance overhead due to containerization<br>• Requires knowledge of Docker and Docker Compose<br>• Limited direct access to system resources (e.g., hardware acceleration) |
+### Manual Installation: Full Control and Flexibility
+
+Manual installation of JupyterLab offers full control over your environment. You can customize every aspect of the setup, ensuring that it fits your specific needs. With direct access to system resources, you can optimize performance and integrate seamlessly with existing applications. Additionally, there’s no additional overhead from container layers, which can make it more efficient in certain scenarios.
+
+However, managing dependencies manually can be complex, leading to potential conflicts between packages. This setup also poses a higher risk of version clashes and makes it harder to isolate different environments, which can complicate the management of multiple projects.
+
+## Dockerized Setup: Convenience and Consistency
+
+A Dockerized setup provides an isolated environment that prevents dependency conflicts, making it easier to manage different projects without worrying about package clashes. Sharing and deploying JupyterLab across various machines becomes straightforward, and managing versions and updates is simplified with Docker. Furthermore, Docker’s ability to scale with multiple containers can handle increased workloads efficiently.
+
+On the flip side, containerization introduces a slight performance overhead compared to a native installation. Additionally, you’ll need to have some knowledge of Docker and Docker Compose to set things up and maintain the environment. Also, direct access to system resources, like hardware acceleration, is limited within containers, which might impact performance for specific tasks.
+
+>Choosing between manual installation and a Dockerized setup depends on your needs for control versus convenience, performance versus isolation, and the complexity you're willing to manage.
+{: .prompt-info}
 
 ## Conclusion
 
 JupyterLab is a versatile tool that provides an interactive computing environment for data science, machine learning, and research. Depending on your needs, you can set it up manually or in a Dockerized environment.
 
-- **Manual Installation**: This is a good choice if you want more control over your environment and don’t mind managing dependencies manually. However, it can be complex and may require extra care when dealing with dependencies or configurations.
-- **Dockerized Setup**: This is the best choice for isolating your JupyterLab environment and ensuring that it runs consistently across different machines or setups. It’s easy to share with others and avoids dependency conflicts. However, it does add some overhead, such as managing Docker and storage.
+>**Manual Installation**: This is a good choice if you want more control over your environment and don’t mind managing dependencies manually. However, it can be complex and may require extra care when dealing with dependencies or configurations.
+{: .prompt-tip}
+
+>**Dockerized Setup**: This is the best choice for isolating your JupyterLab environment and ensuring that it runs consistently across different machines or setups. It’s easy to share with others and avoids dependency conflicts. However, it does add some overhead, such as managing Docker and storage.
+{: .prompt-tip}
 
 Whichever method you choose, JupyterLab is an indispensable tool for modern computational workflows. By providing an all-in-one interface for coding, documentation, and visualization, JupyterLab continues to empower developers, data scientists, and researchers to explore their data and share insights effectively.
