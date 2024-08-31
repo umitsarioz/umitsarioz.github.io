@@ -47,6 +47,7 @@ JupyterLab is also great for scaling up. Whether you’re using Docker or runnin
 ## Method 1 : Manual Installation on Linux Debian
 
 ![image.png](/assets/img/ss/2024-08-31-jupyter-lab/image.png)
+_Figure 1_ 
 
 - Step 1 — Check python version `python --version` or  `python3 --version`. If it is not installed, then install.
 - Step 2 — Check pip version `pip --version` If it is not installed then install pip `sudo apt install -y python3-pip` . If it is already installed run `sudo apt install --upgrade -y python3-pip`  and `pip install --upgrade pip` commands for updating.
@@ -54,6 +55,7 @@ JupyterLab is also great for scaling up. Whether you’re using Docker or runnin
 - 
 
 ![image.png](/assets/img/ss/2024-08-31-jupyter-lab/image1.png)
+_Figure 2_ 
 
 - Step 4 — Install Jupyter Lab `pip install jupyterlab` .
 - Step 5 — Find jupyter-lab path `find ~ -name jupyter-lab`
@@ -61,10 +63,12 @@ JupyterLab is also great for scaling up. Whether you’re using Docker or runnin
 - Step 7 — Set password  `jupyter-lab password` .This step set password and also generate a json file include hashed password.
 
 ![image.png](/assets/img/ss/2024-08-31-jupyter-lab/image2.png)
+_Figure 3_ 
 
 - Voila! Now,  you can run your Jupyter Lab with `jupyter lab`  or `jupyter lab --ip="localhost" --port=8888 --no-browser --allow-root` .
 
 ![image.png](/assets/img/ss/2024-08-31-jupyter-lab/image3.png)
+_Figure 4_ 
 
 You can login Jupyter Lab [localhost:8888](http://localhost:8888) . If you changed ip or port address or port is already used you can see in logs after started Jupyter Lab like in Figure 4.
 
@@ -84,7 +88,8 @@ You can login Jupyter Lab [localhost:8888](http://localhost:8888) . If you chang
         ```
         
         ![image.png](/assets/img/ss/2024-08-31-jupyter-lab/image4.png)
-        
+        _Figure 5_ 
+
 - Step 9 — Create a service for Jupyter Lab,
     - Step 9.1 — Create a services file with `sudo nano /etc/systemd/system/jupyter-lab.service`
     - Step 9.2 — Configure this file according the your username and jupyter-lab environment path etc. You can learn jupyter lab path with `find ~ -name jupyter-lab` , your user name `id -un` ,your group name `id -gn`
@@ -107,12 +112,14 @@ You can login Jupyter Lab [localhost:8888](http://localhost:8888) . If you chang
     ```
     
     ![image.png](/assets/img/ss/2024-08-31-jupyter-lab/image5.png)
-    
+    _Figure 6_ 
+
     - Step 9.3 — Reload system daemon `sudo systemctl daemon-reload`
     - Step 9.4 — Start your new Jupyter Lab Service `sudo systemctl start jupyter-lab.service`
     - Step 9.5 — Check your service status is running `sudo systemctl status jupyter-lab.service`
         
         ![image.png](/assets/img/ss/2024-08-31-jupyter-lab/image6.png)
+        _Figure 7_ 
         
 
 Voila! Another milestone is completed, I think this installation is enough for local development/projects. If you want to work remotely with your team/organization, you should add SSL certifi files and do remote port forwarding with nginx etc. There are many resources on the web 🙂 I might be update this post like included with them in the future. 
@@ -128,6 +135,7 @@ If you want a simpler setup that avoids managing dependencies and conflicts, you
 - Step 5 — Run `docker-compose up -d` and you can reach your JupyterLab [localhost:8889](http://localhost:8889)
 
 ![image.png](/assets/img/ss/2024-08-31-jupyter-lab/image_docker.png)
+_Figure 8_ 
 
 ```yaml
 version: '3.8'

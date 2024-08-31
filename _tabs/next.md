@@ -37,6 +37,7 @@ order: 4
 - [ ] price optimization `#algorithms` `#optimization` `#tutorials` `#projects`
 - [ ] stock optimization `#algorithms` `#optimization` `#tutorials` `#projects`
 - [ ] traffic optimization `#algorithms` `#optimization` `#tutorials` `#projects`
+- [x] jupyter `#tutorials`, `#setup`, `#big-data`
 - [ ] data scientist 101 packages `#frameworks` `#tutorials` `#projects`
 - [ ] docker `#basics` `#tutorials` `#setup`
 - [ ] postgresql `#basics` `#tutorials` `#setup` `#sql`
