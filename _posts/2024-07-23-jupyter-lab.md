@@ -13,6 +13,13 @@ description: JupyterLab is like a magic lab for data scientists, researchers, an
 math: false
 ---
 
+<style>
+  code {
+    white-space : pre-wrap !important;
+    word-break: break-word;
+  }
+</style>
+
 ## Introduction
 
 JupyterLab is your go-to environment for interactive data analysis, blending notebooks, text editors, and terminals into one seamless workspace. It’s like having a digital laboratory where you can experiment, visualize, and document all in real-time. Firstly, this guide will walk you through a hard setup, then we will move on easy setup to get you started swiftly. Using Docker Compose, you can quickly set up JupyterLab on Ubuntu without the usual setup headaches. 
@@ -137,8 +144,8 @@ services:
 
 | **Installation Method** | **Pros** | **Cons** |
 |------------------------ |--------- |--------- |
-| **Manual Installation** | - Full control over environment- Direct access to system resources- No additional overhead (e.g., Docker layer) | - Dependency management can be complex- Higher risk of conflicts between packages- Harder to isolate different environments |
-| **Dockerized Setup** | - Isolated environment prevents dependency conflicts- Easy to share and deploy across different machines- Simple to manage versions and updates- Can easily scale with multiple containers | - Slight performance overhead due to containerization- Requires knowledge of Docker and Docker Compose- Limited direct access to system resources (e.g., hardware acceleration) |
+| **Manual Installation** |• Full control over environment<br>•Direct access to system resources<br>• No additional overhead (e.g., Docker layer) |• Dependency management can be complex<br>• Higher risk of conflicts between packages<br>• Harder to isolate different environments |
+| **Dockerized Setup** |• Isolated environment prevents dependency conflicts<br>• Easy to share and deploy across different machines<br>• Simple to manage versions and updates<br>•Can easily scale with multiple containers |• Slight performance overhead due to containerization<br>• Requires knowledge of Docker and Docker Compose<br>• Limited direct access to system resources (e.g., hardware acceleration) |
 
 ## Conclusion
 
