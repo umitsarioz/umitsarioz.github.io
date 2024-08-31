@@ -164,7 +164,7 @@ Manual installation of JupyterLab offers full control over your environment. You
 
 However, managing dependencies manually can be complex, leading to potential conflicts between packages. This setup also poses a higher risk of version clashes and makes it harder to isolate different environments, which can complicate the management of multiple projects.
 
-## Dockerized Setup: Convenience and Consistency
+### Dockerized Setup: Convenience and Consistency
 
 A Dockerized setup provides an isolated environment that prevents dependency conflicts, making it easier to manage different projects without worrying about package clashes. Sharing and deploying JupyterLab across various machines becomes straightforward, and managing versions and updates is simplified with Docker. Furthermore, Docker’s ability to scale with multiple containers can handle increased workloads efficiently.
 
@@ -183,4 +183,4 @@ JupyterLab is a versatile tool that provides an interactive computing environmen
 >**Dockerized Setup**: This is the best choice for isolating your JupyterLab environment and ensuring that it runs consistently across different machines or setups. It’s easy to share with others and avoids dependency conflicts. However, it does add some overhead, such as managing Docker and storage.
 {: .prompt-tip}
 
-Whichever method you choose, JupyterLab is an indispensable tool for modern computational workflows. By providing an all-in-one interface for coding, documentation, and visualization, JupyterLab continues to empower developers, data scientists, and researchers to explore their data and share insights effectively.
+**Whichever method you choose, JupyterLab is an indispensable tool for modern computational workflows. By providing an all-in-one interface for coding, documentation, and visualization, JupyterLab continues to empower developers, data scientists, and researchers to explore their data and share insights effectively.**
