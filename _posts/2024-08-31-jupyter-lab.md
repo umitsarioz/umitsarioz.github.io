@@ -1,7 +1,7 @@
 ---
 date: 2024-08-31
 title: Jupyter Lab Installation on Debian Linux Server
-image: /assets/img/ss/2024-07-23-jupyter-lab/first.png
+image: /assets/img/ss/2024-08-31-jupyter-lab/first.png
 categories: [Big Data]
 tags: [tutorials, setup, big-data]
 published: true
@@ -38,25 +38,25 @@ JupyterLab is your go-to environment for interactive data analysis, blending not
 
 ## Method 1 : Manual Installation on Linux Debian
 
-![image.png](/assets/img/ss/2024-07-23-jupyter-lab/image.png)
+![image.png](/assets/img/ss/2024-08-31-jupyter-lab/image.png)
 
 - Step 1 — Check python version `python --version` or  `python3 --version`. If it is not installed, then install.
 - Step 2 — Check pip version `pip --version` If it is not installed then install pip `sudo apt install -y python3-pip` . If it is already installed run `sudo apt install --upgrade -y python3-pip`  and `pip install --upgrade pip` commands for updating.
 - Step 3 — Install virtualenv package `pip install virtualenv` to create virtual environment. Then create virtual environment like `virtualenv jupyter-venv` . After that  activate the virtual environment `source jupyter-env/bin/activate` .
 - 
 
-![image.png](/assets/img/ss/2024-07-23-jupyter-lab/image1.png)
+![image.png](/assets/img/ss/2024-08-31-jupyter-lab/image1.png)
 
 - Step 4 — Install Jupyter Lab `pip install jupyterlab` .
 - Step 5 — Find jupyter-lab path `find ~ -name jupyter-lab`
 - Step 6 — Add PATH `echo "export PATH=$PATH:~/jupyter-env/bin/" >> ~/.bashrc`  and after that reload bashrc `source ~/.bashrc` . Then if you need, activate jupyter-env again.
 - Step 7 — Set password  `jupyter-lab password` .This step set password and also generate a json file include hashed password.
 
-![image.png](/assets/img/ss/2024-07-23-jupyter-lab/image2.png)
+![image.png](/assets/img/ss/2024-08-31-jupyter-lab/image2.png)
 
 - Voila! Now,  you can run your Jupyter Lab with `jupyter lab`  or `jupyter lab --ip="localhost" --port=8888 --no-browser --allow-root` .
 
-![image.png](/assets/img/ss/2024-07-23-jupyter-lab/image3.png)
+![image.png](/assets/img/ss/2024-08-31-jupyter-lab/image3.png)
 
 You can login Jupyter Lab [localhost:8888](http://localhost:8888) . If you changed ip or port address or port is already used you can see in logs after started Jupyter Lab like in Figure 4.
 
@@ -75,7 +75,7 @@ You can login Jupyter Lab [localhost:8888](http://localhost:8888) . If you chang
         c.ServerApp.port = 8888 # default port is 8888
         ```
         
-        ![image.png](/assets/img/ss/2024-07-23-jupyter-lab/image4.png)
+        ![image.png](/assets/img/ss/2024-08-31-jupyter-lab/image4.png)
         
 - Step 9 — Create a service for Jupyter Lab,
     - Step 9.1 — Create a services file with `sudo nano /etc/systemd/system/jupyter-lab.service`
@@ -98,13 +98,13 @@ You can login Jupyter Lab [localhost:8888](http://localhost:8888) . If you chang
     WantedBy = multi-user.target
     ```
     
-    ![image.png](/assets/img/ss/2024-07-23-jupyter-lab/image5.png)
+    ![image.png](/assets/img/ss/2024-08-31-jupyter-lab/image5.png)
     
     - Step 9.3 — Reload system daemon `sudo systemctl daemon-reload`
     - Step 9.4 — Start your new Jupyter Lab Service `sudo systemctl start jupyter-lab.service`
     - Step 9.5 — Check your service status is running `sudo systemctl status jupyter-lab.service`
         
-        ![image.png](/assets/img/ss/2024-07-23-jupyter-lab/image6.png)
+        ![image.png](/assets/img/ss/2024-08-31-jupyter-lab/image6.png)
         
 
 Voila! Another milestone is completed, I think this installation is enough for local development/projects. If you want to work remotely with your team/organization, you should add SSL certifi files and do remote port forwarding with nginx etc. There are many resources on the web 🙂 I might be update this post like included with them in the future. 
@@ -119,7 +119,7 @@ If you want a simpler setup that avoids managing dependencies and conflicts, you
 - Step 4 — Create `docker-compose.yml` file
 - Step 5 — Run `docker-compose up -d` and you can reach your JupyterLab [localhost:8889](http://localhost:8889)
 
-![image.png](/assets/img/ss/2024-07-23-jupyter-lab/image_docker.png)
+![image.png](/assets/img/ss/2024-08-31-jupyter-lab/image_docker.png)
 
 ```yaml
 version: '3.8'
