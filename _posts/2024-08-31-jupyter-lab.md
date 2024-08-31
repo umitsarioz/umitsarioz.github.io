@@ -1,6 +1,6 @@
 ---
 date: 2024-08-31
-title: Jupyter Lab Installation on Debian Linux Server
+title: Jupyter Lab Installation on Ubuntu (Linux) 
 image: /assets/img/ss/2024-08-31-jupyter-lab/first.png
 categories: [Big Data]
 tags: [tutorials, setup, big-data]
