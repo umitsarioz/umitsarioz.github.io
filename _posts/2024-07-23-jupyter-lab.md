@@ -1,5 +1,5 @@
 ---
-date: 2024-07-23
+date: 2024-08-31
 title: Jupyter Lab Installation on Debian Linux Server
 image: /assets/img/ss/2024-07-23-jupyter-lab/first.png
 categories: [Big Data]
@@ -13,7 +13,7 @@ description: JupyterLab is like a magic lab for data scientists, researchers, an
 math: false
 ---
 
-# Intro
+## Introduction
 
 JupyterLab is your go-to environment for interactive data analysis, blending notebooks, text editors, and terminals into one seamless workspace. It’s like having a digital laboratory where you can experiment, visualize, and document all in real-time. Firstly, this guide will walk you through a hard setup, then we will move on easy setup to get you started swiftly. Using Docker Compose, you can quickly set up JupyterLab on Ubuntu without the usual setup headaches. 
 
