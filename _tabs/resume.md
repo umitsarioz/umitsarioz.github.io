@@ -2,6 +2,7 @@
 icon: fa-solid fa-file
 order: 5
 ---
+
 <div style='float:right;'>
 <a href="/assets/UmitSariozResume.pdf" download class="download-button"><i class="fa fa-download" aria-hidden="true"></i></a>
 </div>
