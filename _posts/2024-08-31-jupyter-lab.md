@@ -14,7 +14,19 @@ math: false
 ---
 
 <style>
+  body .tablelines table, 
+  body .tablelines td, 
+  body .tablelines th {
+      border: 1px solid black; padding:10px;
+      white-space : pre-wrap !important;
+      word-break: break-word;
+  }
+
   code {
+    white-space : pre-wrap !important;
+    word-break: break-word;
+  }
+  mark{
     white-space : pre-wrap !important;
     word-break: break-word;
   }
