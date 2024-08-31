@@ -2,8 +2,8 @@
 date: 2024-09-01
 title: Install Apache Cassandra on Ubuntu (Linux) 
 image: /assets/img/ss/2024-09-01-install-apache-cassandra/first.png
-categories: [Big Data]
-tags: [tutorials, setup, big-data]
+categories: [DevOps]
+tags: [tutorials, setup, devops, big-data]
 published: true
 pin: false 
 mermaid : false 

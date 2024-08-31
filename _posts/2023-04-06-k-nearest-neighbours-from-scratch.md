@@ -2,8 +2,8 @@
 date: 2023-04-06
 title: Your Friendly Neighborhood Algorithm is KNN
 image: /assets/img/ss/2023-04-06-k-nearest-neighbours-from-scratch/knn1.png
-categories: [Machine Learning,Supervised Learning]
-tag: [algorithms, from-scratch]
+categories: [Data Science, Machine Learning]
+tags: [algorithms, supervised-learning, from-scratch]
 #pin: true 
 published: true
 math: true

@@ -2,7 +2,7 @@
 date: 2023-03-09
 title: A Modern Guide | Linearity and Non-Linearity in Machine Learning  
 image: /assets/img/ss/2023-03-09-linearity/first.jpg
-categories: [Basics]
+categories: [Data Science, Statistics]
 tags: [basics, from-scratch, tutorials]
 published: true
 math: true

@@ -3,7 +3,7 @@ date: 2024-08-30
 title: Apache Kafka Overview
 image: /assets/img/ss/2024-08-30-apache-kafka/first.png
 categories: [Big Data]
-tags: [basics, tutorials, setup, big-data, streaming, apache]
+tags: [basics, tutorials, devops, big-data, streaming, apache]
 published: true
 pin: true 
 mermaid : true 
