@@ -155,7 +155,7 @@ To enable service for cassandra `sudo systemctl enable cassandra` should be run.
 > If cluster names are different, then nodes can not be connected each other properly when seeds are same.
 {: .prompt-warning}
 
-## Challenges
+## Possible Bugs
 - Your server locale should be en_US.UTF-8, `locale` 
 - Ports should be unused, you can check eg. `netstat -tulnp | grep 7199` 
 - Ports can be allowed, `ufw allow 7199/tcp` 
