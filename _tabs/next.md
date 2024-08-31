@@ -49,5 +49,10 @@ order: 4
 - [ ] airflow `#basics` `#tutorials` `#setup` `#big-data` `#ci-cd` `#apache`
 - [ ] regression `#basics` `#tutorials` `#projects`
 - [ ] classification `#basics` `#tutorials` `#projects`
+- [ ] association `#unsupervised-learning` `#algorithms` `#from-scratch`
+- [ ] pca `#unsupervised-learning` `#algorithms` `#from-scratch`
+- [ ] svd `#unsupervised-learning` `#algorithms` `#from-scratch` 
+- [ ] elk `#devops` `#big-data` `#setup`
+- [ ] grafana `#devops` `#setup` 
 
 
