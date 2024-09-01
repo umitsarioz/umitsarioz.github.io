@@ -1,6 +1,6 @@
 ---
 date: 2024-08-31
-title: Jupyter Lab Installation on Ubuntu (Linux) 
+title: Jupyter Lab Installation on Ubuntu
 image: /assets/img/ss/2024-08-31-jupyter-lab/first.png
 categories: [DevOps]
 tags: [tutorials, setup, devops, big-data]

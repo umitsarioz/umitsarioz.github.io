@@ -1,6 +1,6 @@
 ---
 date: 2024-08-30
-title: Apache Kafka Overview
+title: Apache Kafka on Ubuntu | Architecture, Installation, and Usage
 image: /assets/img/ss/2024-08-30-apache-kafka/first.png
 categories: [Big Data]
 tags: [basics, tutorials, devops, big-data, streaming, apache]
