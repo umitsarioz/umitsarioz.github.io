@@ -38,6 +38,10 @@ This is the bread and butter of linear models. You’ve got one input and one ou
 ### 2. Multi Linear Regression
 
 Sometimes, one input isn’t enough. Maybe you want to predict house prices based on square footage, number of bedrooms, and location. That’s where multi linear regression comes in—it lets you handle several inputs at once, drawing a straight line through multi-dimensional space (don’t worry, the math handles that for you).
+
+>$$\text{Sum of Squared Errors}(y, \hat{y}) = {\sum_{i=0}^{N - 1} (y_i - \hat{y}_i)^2}$$
+{: .prompt-tip}
+
 ### 3. Lasso and Ridge Regression
 
 These are fancier versions of multiple linear regression that include something called regularization. Without getting too deep into the weeds, regularization helps prevent your model from getting too fancy with the data, which can actually make it less accurate on new data. Lasso and Ridge are your go-to tools when you want to avoid overfitting.
