@@ -36,7 +36,6 @@ Another perk? Decision trees do not care about whether your data is on the same 
 
 ## Overview of Decision Trees
 
-
 ![dtree2](/assets/img/ss/2023-07-08-decision-trees/dtree_structure2.webp)
 _Decision Tree Structure_
 
@@ -63,14 +62,13 @@ In these formulas:
 - $H(D)$, $H(D_{left})$, and $H(D_{right})$ are the entropies or Gini impurities before and after the split.
 
 
-## Pros and Cons of Decision Trees: The Good, The Bad, and The Twisty
-
-### Pros:
+## Pros and Cons of Decision Trees
+#### Advantages
 - **Crystal clear:** The decisions are laid out in a way that anyone can follow.
 - **Flexibility:** Trees work well with both numbers and categories, and you don’t need to do a ton of data prep beforehand.
 - **Handles complexity:** Trees can capture complex relationships that simpler models might miss.
-
-### Cons:
+  
+#### Disadvantages
 - **Overfitting danger:** If you let the tree grow too deep, it starts to memorize the data rather than learn from it—kind of like a detective who sees conspiracies everywhere. Pruning the tree or limiting its depth helps prevent this.
 - **A bit fickle:** Small changes in the data can sometimes result in a totally different tree, which makes them less stable than other models.
 - **Bias risk:** Trees can sometimes get obsessed with features that have many levels or categories, ignoring others that might be more important.
@@ -183,7 +181,7 @@ def _traverse_tree(self, data_point, node):
 ![irisdataset](/assets/img/ss/2023-07-08-decision-trees/iris-machinelearning.png)
 _Iris Dataset. Image by <a href="https://www.datacamp.com/tutorial/machine-learning-in-r">Datacamp</a>_ 
 
-We can test our decision tree on well-known datasets such as the Iris and Wine datasets.
+We can test our decision tree on well-known datasets such as the Iris dataset.
 
 ```python
 def test_with_iris_dataset():
