@@ -41,7 +41,7 @@ Another perk? Decision trees do not care about whether your data is on the same 
 _Decision Tree Structure_
 
 
-In a decision tree, each internal node represents a test or condition on a feature (e.g., "Is Feature 1 greater than 5?"), each branch represents the outcome of that condition, and each leaf node represents a class label or final decision. The algorithm splits data by selecting the feature and threshold that provides the highest information gain (or lowest impurity).
+In a decision tree, each decision(internal) node represents a test or condition on a feature (e.g., "Is Feature 1 greater than 5?"), each branch represents the outcome of that condition, and each leaf node represents a class label or final decision. The algorithm splits data by selecting the feature and threshold that provides the highest information gain (or lowest impurity).
 
 <u><b>Common Splitting Criteria:</b></u>
 
