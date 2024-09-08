@@ -13,7 +13,7 @@ order: 4
 - [x] linear models `#algorithms` `#from-scratch`
 - [x] k nearest neighbour `#algorithms` `#from-scratch`
 - [x] kmeans `#algorithms` `#from-scratch` 
-- [ ] decision trees `#from-scratch`, `#algorithms`
+- [x] decision trees `#from-scratch`, `#algorithms`
 - [ ] artificial neural networks `#from-scratch` `#deep-learning`
 - [x] convolutional neural networks `#deep-learning` `#architectures` `#paper` `#projects`
 - [x] densenet `#deep-learning` `#architectures` `#paper` `#projects`
