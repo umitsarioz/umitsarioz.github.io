@@ -8,37 +8,45 @@ order: 4
 
 - [x] install python `#setup` `#tutorials` 
 - [x] pip `#python` 
+- [x] jupyter `#tutorials`, `#setup`, `#big-data`
+- [x] data scientist 101 packages `#python` `#devops` `#setup`
 - [x] logging `#python` `#tricks`
 - [x] linearity `#basics` `#from-scratch` `#tutorials`  
 - [x] linear models `#algorithms` `#from-scratch`
 - [x] k nearest neighbour `#algorithms` `#from-scratch`
 - [x] kmeans `#algorithms` `#from-scratch` 
 - [x] decision trees `#from-scratch`, `#algorithms`
-- [ ] artificial neural networks `#from-scratch` `#deep-learning`
+- [ ] naive bayes `#supervised-learning` `#algorithms` `#from-scratch`
 - [x] convolutional neural networks `#deep-learning` `#architectures` `#paper` `#projects`
 - [x] densenet `#deep-learning` `#architectures` `#paper` `#projects`
-- [ ] transformer architecture  `#from-scratch` `#deep-learning` `#architectures` `#paper`
-- [ ] optimization algorithms in neural networks `#algorithms` `#deep-learning`
-- [ ] backpropagation & forward pass in neural networks `#deep-learning`
-- [ ] activation functions `#deep-learning` `#basics`
-- [ ] pytorch `#setup` `#tutorials` `#frameworks`
-- [ ] embedding, tokenization, quantization `#basics` `#deep-learning`
+- [ ] apriori `#unsupervised-learning` `#algorithms` `#from-scratch` `assosication`
+- [ ] principal component analysis `#unsupervised-learning` `#algorithms` `#from-scratch` `dimensionality-reduction`
+- [ ] singular value decomposition `#unsupervised-learning` `#algorithms` `#from-scratch` `dimensionality-reduction`
+- [ ] hierarchial clustering `#unsupervised-learning` `#algorithms` `#from-scratch` `#clustering`
+- [ ] independent component analysis  `#unsupervised-learning` `#algorithms` `#from-scratch` `dimensionality-reduction`
+- [ ] artificial neural networks `#from-scratch` `#deep-learning`
+  - [ ]  optimization algorithms `#algorithms` `#deep-learning`
+  - [ ]  backpropagation & forward pass `#deep-learning`
+  - [ ]  activation functions `#deep-learning` `#basics`
 - [ ] llm `#basics` `#nlp` `#deep-learning`
-- [ ] rag `#basics` `#nlp` `#projects`
-- [ ] chatbot `#nlp` `#tutorials` `#projects`
+  - [ ] transformer architecture  `#from-scratch` `#deep-learning` `#architectures` `#paper`  
+  - [ ] embedding, tokenization, quantization `#basics` `#deep-learning`
+  - [ ] rag `#basics` `#nlp` `#projects`
+  - [ ] chatbot `#nlp` `#tutorials` `#projects`
 - [ ] generative ai, vae `#genai` `#deep-learning`
 - [ ] clustering algorithms `#algorithms` `#clustering`
 - [ ] evaluation metrics `#metrics` `#clustering`
+  - [ ] clustering
+  - [ ] llm
+  - [ ] classification
+  - [ ] regression
 - [ ] graph algorithms `#graph` `#algorithms` `#tutorials` 
-- [ ] time series tricks `#algorithms` `#basics` `#time-series`
-- [ ] arima & sarima `#algorithms` `#from-scratch` `#time-series`
-- [ ] prophet `#time-series` `#frameworks`
+- [ ] time-series  `#algorithms` `#basics` `#time-series`
+  - [ ] rnn & lstm 
+  - [ ] arima & sarima `#algorithms` `#from-scratch` `#time-series`
+  - [ ] prophet `#time-series` `#frameworks`
 - [ ] anomaly detection `#algorithms` `#tutorials` `#basics`
-- [ ] price optimization `#algorithms` `#optimization` `#tutorials` `#projects`
-- [ ] stock optimization `#algorithms` `#optimization` `#tutorials` `#projects`
-- [ ] traffic optimization `#algorithms` `#optimization` `#tutorials` `#projects`
-- [x] jupyter `#tutorials`, `#setup`, `#big-data`
-- [ ] data scientist 101 packages `#frameworks` `#tutorials` `#projects`
+- [ ] price/traffic/stock optimization `#algorithms` `#optimization` `#tutorials` `#projects`
 - [ ] docker `#basics` `#tutorials` `#setup`
 - [ ] postgresql `#basics` `#tutorials` `#setup` `#sql`
 - [ ] mongodb `#basics` `#tutorials` `#setup` `#nosql`
@@ -47,14 +55,7 @@ order: 4
 - [x] kafka `#basics` `#tutorials` `#setup` `#big-data` `#streaming` `#apache`
 - [ ] flink `#basics` `#tutorials` `#setup` `#big-data` `#streaming` `#apache`
 - [ ] airflow `#basics` `#tutorials` `#setup` `#big-data` `#ci-cd` `#apache`
-- [ ] regression `#basics` `#tutorials` `#projects`
-- [ ] classification `#basics` `#tutorials` `#projects`
-- [ ] apriori `#unsupervised-learning` `#algorithms` `#from-scratch` `assosication`
-- [ ] principal component analysis `#unsupervised-learning` `#algorithms` `#from-scratch` `dimensionality-reduction`
-- [ ] singular value decomposition `#unsupervised-learning` `#algorithms` `#from-scratch` `dimensionality-reduction`
-- [ ] hierarchial clustering `#unsupervised-learning` `#algorithms` `#from-scratch` `#clustering`
-- [ ] independent component analysis  `#unsupervised-learning` `#algorithms` `#from-scratch` `dimensionality-reduction`
 - [ ] elk `#devops` `#big-data` `#setup`
 - [ ] grafana `#devops` `#setup` 
-- [ ] naive bayes `#supervised-learning` `#algorithms` `#from-scratch`
+
 
