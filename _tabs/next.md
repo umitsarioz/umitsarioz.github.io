@@ -19,7 +19,7 @@ order: 4
 - [ ] naive bayes `#supervised-learning` `#algorithms` `#from-scratch`
 - [x] convolutional neural networks `#deep-learning` `#architectures` `#paper` `#projects`
 - [x] densenet `#deep-learning` `#architectures` `#paper` `#projects`
-- [ ] apriori `#unsupervised-learning` `#algorithms` `#from-scratch` `assosication`
+- [x] apriori `#unsupervised-learning` `#algorithms` `#from-scratch` `assosication`
 - [ ] principal component analysis `#unsupervised-learning` `#algorithms` `#from-scratch` `dimensionality-reduction`
 - [ ] singular value decomposition `#unsupervised-learning` `#algorithms` `#from-scratch` `dimensionality-reduction`
 - [ ] hierarchial clustering `#unsupervised-learning` `#algorithms` `#from-scratch` `#clustering`
