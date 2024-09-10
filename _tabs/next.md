@@ -16,7 +16,7 @@ order: 4
 - [x] k nearest neighbour `#algorithms` `#from-scratch`
 - [x] kmeans `#algorithms` `#from-scratch` 
 - [x] decision trees `#from-scratch`, `#algorithms`
-- [ ] naive bayes `#supervised-learning` `#algorithms` `#from-scratch`
+- [x] naive bayes `#supervised-learning` `#algorithms` `#from-scratch`
 - [x] convolutional neural networks `#deep-learning` `#architectures` `#paper` `#projects`
 - [x] densenet `#deep-learning` `#architectures` `#paper` `#projects`
 - [x] apriori `#unsupervised-learning` `#algorithms` `#from-scratch` `assosication`
