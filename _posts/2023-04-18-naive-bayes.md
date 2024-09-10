@@ -45,7 +45,7 @@ Where:
 
 Let’s solve a basic Naive Bayes problem step-by-step.
 
-** Problem Statement: Suppose we have a dataset with two features $x_1$​ and $x_2$​ and a binary class label $C$. We want to classify a new data point ($x_1^′$,$x_2^′$).
+** Problem Statement:** Suppose we have a dataset with two features $x_1$​ and $x_2$​ and a binary class label $C$. We want to classify a new data point ($x_1^′$,$x_2^′$).
 
 ![parts](/assets/img/ss/2023-04-18-naive-bayes/bayes2.png)
 
@@ -102,33 +102,44 @@ Naive Bayes is a classification technique based on Bayes' theorem, assuming that
 
 $$\text{Formula} \rightarrow P(x_i \mid C) = \frac{1}{\sqrt{2 \pi \sigma_i^2}} \exp \left( -\frac{(x_i - \mu_i)^2}{2 \sigma_i^2} \right)$$
 
-<span style='background:#244027;border-radius:2rem;'>`+`Simple and efficient with continuous data; works well with normally distributed data.</span><br>
+>**`+`** Simple and efficient with continuous data; works well with normally distributed data.
+{: .prompt-tip}
 
-<span style='background-color:#fb654e;border-radius:2rem;'>`-`Assumes features are normally distributed, which may not always be true.</span>
+>**`-`** Assumes features are normally distributed, which may not always be true.
+{: .prompt-error}
 
 ### Multinomial Naive Bayes:
 - **Usage:** Suitable for discrete data, such as word counts in text classification.
 
 $$\text{Formula} \rightarrow P(x_j \mid C) = \frac{N_{Cj} + \alpha}{N_C + \alpha \cdot |V|}$$
 
-<span style='background:#244027;border-radius:2rem;'>`+`Effective for text classification with large vocabularies; handles feature count data well.</span><br>
-<span style='background-color:#fb654e;border-radius:2rem;'>`-`Assumes that feature counts are conditionally independent.</span><br>
+>**`+`** Effective for text classification with large vocabularies; handles feature count data well.
+{: .prompt-tip}
+
+>**`-`** Assumes that feature counts are conditionally independent.
+{: .prompt-error}
 
 ### Bernoulli Naive Bayes:
 - **Usage:** Ideal for binary/boolean features.
 
 $$\text{Formula} \rightarrow P(x_j \mid C) = \frac{N_{Cj} + \alpha}{N_C + \alpha \cdot 2}$$
 
-<span style='background:#244027;border-radius:2rem;'>`+`Suitable for binary/boolean data; handles presence/absence features well.</span><br>
-<span style='background-color:#fb654e;border-radius:2rem;'>`-`Assumes features are binary, which may not always be the case.
-</span><br>
+>**`+`** Suitable for binary/boolean data; handles presence/absence features well.
+{: .prompt-tip}
+
+>**`-`** Assumes features are binary, which may not always be the case.
+{: .prompt-error}
+
 ### Complement Naive Bayes:
 - **Usage:** Designed to handle imbalanced datasets better.
 
 $$\text{Formula} \rightarrow P(x_j \mid C) = \frac{N_{C'j} + \alpha}{N_{C'} + \alpha \cdot |V|}$$
 
-<span style='background:#244027;border-radius:2rem;'>`+`Addresses class imbalance by using feature probabilities from the complement of each class.</span><br>
-<span style='background-color:#fb654e;border-radius:1rem;'>`-`More complex to implement; may not perform well on balanced datasets.</span><br>
+>**`+`** Addresses class imbalance by using feature probabilities from the complement of each class.
+{: .prompt-tip}
+
+>**`-`** More complex to implement; may not perform well on balanced datasets.
+{: .prompt-error}
 
 ## Advantages and Disadvantages of Naive Bayes
 
