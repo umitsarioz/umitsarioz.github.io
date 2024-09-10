@@ -106,7 +106,7 @@ $$\text{Formula} \rightarrow P(x_i \mid C) = \frac{1}{\sqrt{2 \pi \sigma_i^2}} \
 {: .prompt-tip}
 
 >**`-`** Assumes features are normally distributed, which may not always be true.
-{: .prompt-error}
+{: .prompt-danger}
 
 ### Multinomial Naive Bayes:
 - **Usage:** Suitable for discrete data, such as word counts in text classification.
@@ -117,7 +117,7 @@ $$\text{Formula} \rightarrow P(x_j \mid C) = \frac{N_{Cj} + \alpha}{N_C + \alpha
 {: .prompt-tip}
 
 >**`-`** Assumes that feature counts are conditionally independent.
-{: .prompt-error}
+{: .prompt-danger}
 
 ### Bernoulli Naive Bayes:
 - **Usage:** Ideal for binary/boolean features.
@@ -128,7 +128,7 @@ $$\text{Formula} \rightarrow P(x_j \mid C) = \frac{N_{Cj} + \alpha}{N_C + \alpha
 {: .prompt-tip}
 
 >**`-`** Assumes features are binary, which may not always be the case.
-{: .prompt-error}
+{: .prompt-danger}
 
 ### Complement Naive Bayes:
 - **Usage:** Designed to handle imbalanced datasets better.
@@ -139,7 +139,7 @@ $$\text{Formula} \rightarrow P(x_j \mid C) = \frac{N_{C'j} + \alpha}{N_{C'} + \a
 {: .prompt-tip}
 
 >**`-`** More complex to implement; may not perform well on balanced datasets.
-{: .prompt-error}
+{: .prompt-danger}
 
 ## Advantages and Disadvantages of Naive Bayes
 
