@@ -7,7 +7,7 @@ tags: [algorithms, supervised-learning, from-scratch]
 #pin: true 
 published: true
 math: true
-description: Naive Bayes is a family of probabilistic classifiers based on Bayes' theorem with the "naive" assumption that features are conditionally independent given the class label. Despite this simplification, Naive Bayes classifiers often perform remarkably well on a variety of problems, especially with text classification and real-world datasets. This blog post explores the foundation of Bayes' theorem, its formula, and applications in real life. We will then delve into the mathematical underpinnings and step-by-step solutions for a basic Naive Bayes problem. We'll cover different types of Naive Bayes classifiers, including Gaussian, Multinomial, Bernoulli, and Complement Naive Bayes, discussing their advantages, disadvantages, and practical applications. Finally, we will code each classifier from scratch in Python, culminating in a comprehensive implementation of a combined Naive Bayes classifier.
+description: Naive Bayes is a family of probabilistic classifiers based on Bayes' theorem with the "naive" assumption that features are conditionally independent given the class label. Despite this simplification, Naive Bayes classifiers often perform remarkably well on a variety of problems, especially with text classification and real-world datasets. This blog post explores the foundation of Bayes' theorem, its formula, and applications in real life.
 ---
 
 ## Introduction
