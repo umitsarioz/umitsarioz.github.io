@@ -3,7 +3,7 @@ date: 2024-09-13
 title: Singular Value Decomposition (SVD) 
 image: /assets/img/ss/2023-05-01-singular-value-decompositon/first.png
 categories: [Data Science, Linear Algebra]
-tags: [linear-algebra, from-scratch]
+tags: [algorithms,unsupervised-learning, from-scratch]
 pin: false
 published: true
 math: true
@@ -51,7 +51,7 @@ Where $v$ is an eigenvector and $λ$ is its corresponding eigenvalue. SVD builds
 
 ## Eigenvalues and Eigenvectors: What Are They?
 
-![eigenj.](/assets/img/ss/2023-05-01-singular-value-decompositon/eigenj.webp)
+![eigenj.](/assets/img/ss/2023-05-01-singular-value-decompositon/eigenj.png)
 _It may be true_ 
 
 To understand SVD, we need to know about **eigenvalues** and **eigenvectors**. These are concepts from linear algebra that help us understand transformations (how things like matrices can stretch or rotate a shape).
