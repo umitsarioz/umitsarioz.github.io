@@ -51,8 +51,8 @@ Where $v$ is an eigenvector and $λ$ is its corresponding eigenvalue. SVD builds
 
 ## Eigenvalues and Eigenvectors: What Are They?
 
-![eigens](/assets/img/ss/2023-05-01-singular-value-decompositon/eigen.gif)
-_Image Source <a hreF="https://commons.wikimedia.org/wiki/File:Eigenvectors-extended.gif"> Wikimedia</a>_
+![eigenj.](/assets/img/ss/2023-05-01-singular-value-decompositon/eigenj.webp)
+_It may be true_ 
 
 To understand SVD, we need to know about **eigenvalues** and **eigenvectors**. These are concepts from linear algebra that help us understand transformations (how things like matrices can stretch or rotate a shape).
 
@@ -64,6 +64,10 @@ Imagine pushing on a piece of elastic. The eigenvector is the direction in which
 
 In SVD, the eigenvalues are connected to the singular values, and the eigenvectors make up the U and V matrices. Together, they give us a way to understand the directions in which the matrix "pulls" the data.
 If you want to learn more about eigen vectors and eigen values, i highly recommended you to watch <a href="https://www.youtube.com/watch?v=PFDu9oVAE-g&list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab&t=2s">3Blue1Brown's video</a>
+
+
+![eigens](/assets/img/ss/2023-05-01-singular-value-decompositon/eigen.gif)
+_Image Source <a hreF="https://commons.wikimedia.org/wiki/File:Eigenvectors-extended.gif"> Wikimedia</a>_
 
 ## Subspaces and Dimensions: What Are We Doing with the Data?
 
