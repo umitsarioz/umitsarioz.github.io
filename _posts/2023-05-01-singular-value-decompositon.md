@@ -517,6 +517,7 @@ $$
 ### Step 6: Verification 
 
 Now, we applied singular value decomposition method for $A$ matrix.
+
 $$
 U = \begin{bmatrix} 
 0.65 & 1.32 \\
@@ -542,12 +543,10 @@ A = U \Sigma V^T = \begin{bmatrix}
 0.95 & -1.45 
 \end{bmatrix}
 \cdot 
-
 \begin{bmatrix} 
 4.76 & 0 \\
 0 & 0.63 
 \end{bmatrix}
-
 \cdot \begin{bmatrix} 
 0.8 & -0.6 \\
 0.6 & 0.8 
@@ -567,6 +566,7 @@ Let's say we want to truncate or dimension reduction to rank 1 for A matrix. We 
 
 #### Step 1: Analyze the Singular Value Matrix $\Sigma$ 
 The diagonal matrix $\Sigma$ contains the singular values, which are non-negative and arranged in descending order. In this case, the matrix $\Sigma$ is:
+
 $$
 \begin{bmatrix} 
 4.76 & 0 \\
@@ -620,12 +620,12 @@ V =
 0.8 & 0.6 \\
 -0.6 & 0.8 
 \end{bmatrix}
-
 $$ 
 
 Similar to $U$, each row of $V^T$ corresponds to a singular value in $\Sigma$. For rank-1 truncation, we keep only the first row of $V^T$, which corresponds to the largest singular value $4.76$.
 
 Thus, the truncated $V_1^T$ matrix becomes:
+
 $$
 V_1^T = 
 \begin{bmatrix} 
@@ -649,7 +649,6 @@ $$
 > Multiply $U_1$​ and $\Sigma_1$ : 
 
 $$ 
-
 \begin{bmatrix} 
 0.65 \\
 0.95 
@@ -728,10 +727,13 @@ A_1 =
 
 $$
 
+<hr>
+
 ## Step-by-Step SVD in Python
 
 - Install NumPy to work with matrices : `pip install numpy` 
 - Perform SVD with NumPy
+
 ```python
 import numpy as np
 
@@ -751,6 +753,7 @@ print(S)
 print("\nV^T Matrix:")
 print(VT)
 ```
+
 ![1.png1](/assets/img/ss/2023-05-01-singular-value-decompositon/1.png)
 
 
@@ -789,7 +792,7 @@ print(A_reduced)
 
 ![3.png1](/assets/img/ss/2023-05-01-singular-value-decompositon/3.png)
 
-> Last but not least, you can use svd with scikit-learn 
+> Last but not least, you can use Singular Value Decomposition with scikit-learn Truncated_SVD.
 {: .prompt-tip}
 
 ## Conclusion
