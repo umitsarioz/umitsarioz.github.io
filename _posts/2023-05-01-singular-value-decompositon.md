@@ -102,7 +102,7 @@ By keeping only the most important singular values, we can reduce the number of 
         SVD can also be used to compress images. By decomposing the image into singular values and truncating the less important ones, we can reduce the file size without losing much visual quality.
 
 ![reduce.png](/assets/img/ss/2023-05-01-singular-value-decompositon/demo.gif)
-_Projection of  Principal Component1_
+_Projection of  Principal Component1.gif_
 
  
 ## SVD in Matrix Form
