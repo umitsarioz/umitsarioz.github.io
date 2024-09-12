@@ -10,8 +10,6 @@ math: true
 description: Singular Value Decomposition (SVD) is one of the most important concepts in linear algebra and has broad applications in data science, machine learning, and other computational fields. It’s used in tasks like dimensionality reduction, noise reduction, and recommendation systems.In this guide, I’ll walk you through everything you need to know about SVD, from basic concepts to complex mathematical formulas, real-world examples, Python implementation, and its advantages and disadvantages.
 ---
 
-![c1.png](/assets/img/ss/2023-05-01-singular-value-decompositon/nnn.png)
-
 Singular Value Decomposition (SVD) is a mathematical technique that factorizes a matrix $A$ into three simpler matrices: $U$, $Σ$, and $V^T$. This decomposition allows us to express the original matrix as a product of these matrices, which makes it easier to analyze and manipulate.The formula for SVD is:
 
 $$ A = U Σ V^T$$
@@ -23,6 +21,10 @@ Where:
 - $V^T$ is the transpose of an $n×n$ orthogonal matrix (right singular vectors).
 
 This decomposition has a range of applications in unsupervised learning (like PCA), recommendation systems (like Netflix and Amazon), and Google's PageRank algorithm.
+
+
+![c1.png](/assets/img/ss/2023-05-01-singular-value-decompositon/nnn.png)
+
 
 ## Components of SVD
 
