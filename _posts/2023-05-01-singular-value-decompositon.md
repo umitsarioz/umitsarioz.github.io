@@ -49,6 +49,9 @@ Where $v$ is an eigenvector and $λ$ is its corresponding eigenvalue. SVD builds
 
 ## Eigenvalues and Eigenvectors: What Are They?
 
+![eigens](/assets/img/ss/2023-05-01-singular-value-decompositon/eigen.gif)
+_Image Source <a hreF="https://commons.wikimedia.org/wiki/File:Eigenvectors-extended.gif"> Wikimedia</a>_
+
 To understand SVD, we need to know about **eigenvalues** and **eigenvectors**. These are concepts from linear algebra that help us understand transformations (how things like matrices can stretch or rotate a shape).
 
 - **Eigenvectors** are special vectors that don’t change direction when a matrix is applied to them. They can stretch or shrink but always point in the same direction.
@@ -93,8 +96,9 @@ By keeping only the most important singular values, we can reduce the number of 
         SVD can also be used to compress images. By decomposing the image into singular values and truncating the less important ones, we can reduce the file size without losing much visual quality.
 
 ![reduce.png](/assets/img/ss/2023-05-01-singular-value-decompositon/demo.gif)
+_Projection of  Principal Component1_
 
-
+ 
 ## SVD in Matrix Form
 
 Given a matrix $A$, the SVD is:
