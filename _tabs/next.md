@@ -21,7 +21,7 @@ order: 4
 - [x] densenet `#deep-learning` `#architectures` `#paper` `#projects`
 - [x] apriori `#unsupervised-learning` `#algorithms` `#from-scratch` `assosication`
 - [ ] principal component analysis `#unsupervised-learning` `#algorithms` `#from-scratch` `dimensionality-reduction`
-- [ ] singular value decomposition `#unsupervised-learning` `#algorithms` `#from-scratch` `dimensionality-reduction`
+- [x] singular value decomposition `#unsupervised-learning` `#algorithms` `#from-scratch` `dimensionality-reduction`
 - [ ] hierarchial clustering `#unsupervised-learning` `#algorithms` `#from-scratch` `#clustering`
 - [ ] independent component analysis  `#unsupervised-learning` `#algorithms` `#from-scratch` `dimensionality-reduction`
 - [ ] artificial neural networks `#from-scratch` `#deep-learning`

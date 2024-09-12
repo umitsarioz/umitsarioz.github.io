@@ -3,7 +3,7 @@ date: 2024-09-13
 title: Singular Value Decomposition (SVD) 
 image: /assets/img/ss/2023-05-01-singular-value-decompositon/first.png
 categories: [Data Science, Linear Algebra]
-tags: [algorithms,unsupervised-learning, from-scratch]
+tags: [algorithms,unsupervised-learning,dimensionality-reduction, from-scratch]
 pin: false
 published: true
 math: true
