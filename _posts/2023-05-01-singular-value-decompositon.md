@@ -114,11 +114,25 @@ $$A = U \Sigma V^T $$
 
 Where $U$, $Σ$, and $V^T$ look like:
 
-- $U = [u_1​,u_2​,...,u_m​ ]_{1xm} \ \text{(left singular vectors)}$ 
+$$ 
+\rightarrow  
+U = [u_1​,u_2​,...,u_m​ ]_{1xm} \ \text{(left singular vectors)}
+$$ 
 
-- $\Sigma = diag(σ_1,σ_2,...,σ_k) \ \text{(singular values)}$ ,
+$$
+\rightarrow \ 
+\Sigma = diag(σ_1,σ_2,...,σ_k) \ \text{(singular values)}
+$$
 
-- $V^T = \begin{bmatrix} v_1^T \\ v_2^T \\ \vdots \\ v_n^T \end{bmatrix}\ \text{(right singular vectors)}$
+$$
+\rightarrow \ 
+V^T =
+\begin{bmatrix} 
+v_1^T \\ 
+v_2^T \\ 
+\vdots \\ 
+v_n^T 
+\end{bmatrix} \text{(right singular vectors)}$$
 
 **Key Properties:** 
 
