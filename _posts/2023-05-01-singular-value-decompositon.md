@@ -118,7 +118,7 @@ Where $U$, $Σ$, and $V^T$ look like:
 
 - $\Sigma = diag(σ_1,σ_2,...,σ_k) \ \text{(singular values)}$ ,
 
-- $V^T = \begin{bmatrix} v_1^T \\v_2^T \\\vdots \\v_n^T\end{bmatrix}\ \text{(right singular vectors)}$
+- $V^T = \begin{bmatrix} v_1^T \\ v_2^T \\ \vdots \\ v_n^T \end{bmatrix}\ \text{(right singular vectors)}$
 
 **Key Properties:** 
 
@@ -232,12 +232,14 @@ $
 \sigma_1 = \sqrt \lambda_1 = \sqrt 22.6  \approx 4.76 \\\ \\ \sigma_2 = \sqrt \lambda_2 = \sqrt 0.4 \approx 0.63
 $ 
 
+>
 $$
 \Sigma = \begin{bmatrix} 
 4.76 & 0 \\
 0 & 0.63 
 \end{bmatrix}
-$$ 
+$$
+{: .prompt-info} 
 
 ### Step 4: Compute Eigenvectors of $AA^T$ ($U$)
 
@@ -273,15 +275,19 @@ $$
 $$
 u_2 = \frac{17.6}{9} \times u_1 \approx 1.96 \times u_1
 $$
+
 $$
 \| u \| = \sqrt{u_1^2 + u_2^2} = \sqrt{u_1^2 + (1.96 \cdot u_1)^2} = u_1 \sqrt{1 + 1.96^2} = u_1 \times \sqrt{4.82}
 $$
+
 $$
 u_1 = \frac{1}{\sqrt{4.82}} \approx 0.46
 $$
+
 $$
 u_2 = 1.96 \times 0.46 \approx 0.89
 $$
+
 $$
 U_1 = \begin{bmatrix} 0.46 \\ 0.89 \end{bmatrix}
 $$
@@ -428,15 +434,19 @@ $$
 $$
 v_2 = \frac{12.6}{11} \times v_1 \approx 1.45 \times v_1
 $$
+
 $$
 \| v \| = \sqrt{v_1^2 + v_2^2} = \sqrt{v_1^2 + (1.45 \cdot v_1)^2} = v_1 \sqrt{1 + 1.45^2} = v_1 \times \sqrt{2.31}
 $$
+
 $$
 v_1 = \frac{1}{\sqrt{2.31}} \approx 0.65
 $$
+
 $$
 v_2 = 1.45 \times 0.65 \approx 0.95
 $$
+
 $$
 V_1 = \begin{bmatrix} 0.65 \\ 0.95 \end{bmatrix}
 $$
@@ -504,8 +514,6 @@ $$
 {: .prompt-info}
 
 
-
----------------------
 ### Step 6: Verification 
 
 Now, we applied singular value decomposition method for $A$ matrix.
@@ -527,6 +535,7 @@ $$
 
 **Thus, the SVD decomposition is :**
 
+>
 $$
 A = U \Sigma V^T = \begin{bmatrix} 
 0.65 & 1.32 \\
@@ -544,7 +553,7 @@ A = U \Sigma V^T = \begin{bmatrix}
 0.6 & 0.8 
 \end{bmatrix}^T 
 $$
-
+{: .prompt-info}
 
 ## Truncated to $r$ - Rank
 
