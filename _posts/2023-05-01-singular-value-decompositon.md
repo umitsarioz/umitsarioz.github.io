@@ -222,7 +222,7 @@ $$
 (5 - \lambda)(18 - \lambda) - 81 = \lambda^2 - 23\lambda + 9 = 0
 $$
 
-> $ \text(roots \ of \ an \ equation) = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} $
+> $ \text(roots \ of \ an \ equation) = \Large \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} $
 {: .prompt-tip}
 
 
