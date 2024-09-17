@@ -670,7 +670,7 @@ $$
 
 \begin{bmatrix} 
 4.76 
-\end{bmatrix}_{1\times}
+\end{bmatrix}_{1\times1}
 
 = 
 
@@ -717,7 +717,7 @@ $$
 \\
 4.52 \times 0.8 & 4.52 \times 0.6 
 
-\end{bmatrix}_{2\times1}
+\end{bmatrix}_{2\times2}
 
 = 
 
@@ -725,7 +725,7 @@ $$
 2.47 & 1.85
 \\
 3.62 & 2.71
-\end{bmatrix}_{2\times1}
+\end{bmatrix}_{2\times2}
 
 $$
 
@@ -737,7 +737,7 @@ A_1 =
 2.47 & 1.85
 \\
 3.62 & 2.71
-\end{bmatrix}_{2\times1}
+\end{bmatrix}_{2\times2}
 
 $$
 
