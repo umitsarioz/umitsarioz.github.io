@@ -108,56 +108,6 @@ $$\text{Formula} \rightarrow P(x_i \mid C) = \frac{1}{\sqrt{2 \pi \sigma_i^2}} \
 >**`-`** Assumes features are normally distributed, which may not always be true.
 {: .prompt-warning}
 
-### Multinomial Naive Bayes:
-- **Usage:** Suitable for discrete data, such as word counts in text classification.
-
-$$\text{Formula} \rightarrow P(x_j \mid C) = \frac{N_{Cj} + \alpha}{N_C + \alpha \cdot |V|}$$
-
->**`+`** Effective for text classification with large vocabularies; handles feature count data well.
-{: .prompt-tip}
-
->**`-`** Assumes that feature counts are conditionally independent.
-{: .prompt-warning}
-
-### Bernoulli Naive Bayes:
-- **Usage:** Ideal for binary/boolean features.
-
-$$\text{Formula} \rightarrow P(x_j \mid C) = \frac{N_{Cj} + \alpha}{N_C + \alpha \cdot 2}$$
-
->**`+`** Suitable for binary/boolean data; handles presence/absence features well.
-{: .prompt-tip}
-
->**`-`** Assumes features are binary, which may not always be the case.
-{: .prompt-warning}
-
-### Complement Naive Bayes:
-- **Usage:** Designed to handle imbalanced datasets better.
-
-$$\text{Formula} \rightarrow P(x_j \mid C) = \frac{N_{C'j} + \alpha}{N_{C'} + \alpha \cdot |V|}$$
-
->**`+`** Addresses class imbalance by using feature probabilities from the complement of each class.
-{: .prompt-tip}
-
->**`-`** More complex to implement; may not perform well on balanced datasets.
-{: .prompt-warning}
-
-## Advantages and Disadvantages of Naive Bayes
-
-### Advantages:
-
-- **`Simplicity:`** Easy to understand and implement.
-- **`Efficiency:`** Fast training and prediction.
-- **`Scalability:`** Handles large datasets efficiently.
-- **`Performance:`** Often performs well even with the naive independence assumption.
-
-### Disadvantages:
-
-- **`Conditional Independence Assumption:`** The assumption that features are independent given the class label may not hold true in practice.
-- **`Feature Dependence:`** Correlated features can lead to poor performance.
-- **`Gaussian Assumption:`** Gaussian Naive Bayes assumes normally distributed features, which may not always be valid.
-
-## Implementation in Python
-Here’s the code for each Naive Bayes classifier implemented from scratch:
 
 ```python
 import numpy as np
@@ -197,6 +147,22 @@ class GaussianNaiveBayes:
             posteriors[:, i] = prior + likelihood
             
         return self.classes[np.argmax(posteriors, axis=1)]
+```
+
+### Multinomial Naive Bayes:
+- **Usage:** Suitable for discrete data, such as word counts in text classification.
+
+$$\text{Formula} \rightarrow P(x_j \mid C) = \frac{N_{Cj} + \alpha}{N_C + \alpha \cdot |V|}$$
+
+>**`+`** Effective for text classification with large vocabularies; handles feature count data well.
+{: .prompt-tip}
+
+>**`-`** Assumes that feature counts are conditionally independent.
+{: .prompt-warning}
+
+
+```python
+import numpy as np
 
 class MultinomialNaiveBayes:
     """
@@ -220,6 +186,21 @@ class MultinomialNaiveBayes:
         log_posterior = log_priors + log_likelihoods
         
         return self.classes[np.argmax(log_posterior, axis=1)]
+```
+
+### Bernoulli Naive Bayes:
+- **Usage:** Ideal for binary/boolean features.
+
+$$\text{Formula} \rightarrow P(x_j \mid C) = \frac{N_{Cj} + \alpha}{N_C + \alpha \cdot 2}$$
+
+>**`+`** Suitable for binary/boolean data; handles presence/absence features well.
+{: .prompt-tip}
+
+>**`-`** Assumes features are binary, which may not always be the case.
+{: .prompt-warning}
+
+```python
+import numpy as np
 
 class BernoulliNaiveBayes:
     """
@@ -242,6 +223,23 @@ class BernoulliNaiveBayes:
         log_posterior = log_priors + np.sum(log_likelihoods, axis=1)
         
         return self.classes[np.argmax(log_posterior, axis=1)]
+```
+
+### Complement Naive Bayes:
+- **Usage:** Designed to handle imbalanced datasets better.
+
+$$\text{Formula} \rightarrow P(x_j \mid C) = \frac{N_{C'j} + \alpha}{N_{C'} + \alpha \cdot |V|}$$
+
+>**`+`** Addresses class imbalance by using feature probabilities from the complement of each class.
+{: .prompt-tip}
+
+>**`-`** More complex to implement; may not perform well on balanced datasets.
+{: .prompt-warning}
+
+
+
+```python
+import numpy as np
 
 class ComplementNaiveBayes:
     """
@@ -269,7 +267,25 @@ class ComplementNaiveBayes:
         log_posterior = log_priors + np.sum(X * log_likelihoods - (1 - X) * log_complement, axis=1)
         
         return self.classes[np.argmax(log_posterior, axis=1)]
-``` 
+```
+
+## Advantages and Disadvantages of Naive Bayes
+
+### Advantages:
+
+- **`Simplicity:`** Easy to understand and implement.
+- **`Efficiency:`** Fast training and prediction.
+- **`Scalability:`** Handles large datasets efficiently.
+- **`Performance:`** Often performs well even with the naive independence assumption.
+
+### Disadvantages:
+
+- **`Conditional Independence Assumption:`** The assumption that features are independent given the class label may not hold true in practice.
+- **`Feature Dependence:`** Correlated features can lead to poor performance.
+- **`Gaussian Assumption:`** Gaussian Naive Bayes assumes normally distributed features, which may not always be valid.
+
+## Implementation in Python
+Here’s the code for each Naive Bayes classifier implemented from scratch:
 
 ## Conclusion
 
