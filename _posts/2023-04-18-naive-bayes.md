@@ -284,9 +284,6 @@ class ComplementNaiveBayes:
 - **`Feature Dependence:`** Correlated features can lead to poor performance.
 - **`Gaussian Assumption:`** Gaussian Naive Bayes assumes normally distributed features, which may not always be valid.
 
-## Implementation in Python
-Here’s the code for each Naive Bayes classifier implemented from scratch:
-
 ## Conclusion
 
 Naive Bayes classifiers offer a powerful yet simple approach to classification problems. By leveraging Bayes' theorem and assuming feature independence, these classifiers can efficiently handle a variety of data types and scales. While the conditional independence assumption can be a limitation, the classifiers’ efficiency and effectiveness often outweigh this drawback. From text classification to medical diagnosis, Naive Bayes provides a versatile tool for many real-world applications. By understanding the underlying principles and implementing these classifiers from scratch, you can better appreciate their strengths and tailor them to your specific needs.
