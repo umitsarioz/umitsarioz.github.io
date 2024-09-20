@@ -21,10 +21,10 @@ order: 4
 - [ ] clustering algorithms `#algorithms` `#clustering`
   - [ ] hierarchial clustering `#unsupervised-learning` `#algorithms` `#from-scratch` `#clustering`
   - [x] kmeans `#algorithms` `#from-scratch` 
-- [ ] evaluation metrics `#metrics` `#clustering`
+- [ ] evaluation metrics `#metrics` 
   - [ ] clustering
   - [ ] llm
-  - [ ] classification
+  - [x] classification
   - [ ] regression
 - [ ] dimensionality reduction
   - [ ] principal component analysis `#unsupervised-learning` `#algorithms` `#from-scratch` `dimensionality-reduction`
