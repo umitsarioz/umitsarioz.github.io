@@ -2,8 +2,8 @@
 date: 2023-03-10
 title: When Simplicity Meets Power | Linear Models
 image: /assets/img/ss/2023-03-10-linear-models/lineer_denklem.jpg
-categories: [Data Science, Machine Learning]
-tags: [algorithms, supervised-learning, from-scratch]
+#categories: [Machine Learning, Supervised Learning]
+tags: [algorithms, machine-learning,supervised-learning, from-scratch]
 published: true
 math: true
 description: Linear models in machine learning are like the "basic" setting on your coffee machine—simple but surprisingly powerful. They predict outcomes by drawing straight lines through your data, making them a handy tool for many projects.

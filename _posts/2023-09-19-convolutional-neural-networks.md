@@ -2,8 +2,8 @@
 date: 2023-09-19
 title: Deep Dive into Convolutional Neural Networks (CNNs)
 image: /assets/img/ss/2023-09-19-convolutional-neural-networks/conv_1.jpeg
-categories: [Data Science, Machine Learning]
-tags: [algorithms, supervised-learning, from-scratch, deep-learning, pytorch]
+#categories: [Machine Learning,Supervised Learning]
+tags: [algorithms, machine-learning,supervised-learning, from-scratch, deep-learning, pytorch]
 mermaid: true
 published: true
 math: true

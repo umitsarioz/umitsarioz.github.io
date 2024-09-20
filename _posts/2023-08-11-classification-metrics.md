@@ -2,8 +2,8 @@
 date: 2023-08-11
 title: Classification Evaluation Metrics in Machine Learning
 image: /assets/img/ss/2023-08-11-classification-metrics/second.webp
-categories: [Data Science, Machine Learning]
-tags: [metrics,classification, basics]
+#categories: [Machine Learning, Evaluation]
+tags: [metrics,machine-learning,classification, basics]
 mermaid: true
 published: true
 math: true

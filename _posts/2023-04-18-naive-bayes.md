@@ -2,8 +2,8 @@
 date: 2023-04-18
 title: Naive Bayes Simplified | From Theory to Code
 image: /assets/img/ss/2023-04-18-naive-bayes/first.webp
-categories: [Data Science, Machine Learning]
-tags: [algorithms, supervised-learning, from-scratch]
+#categories: [Machine Learning, Supervised Learning]
+tags: [algorithms, machine-learning,supervised-learning, from-scratch]
 #pin: true 
 published: true
 math: true

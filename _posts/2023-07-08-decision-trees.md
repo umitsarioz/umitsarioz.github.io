@@ -2,8 +2,8 @@
 date: 2023-07-08
 title: Decision Trees | Growing Your Way to Smarter Decisions
 image: /assets/img/ss/2023-07-08-decision-trees/first.jpg
-categories: [Data Science, Machine Learning]
-tags: [algorithms, supervised-learning, from-scratch]
+#categories: [Machine Learning,Supervised Learning]
+tags: [algorithms, machine-learning,supervised-learning, from-scratch]
 #pin: true 
 published: true
 math: true

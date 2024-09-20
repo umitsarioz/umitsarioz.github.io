@@ -2,8 +2,8 @@
 date: 2023-10-24
 title: Logging instead of Print Statements!
 image: /assets/img/ss/2023-10-24-logging/hello_world.png
-categories: [Software]
-tags: [python, tricks, logging]
+#categories: [Software]
+tags: [python, software,tricks, logging]
 published: true
 math: true
 description: Print statements are handy for logging and debugging, but they have some limitations and risks.
