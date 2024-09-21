@@ -10,14 +10,14 @@
 
       {% if paths.size == 0 or page.layout == 'home' %}
         <!-- index page -->
-        <span>{{ site.data.locales[include.lang].tabs.home | capitalize }}</span>
+        Blog<!--<span>{{ site.data.locales[include.lang].tabs.home | capitalize }}</span>-->
 
       {% else %}
         {% for item in paths %}
           {% if forloop.first %}
             <span>
               <a href="{{ '/' | relative_url }}">
-                {{- site.data.locales[include.lang].tabs.home | capitalize -}}
+                Blog<!--{{- site.data.locales[include.lang].tabs.home | capitalize -}}-->
               </a>
             </span>
 

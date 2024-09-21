@@ -1,5 +1,5 @@
 ---
 layout: archives
-icon: fa-fw fas fa-pencil 
+icon: fa-fw fas fa-timeline
 order: 1
 ---
