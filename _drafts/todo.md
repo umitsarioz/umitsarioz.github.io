@@ -1,16 +1,22 @@
-- jupyterlab extensions
-    - snippets: https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/snippets/README.html 
-        - hazır kod blokları yazılıp, hızlıca gömülebilmesini sağlaması, en cok import edilen formatlar , hazır kodlar vs. 
-    - printview: https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/printview/readme.html 
-        - png, pdf olarak yazdırmamızı saglıyor
-    - html export: https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/export_embedded/readme.html 
-        - html sayfası olarak export alma
-    - indent closer: https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/codefolding/readme.html 
-        - indentleri toplu kapama acma 
+# Research & Post Ideas
 
-- OYZ Fikirleri:
-    - Jupyter lab olusturulurken bir dizin statik olarak kopyalanabilir
-    - Bu kopyalanacak dizin bitbucket'a oyz framework olarak verilebilir
-    - Bu dizin gitbucket içerisinden güncellenebilir(belli aralıklarla - ayrıca her container icin öncesinde bu dizin de pull edilir)
-
-- https://github.com/amphi-ai/amphi-etl : innova projesini yapmıslar
+- software: 
+  - turing complete / turing machines
+- machine learning:
+  - nlp > llm 
+  - time series problems > arima, sarima, deep learning 
+  - optimization problems > traffic/stock
+  - anomaly detection problems > 
+  - graph problems > graph sage, graph attention
+  - clustering problems > k-means, agglomerative, dbscan, fuzzy, gaussian mix, 
+  - dimensionality reduction techniques > rfm, svd, pca, kernel pca, tsne
+  - evaluation metrics > clustering, classification, llm, regression 
+  - bias-variance tradeoff : learning curves, validation curves  
+  - cross validation & gridsearch 
+  - distributions > statistics 
+  - matrix, matrix multiplication, vector etc. 
+  - embedding, token, quantization etc. 
+  - deep learning problems with pytorch > image recognition, binary classification, multi-class classification, regression etc. 
+- bigdata & devops:
+  - apache frameworks > cassandra, hdfs, spark, sqoop, kafka, flink, airflow, elasticsearch, kibana, logstash
+  - grafana, mongodb, postgresql, vectordb, docker 
