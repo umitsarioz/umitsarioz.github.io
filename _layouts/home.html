@@ -10,6 +10,18 @@ refactor: true
 
 {% assign posts = '' | split: '' %}
 
+<!-- Get first home -->
+ {% if paginator.page == 1 %}
+  {% include intro.html %}
+ {% else %}
+ 
+  <h2>
+  <i class="fas fa-pen mr-2"></i>
+  <span>Blog</span>
+  </h2>
+
+ {% endif %}
+
 <!-- Get pinned posts -->
 
 {% assign offset = paginator.page | minus: 1 | times: paginator.per_page %}
