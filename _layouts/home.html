@@ -13,11 +13,14 @@ refactor: true
 <!-- Get first home -->
  {% if paginator.page == 1 %}
   {% include short-bio-and-news.html %}
- {% else %}
- 
+
   <h2>
-  <i class="fas fa-pen mr-2"></i>
-  <span>Blog</span>
+    <i class="fas fa-pen mr-2"></i><span>Blog</span>
+  </h2>
+
+ {% else %}
+  <h2>
+    <i class="fas fa-pen mr-2"></i><span>Blog</span>
   </h2>
 
  {% endif %}
