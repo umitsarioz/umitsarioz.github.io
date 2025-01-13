@@ -1,0 +1,23 @@
+
+
+{
+  "name": "Ümit Sarıöz",
+  "short_name": "Ümit Sarıöz",
+  "description": "Welcome to Ümit Sarıöz’s Blog – Your Comprehensive Resource for Machine Learning, Big Data, Python Programming, and Artificial Intelligence! Discover a wealth of knowledge with Ümit Sarıöz as you explore machine learning, big data analytics, Python programming, and artificial intelligence. This blog offers a broad range of content, from foundational concepts to the latest trends and advancements in data science and software development. Whether you’re just starting out or looking to expand your expertise, you’ll find practical tutorials, detailed guides, and expert insights designed to enhance your skills and keep you informed in the dynamic tech world. Dive into a rich collection of resources and stay ahead in the evolving landscape of technology with Ümit Sarıöz!",
+  "icons": [
+    {
+      "src": "/assets/img/favicons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/img/favicons/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }],
+  "start_url": "/index.html",
+  "theme_color": "#2a1e6b",
+  "background_color": "#ffffff",
+  "display": "fullscreen"
+}
+
