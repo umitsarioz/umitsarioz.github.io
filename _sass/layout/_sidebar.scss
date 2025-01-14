@@ -57,12 +57,12 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
 
   #avatar {
     display: block;
-    margin-top:0.5rem; /*ben ekledim*/
+    margin-top: 0.5rem; /*ben ekledim*/
     margin-left: 2.5rem; /*ben ekledim*/
     width: 6.5rem;
     height: 6.5rem;
     overflow: hidden;
-    box-shadow: var(--avatar-border-color) 0 0 0 2px;
+    /*box-shadow: var(--avatar-border-color) 0 0 0 2px;*/
     transform: translateZ(0); /* fixed the zoom in Safari */
 
     @include bp.sm {
@@ -71,10 +71,10 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
     }
 
     img {
-      transition: transform 0.5s;
+      transition: transform 0.4s;
 
       &:hover {
-        transform: scale(1.2);
+        transform: scale(1.1);
       }
     }
   }
@@ -83,7 +83,6 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
     @include mx.mt-mb(2.5rem);
     @extend %clickable-transition;
 
-    text-align: center; /*ben ekledim*/
     padding-left: 2.5rem;
     padding-right: 1.25rem;
     width: 100%;
@@ -102,7 +101,7 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
   .site-title {
     @extend %clickable-transition;
     @extend %sidebar-link-hover;
-    text-align: center; /*ben ekledim*/
+
     font-family: inherit;
     font-weight: 900;
     font-size: 1.75rem;
@@ -110,12 +109,12 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
     letter-spacing: 0.25px;
     margin-top: 1.25rem;
     margin-bottom: 0.5rem;
-    /*width: fit-content;*/ /*ben kapattım*/
+    margin-left: 1.1rem;
+    width: fit-content; /*ben kapattım*/
     color: var(--site-title-color);
   }
 
   .site-subtitle {
-    text-align: center; /*ben ekledim*/
     font-size: 95%;
     color: var(--site-subtitle-color);
     margin-top: 0.25rem;

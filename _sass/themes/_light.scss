@@ -1,4 +1,8 @@
 @mixin styles {
+  /*Kaizen Image color*/
+  --kaizen-filter: contrast(0.8) brightness(1.2) invert(1);
+  --sepator-line-color: #c1c3c5;
+
   /* Framework color */
   --main-bg: white;
   --mask-bg: #c1c3c5;

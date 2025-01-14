@@ -1,6 +1,10 @@
 @mixin styles {
   color-scheme: dark;
 
+  /*Kaizen Image color*/
+  --kaizen-filter: contrast(1.2) brightness(0.9);
+  --sepator-line-color: #6b6b6b;
+
   /* Framework color */
   --main-bg: rgb(27, 27, 30);
   --mask-bg: rgb(68, 69, 70);

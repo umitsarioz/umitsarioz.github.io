@@ -1,7 +1,31 @@
+<style>
+  .vintage-image {
+    display: block;
+    margin-bottom: 1.25rem;
+    padding: 15px;
+    width: 100%;
+    height: auto;
+    filter: var(--kaizen-filter); /* Default vintage effect */
+  }
+
+ .sidebar-bg{
+  background-image: url('/assets/img/core/bg.png') center/cover no-repeat; 
+ }
+
+  .separator-line {
+  width: 10%;
+  height: 1px;
+  background-color: var(--sepator-line-color);
+  margin: 0 auto; /* Add spacing around the line */
+}
+
+</style>
+
 <!-- The Side Bar -->
 
-<aside aria-label="Sidebar" id="sidebar" class="d-flex flex-column align-items-end">
-  <!--
+<aside aria-label="Sidebar" id="sidebar" class="d-flex flex-column align-items-end sidebar-bg">
+  
+<!-- Profile Section (Commented Out) -->
   <header class="profile-wrapper">
     <a href="{{ '/' | relative_url }}" id="avatar" class="rounded-circle">
       {%- if site.avatar != empty and site.avatar -%}
@@ -13,12 +37,16 @@
     </a>
 
     <a class="site-title d-block" href="{{ '/' | relative_url }}">{{ site.title }}</a>
-    <p class="site-subtitle fst-italic mb-0">{{ site.tagline }}</p>
+    <!--<p class="site-subtitle fst-italic mb-0">{{ site.tagline }}</p>-->
   </header>
--->
+
   <!-- .profile-wrapper -->
 
-  <nav class="flex-column flex-grow-1 w-100 ps-0">
+<!-- Seperator Horizontal Line -->
+<div class="separator-line"></div>
+
+ <!-- Navigation Section -->
+  <nav class="flex-column flex-grow-1 w-100">
     <ul class="nav">
       <!-- home -->
       <li class="nav-item{% if page.layout == 'home' %}{{ " active" }}{% endif %}">
@@ -42,6 +70,12 @@
     </ul>
   </nav>
 
+<!-- Vintage Image Section -->
+ <div>
+    <img src="{{ '/assets/img/core/kaizen1-removebg.png' | relative_url }}" alt="Vintage Image" class="vintage-image">
+  </div>
+
+<!-- Bottom Section -->
   <div class="sidebar-bottom d-flex flex-wrap  align-items-center w-100">
     {% unless site.theme_mode %}
       <button type="button" class="btn btn-link nav-link" aria-label="Switch Mode" id="mode-toggle">
