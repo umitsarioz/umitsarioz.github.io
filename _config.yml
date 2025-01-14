@@ -221,8 +221,3 @@ jekyll-archives:
   permalinks:
     tag: /tags/:name/
     category: /categories/:name/
-
-# ben ekledim
-
-plugins:
-  - jekyll-github-metadata

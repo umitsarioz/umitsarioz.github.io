@@ -46,6 +46,9 @@ layout: default
     object-fit: cover; /* Ensures the image fills the container and maintains its aspect ratio */
     max-width: 100%; /* Prevents the image from exceeding the container's width */
     max-height: 100%; /* Prevents the image from exceeding the container's height */
+    border-radius: 0.5rem;
+    border-right: 0.1rem groove;
+    border-right-color: var(--text-color);
   }
 
   .project-card {
@@ -95,13 +98,7 @@ layout: default
     <div class="col-12 mb-4">
       <div class="card project-card shadow-sm">
         <div class="row g-0">
-          <div
-            class="col-md-4"
-            style="
-              border-right: 0.1rem groove;
-              border-right-color: var(--text-color);
-            "
-          >
+          <div class="col-md-4">
             <img
               src="{{ project.image }}"
               class="img-fluid rounded-start project-image"
