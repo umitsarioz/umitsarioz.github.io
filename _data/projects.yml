@@ -4,3 +4,17 @@
   image: /assets/img/projects/chestx-ai-demo.gif
   url: https://github.com/umitsarioz/ChestX-AI
   technologies: Python, TensorFlow, NumPy, Pandas, Matplotlib, FastAPI, Docker, NLP
+
+- name: Traffic Sign Recognizer
+  date: 2024-01-22
+  description: It's a multilabel classification problem. Project aim is to recognize traffic signs from an image.
+  image: /assets/img/projects/tsn.gif
+  url: https://github.com/umitsarioz/Traffic-Sign-Recognizer
+  technologies: Python, TensorFlow, Scikit-Learn, Pillow, Streamlit, NumPy, Pandas, Matplotlib, FastAPI, Docker
+
+- name: Big Data Module Box
+  date: 2024-01-30
+  description: created a big data junk box. It consists of some modules about datasource operations, pyspark operations, io operations etc. Check readme.md and codes for details.
+  image: /assets/img/projects/big_data.webp
+  url: https://github.com/umitsarioz/big-data-module-box
+  technologies: Python, TensorFlow, NumPy, Pandas, Matplotlib, FastAPI, Docker, NLP
