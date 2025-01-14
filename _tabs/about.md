@@ -5,35 +5,53 @@ icon: fa-regular fa-address-card
 ---
 
 <style>
-    .my-badge {
-    display: inline-block;
-    padding: 0.25em 0.4em;
-    height: fit-content;
-    font-size: 75%;
-    font-weight: bold; /* Kalın yazı */
-    text-transform: uppercase; /* Büyük harf */
-    color: #fff;
-    float:right;
-    text-align:center;
-    background-color: #6c757d; /* Secondary arka plan */
-    border-radius: 0.25rem;
-    vertical-align: middle; /* Orta hizalama */
-    margin: 0.1rem 0.25rem; /* ml-3: Sola boşluk */
-  }
+     .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            flex-wrap: wrap; /* Make the layout responsive */
+        }
 
-    .my-badge-title {
-    display: inline-block;
-    padding: 0.25em 0.4em;
-    height: fit-content;
-    font-size: 90%;
-    font-weight: bold; /* Kalın yazı */
-    color: #fff;
-    float:left;
-    background-color:rgb(150, 117, 56); /* Secondary arka plan */
-    border-radius: 0.25rem;
-    vertical-align: middle; /* Orta hizalama */
-  }
+        .my-badge-title {
+            display: inline-block;
+            padding: 0.25em 0.4em;
+            height: fit-content;
+            font-size: 90%;
+            font-weight: bold; /* Kalın yazı */
+            color: #fff;
+            background-color: rgb(150, 117, 56); /* Secondary arka plan */
+            border-radius: 0.25rem;
+            vertical-align: middle; /* Orta hizalama */
+        }
 
+        .my-badge {
+            display: inline-block;
+            padding: 0.25em 0.4em;
+            height: fit-content;
+            font-size: 75%;
+            font-weight: bold; /* Kalın yazı */
+            text-transform: uppercase; /* Büyük harf */
+            color: #fff;
+            text-align: center;
+            background-color: #6c757d; /* Secondary arka plan */
+            border-radius: 0.25rem;
+            vertical-align: middle; /* Orta hizalama */
+            margin: 0.1rem 0.25rem; /* ml-3: Sola boşluk */
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column; /* Stack items on small screens */
+                align-items: flex-start;
+                margin:0;
+            }
+
+            .my-badge {
+                text-align: left; /* Adjust alignment for small screens */
+                margin: 0.5rem 0;
+            }
+        }
 </style>
 <h2>
     Hi,&#128075;
@@ -63,38 +81,44 @@ icon: fa-regular fa-address-card
 
 ## Professional Experience
 
-> <span class="my-badge-title"> Data Scientist at <a href="https://www.innova.com.tr/en/about"><b>Innova Bilişim </b></a></span>
-> <span class="my-badge">  Ankara, Turkey (Remote)<br>Dec 2022 - Jan 2025</span> 
-<br>
+<div class="container">
+  <div class="my-badge-title"> Data Scientist at <a href="https://www.innova.com.tr/en/about"><b>Innova Bilişim </b></a></div>
+  <div class="my-badge"> Ankara, Turkey (Remote)<br>Dec 2022 - Jan 2025 </div>
 
-- Chatbot with Local LLMs and RAG was developed to improve efficiency for over 2,000 personnel, streamlining
-workflows and response times.
-- Clustering for Network Topology Optimization was implemented using graph neural network embeddings,
-optimizing resource allocation for over 12,000 devices and benefiting 50 million customers. High performance
-was achieved supporting more strategic investment decisions. (Silhouette:0.72; F1: 0.87; Accuracy: 0.92)
-- Forecasting model for traffic saturation was built using deep learning, achieving 0.84 accuracy and enabling
-proactive network management to prevent overloads and enhance customer experience.
-- Predictive system for mobile cell tower battery life was developed, achieving 0.89 accuracy and saving €2 million
-annually, benefiting 50 million customers by enabling timely maintenance and extending equipment lifespan.
-- Code reviews were conducted as a member of the Türk Telekom AI team’s Code Review Committee, reducing
-bugs by 80% and improving resolution times by 90%, enhancing system reliability and customer satisfaction.
+  <ul>
+    <li>Chatbot with Local LLMs and RAG was developed to improve efficiency for over 2,000 personnel, streamlining
+    workflows and response times.</li>
+    <li>Clustering for Network Topology Optimization was implemented using graph neural network embeddings,
+    optimizing resource allocation for over 12,000 devices and benefiting 50 million customers. High performance
+    was achieved supporting more strategic investment decisions. (Silhouette:0.72; F1: 0.87; Accuracy: 0.92)</li>
+    <li>Forecasting model for traffic saturation was built using deep learning, achieving 0.84 accuracy and enabling
+    proactive network management to prevent overloads and enhance customer experience.</li>
+    <li>Predictive system for mobile cell tower battery life was developed, achieving 0.89 accuracy and saving €2 million
+    annually, benefiting 50 million customers by enabling timely maintenance and extending equipment lifespan.</li>
+    <li>Code reviews were conducted as a member of the Türk Telekom AI team’s Code Review Committee, reducing
+    bugs by 80% and improving resolution times by 90%, enhancing system reliability and customer satisfaction.</li>
+  </ul>
 
-> <span class="my-badge-title">Software Engineer I at <a href="https://www.kavak.com/ae/about-us"><b>KAVAK TR | CARVAK </b></a> </span>
-> <span class="my-badge"> İstanbul, Turkey (Remote)<br>Nov 2021 - Nov 2022</span> 
-<br>
+  <div class="my-badge-title"> Software Engineer I at <a href="https://www.kavak.com/ae/about-us"><b>KAVAK TR | CARVAK </b></a></div>
+  <div class="my-badge"> İstanbul, Turkey (Remote)<br>Nov 2021 - Nov 2022</div>
 
-- Recommendation System for Carvak.com was developed to deliver personalized vehicle listings, improving user
-engagement by 20% and reducing request times from over one second to milliseconds through query caching.
-- Crawler was developed to automate data scraping and storage for vehicle offers, integrating results into Google
-Sheets to provide actionable insights into market pricing trends for pricing and planning teams.
-- RESTful API was created for vehicle data retrieval via chassis numbers, enabling quick access and improving
-operational efficiency and customer satisfaction.
+  <ul>
+    <li>Recommendation System for Carvak.com was developed to deliver personalized vehicle listings, improving user
+    engagement by 20% and reducing request times from over one second to milliseconds through query caching.</li>
+    <li>Crawler was developed to automate data scraping and storage for vehicle offers, integrating results into Google
+    Sheets to provide actionable insights into market pricing trends for pricing and planning teams.</li>
+    <li>RESTful API was created for vehicle data retrieval via chassis numbers, enabling quick access and improving
+    operational efficiency and customer satisfaction.</li>
+  </ul>
 
-> <span class="my-badge-title">Artificial Intelligence Engineer, Freelancer </span>
-> <span class="my-badge"> Ankara, Turkey (Remote)<br>Jan 2021 - Aug 2021</span> 
-<br>
 
-- Developed Machine Learning solutions and created ETL pipelines and Visualizations
+  <div class="my-badge-title">Artificial Intelligence Engineer, Freelancer </div>
+  <div class="my-badge">Ankara, Turkey (Remote)<br>Jan 2021 - Aug 2021</div>
+  <ul>
+    <li>Developed Machine Learning solutions and created ETL pipelines and Visualizations </li>
+  </ul>
+</div>
+
 
 ---
 
