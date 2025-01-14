@@ -1,0 +1,6 @@
+- name: ChestX-AI
+  date: 2024-01-27
+  description: It's a machine learning project for image captioning on radiological Chest X-ray images. NLP is used for captioning, image processing and CNN used for feature extraction of images.
+  image: /assets/img/projects/chestx-ai-demo.gif
+  url: https://github.com/umitsarioz/ChestX-AI
+  technologies: Python, TensorFlow, NumPy, Pandas, Matplotlib, FastAPI, Docker, NLP

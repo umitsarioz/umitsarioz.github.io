@@ -1,4 +1,6 @@
 ---
+layout: projects
+title: Projects
 icon: fa-fw fas fa-code ml-xl-3 mr-xl-3 unloaded
 order: 2
 ---

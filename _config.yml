@@ -19,7 +19,7 @@ title: Ümit Sarıöz # the main title
 tagline: AI & Tech. Bloge # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
-   Welcome to Ümit Sarıöz’s Blog – Your Comprehensive Resource for Machine Learning, Big Data, Python Programming, and Artificial Intelligence! Discover a wealth of knowledge with Ümit Sarıöz as you explore machine learning, big data analytics, Python programming, and artificial intelligence. This blog offers a broad range of content, from foundational concepts to the latest trends and advancements in data science and software development. Whether you’re just starting out or looking to expand your expertise, you’ll find practical tutorials, detailed guides, and expert insights designed to enhance your skills and keep you informed in the dynamic tech world. Dive into a rich collection of resources and stay ahead in the evolving landscape of technology with Ümit Sarıöz!
+  Welcome to Ümit Sarıöz’s Blog – Your Comprehensive Resource for Machine Learning, Big Data, Python Programming, and Artificial Intelligence! Discover a wealth of knowledge with Ümit Sarıöz as you explore machine learning, big data analytics, Python programming, and artificial intelligence. This blog offers a broad range of content, from foundational concepts to the latest trends and advancements in data science and software development. Whether you’re just starting out or looking to expand your expertise, you’ll find practical tutorials, detailed guides, and expert insights designed to enhance your skills and keep you informed in the dynamic tech world. Dive into a rich collection of resources and stay ahead in the evolving landscape of technology with Ümit Sarıöz!
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
@@ -38,9 +38,8 @@ social:
   email: umitsariozz@gmail.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://www.linkedin.com/in/umitsarioz 
-    - https://github.com/umitsarioz  
-
+    - https://www.linkedin.com/in/umitsarioz
+    - https://github.com/umitsarioz
 
 # Site Verification Settings
 webmaster_verifications:
@@ -222,3 +221,8 @@ jekyll-archives:
   permalinks:
     tag: /tags/:name/
     category: /categories/:name/
+
+# ben ekledim
+
+plugins:
+  - jekyll-github-metadata
