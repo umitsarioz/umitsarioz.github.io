@@ -5,6 +5,13 @@
   url: https://github.com/umitsarioz/ChestX-AI
   technologies: Python, TensorFlow, NumPy, Pandas, Matplotlib, FastAPI, Docker, NLP
 
+- name: Algorithms From Scratch
+  date: 2024-09-02
+  description: Machine learning algorithms from scratch in python.
+  image: /assets/img/projects/algorithms.jpeg
+  url: https://github.com/umitsarioz/algorithms-from-scratch
+  technologies: Python, NumPy, Pandas
+
 - name: Traffic Sign Recognizer
   date: 2024-01-22
   description: It's a multilabel classification problem. Project aim is to recognize traffic signs from an image.
