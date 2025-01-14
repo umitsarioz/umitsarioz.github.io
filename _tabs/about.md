@@ -5,7 +5,8 @@ icon: fa-regular fa-address-card
 ---
 
 <style>
-      .my-badge {
+    .my-badge {
+    display: inline-block;
     padding: 0.25em 0.4em;
     height: fit-content;
     font-size: 75%;
@@ -13,25 +14,24 @@ icon: fa-regular fa-address-card
     text-transform: uppercase; /* Büyük harf */
     color: #fff;
     float:right;
+    text-align:center;
     background-color: #6c757d; /* Secondary arka plan */
     border-radius: 0.25rem;
     vertical-align: middle; /* Orta hizalama */
-    margin-left: 0.25rem; /* ml-3: Sola boşluk */
+    margin: 0.1rem 0.25rem; /* ml-3: Sola boşluk */
   }
 
     .my-badge-title {
     display: inline-block;
     padding: 0.25em 0.4em;
     height: fit-content;
-    font-size: 80%;
+    font-size: 90%;
     font-weight: bold; /* Kalın yazı */
-    text-transform: uppercase; /* Büyük harf */
     color: #fff;
     float:left;
-    background-color:rgb(240, 197, 117); /* Secondary arka plan */
+    background-color:rgb(150, 117, 56); /* Secondary arka plan */
     border-radius: 0.25rem;
     vertical-align: middle; /* Orta hizalama */
-    margin-left: 0.1rem; /* ml-3: Sola boşluk */
   }
 
 </style>
@@ -50,22 +50,21 @@ icon: fa-regular fa-address-card
 </div>
 
 ## Skills
-- <b> Python, Bash, SQL </b>
-- PySpark, Pandas, NumPy, Networkx, BeautifulSoup <b> — Data Manipulation</b>
-- PyTorch, Scikit-Learn, Langchain, NLTK, VLLM <b> — Machine Learning</b>
-- Matplotlib, Seaborn, Plotly <b> — Visualization</b>
-- PostgreSQL, Mongo, Cassandra, Redis, Milvus, HDFS, Kafka, Sqoop <b> — Data Storage / Database</b>
-- Git, Linux, Docker, Jupyter Notebook, Fast API, Gradio , Streamlit, Grafana, JIRA <b> — Developer Tools</b>
-- English (Professional Working Proficiency), Turkish (Native) <b> — Languages</b>
-- Machine Learning, NLP, LLMs, Forecasting, Clustering, Anomaly Detection, Graph <b> — Expertise</b>
+- <b> Python, Bash, SQL <span class="my-badge" style="float:none;"> Core </span> </b>
+- PySpark, Pandas, NumPy, Networkx, BeautifulSoup <b>  <span class="my-badge" style="float:none;"> Data Manipulation </span> </b>
+- PyTorch, Scikit-Learn, Langchain, NLTK, VLLM <b> <span class="my-badge" style="float:none;">  Machine Learning </span></b>
+- Matplotlib, Seaborn, Plotly <b> <span class="my-badge" style="float:none;">  Visualization </span></b>
+- PostgreSQL, Mongo, Cassandra, Redis, Milvus, HDFS, Kafka, Sqoop <b> <span class="my-badge" style="float:none;">  Data Storage / Database </span></b>
+- Git, Linux, Docker, Jupyter Notebook, Fast API, Gradio , Streamlit, Grafana, JIRA <b> <span class="my-badge" style="float:none;">  Developer Tools </span></b>
+- English (Professional Working Proficiency), Turkish (Native) <b> <span class="my-badge" style="float:none;">  Languages </span></b>
+- Machine Learning, NLP, LLMs, Forecasting, Clustering, Anomaly Detection, Graph <b> <span class="my-badge" style="float:none;">  Expertise </span></b>
 
 ---
 
 ## Professional Experience
 
 > <span class="my-badge-title"> Data Scientist at <a href="https://www.innova.com.tr/en/about"><b>Innova Bilişim </b></a></span>
-> <span class="my-badge"> Dec 2022 - Jan 2025</span> 
-> <span class="my-badge">  Ankara, Turkey (Remote)</span> 
+> <span class="my-badge">  Ankara, Turkey (Remote)<br>Dec 2022 - Jan 2025</span> 
 <br>
 
 - Chatbot with Local LLMs and RAG was developed to improve efficiency for over 2,000 personnel, streamlining
@@ -81,8 +80,7 @@ annually, benefiting 50 million customers by enabling timely maintenance and ext
 bugs by 80% and improving resolution times by 90%, enhancing system reliability and customer satisfaction.
 
 > <span class="my-badge-title">Software Engineer I at <a href="https://www.kavak.com/ae/about-us"><b>KAVAK TR | CARVAK </b></a> </span>
-> <span class="my-badge"> Nov 2021 - Nov 2022</span> 
-> <span class="my-badge"> İstanbul, Turkey (Remote)</span> 
+> <span class="my-badge"> İstanbul, Turkey (Remote)<br>Nov 2021 - Nov 2022</span> 
 <br>
 
 - Recommendation System for Carvak.com was developed to deliver personalized vehicle listings, improving user
@@ -93,8 +91,7 @@ Sheets to provide actionable insights into market pricing trends for pricing and
 operational efficiency and customer satisfaction.
 
 > <span class="my-badge-title">Artificial Intelligence Engineer, Freelancer </span>
-> <span class="my-badge"> Jan 2021 - Aug 2021</span> 
-> <span class="my-badge"> Ankara, Turkey (Remote)</span> 
+> <span class="my-badge"> Ankara, Turkey (Remote)<br>Jan 2021 - Aug 2021</span> 
 <br>
 
 - Developed Machine Learning solutions and created ETL pipelines and Visualizations
