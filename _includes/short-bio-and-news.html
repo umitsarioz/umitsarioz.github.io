@@ -27,6 +27,7 @@
   .news-item {
     flex: 0 0 30px; /* Fixed height for each item */
     padding: 16px 20px;
+    color: var(--sidebar-active-color);
     background: var(--news-item-bg);
     border-radius: 12px;
     box-shadow: 0 2px 12px var(--card-shadow);
@@ -34,13 +35,8 @@
     opacity: 1;
     display: flex;
     align-items: flex-start;
-    gap: 10px;
+    gap: 5px;
     border: 1px solid var(--bs-border-color-translucent);
-  }
-
-  .news-item:hover {
-    box-shadow: 0 8px 24px var(--card-shadow);
-    transform: translateY(-2px);
   }
 
   .news-date {
@@ -53,11 +49,11 @@
     display: inline-block;
     width: 5.2rem;
     padding: 6px 12px;
-    background: var(--heading-color);
+    background: var(--text-color);
     color: var(--main-bg);
     border-radius: 6px;
     font-size: 13px;
-    font-weight: 500;
+    font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 0.5px;
   }
@@ -84,7 +80,7 @@
 
   .slider-controls {
     position: absolute;
-    right: -42px;
+    right: -40px;
     top: 50%;
     transform: translateY(-50%);
     display: flex;
@@ -125,7 +121,7 @@
 
   .slider-dots {
     position: absolute;
-    left: -40px;
+    left: -30px;
     top: 50%;
     transform: translateY(-50%);
     display: flex;
@@ -239,7 +235,7 @@
     var newsData = [
       {
         date: "JUL 2024",
-        content: "Completed Natural Language Processing Specialization at",
+        content: " 📚 Completed Natural Language Processing Specialization at",
         link: {
           text: "DeepLearning.AI",
           url: "https://coursera.org/share/6612d2ac3251f34bf23d73055a3d8cbd"
@@ -248,11 +244,11 @@
       {
         date: "JAN 2023",
         content:
-          "Completed first data science project (Anomaly Detection) at Innova!"
+          "📊 Completed first data science project (Anomaly Detection) at Innova!"
       },
       {
         date: "NOV 2022",
-        content: "Started working as a Data Scientist at",
+        content: "💼 Started working as a Data Scientist at",
         link: {
           text: "Innova",
           url: "https://www.innova.com.tr/en/about"
@@ -260,11 +256,12 @@
       },
       {
         date: "NOV 2021",
-        content: "Completed first software project (Restful API) at KAVAK.com!"
+        content:
+          "🖥️ Completed first software project (Restful API) at KAVAK.com!"
       },
       {
         date: "NOV 2021",
-        content: "Started my first job as Software Engineer I at",
+        content: "👨‍💻 Started my first job as Software Engineer I at",
         link: {
           text: "KAVAK.com",
           url: "https://www.carvak.com/tr/hakkimizda"
@@ -272,7 +269,7 @@
       },
       {
         date: "SEP 2021",
-        content: "Graduated from Computer Engineering department at",
+        content: "🎓 Graduated from Computer Engineering department at",
         link: {
           text: "Gazi University",
           url: "https://mf.gazi.edu.tr/"
@@ -280,7 +277,7 @@
       },
       {
         date: "OCT 2020",
-        content: "Completed Deep Learning Specialization at",
+        content: "🧠 Completed Deep Learning Specialization at",
         link: {
           text: "DeepLearning.AI",
           url: "https://coursera.org/share/bdeac01dd42ca9ed10df72fd6b6baaec"
@@ -382,7 +379,6 @@
 
     updateSlide() {
       if (this.data.length === 0) {
-        console.log("No data to update slides.");
         return;
       }
 
@@ -412,13 +408,6 @@
       const maxIndex = this.data.length - this.itemsPerView - this.minus;
       this.prevBtn.disabled = this.currentIndex <= 0;
       this.nextBtn.disabled = this.currentIndex >= maxIndex;
-
-      console.log(
-        "Update buttons: prevBtn.disabled =",
-        this.prevBtn.disabled,
-        "nextBtn.disabled =",
-        this.nextBtn.disabled
-      );
     }
 
     next() {
