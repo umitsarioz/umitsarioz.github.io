@@ -300,7 +300,6 @@
       this.autoplayInterval = 3000;
       this.autoplayTimer = null;
 
-      console.log("Initializing NewsSlider with data:", this.data);
       this.init();
       this.startAutoplay();
     }
@@ -310,13 +309,6 @@
       this.prevBtn = document.getElementById("prevBtn");
       this.nextBtn = document.getElementById("nextBtn");
       this.dotsContainer = document.getElementById("sliderDots");
-
-      console.log("Slider elements initialized:", {
-        sliderTrack: this.sliderTrack,
-        prevBtn: this.prevBtn,
-        nextBtn: this.nextBtn,
-        dotsContainer: this.dotsContainer
-      });
 
       this.renderItems();
       this.renderDots();
@@ -329,7 +321,6 @@
       if (this.data.length === 0) {
         this.sliderTrack.innerHTML =
           '<div class="news-item">No news available</div>';
-        console.log("No news available.");
         return;
       }
 
@@ -354,8 +345,6 @@
             `
         )
         .join("");
-
-      console.log("News items rendered:", this.data);
     }
 
     renderDots() {
@@ -370,8 +359,6 @@
             `
         )
         .join("");
-
-      console.log(`Rendered ${dotsCount} dots.`);
     }
 
     attachEventListeners() {
@@ -381,7 +368,6 @@
       this.dotsContainer.addEventListener("click", (e) => {
         if (e.target.classList.contains("dot")) {
           const index = parseInt(e.target.dataset.index);
-          console.log("Dot clicked, navigating to slide:", index);
           this.goToSlide(index * this.itemsPerView);
         }
       });
@@ -437,63 +423,51 @@
 
     next() {
       if (this.data.length === 0) {
-        console.log("No data to move next.");
         return;
       }
 
       const maxIndex = this.data.length - this.itemsPerView;
       if (this.currentIndex < maxIndex) {
         this.currentIndex++;
-        console.log("Moving to next slide:", this.currentIndex);
         this.updateSlide();
       } else {
         this.currentIndex = 0;
-        console.log("Reaching the end, starting from the beginning.");
         this.updateSlide();
       }
     }
 
     prev() {
       if (this.data.length === 0) {
-        console.log("No data to move previous.");
         return;
       }
 
       if (this.currentIndex > 0) {
         this.currentIndex--;
-        console.log("Moving to previous slide:", this.currentIndex);
         this.updateSlide();
       } else {
         this.currentIndex = 0;
-        console.log("Already at the first slide.");
         this.updateSlide();
       }
     }
 
     goToSlide(index) {
       if (this.data.length === 0) {
-        console.log("No data to go to specific slide.");
         return;
       }
 
       this.currentIndex = Math.min(index, this.data.length - this.itemsPerView);
-      console.log("Going to slide:", this.currentIndex);
       this.updateSlide();
     }
 
     startAutoplay() {
       if (this.data.length === 0) {
-        console.log("No data to start autoplay.");
         return;
       }
 
-      console.log("Starting autoplay.");
       this.autoplayTimer = setInterval(() => {
         if (!this.nextBtn.disabled) {
-          console.log("Autoplay: Moving to next slide.");
           this.next();
         } else {
-          console.log("Autoplay: Reached the end, resetting.");
           this.currentIndex = 0;
           this.updateSlide();
         }
@@ -501,7 +475,6 @@
     }
 
     pauseAutoplay() {
-      console.log("Pausing autoplay.");
       clearInterval(this.autoplayTimer);
     }
   }
