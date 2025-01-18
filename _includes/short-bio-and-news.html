@@ -84,12 +84,12 @@
 
   .slider-controls {
     position: absolute;
-    right: -64px;
+    right: -42px;
     top: 50%;
     transform: translateY(-50%);
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 24px;
   }
 
   .slider-btn {
@@ -148,27 +148,25 @@
     background: var(--heading-color);
   }
 
-  @media (max-width: 992px) {
+  @media (max-width: 848px) {
     .news-container {
-      max-width: 100%;
+      max-width: 95%;
       margin: 0 15px;
     }
 
     .slider-controls {
-      right: 15px;
-      top: -60px;
+      right: 4rem;
+      top: -30px;
       transform: none;
       flex-direction: row;
     }
-  }
 
-  @media (max-width: 768px) {
     .news-container {
       padding: 16px;
     }
 
     .slider-container {
-      height: 450px; /* Adjusted for mobile layout */
+      height: 400px; /* Adjusted for mobile layout */
     }
 
     .news-item {
@@ -235,207 +233,276 @@
     </div>
   </div>
 </div>
+
 <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    console.log("Trying to NewsSlider with newsData..");
-    // Assuming `newsData` is rendered correctly as a valid JSON object
-    const newsData = {{ site.data.news | jsonify }};
+  document.addEventListener("DOMContentLoaded", function () {
+    var newsData = [
+      {
+        date: "JUL 2024",
+        content: "Completed Natural Language Processing Specialization at",
+        link: {
+          text: "DeepLearning.AI",
+          url: "https://coursera.org/share/6612d2ac3251f34bf23d73055a3d8cbd"
+        }
+      },
+      {
+        date: "JAN 2023",
+        content:
+          "Completed first data science project (Anomaly Detection) at Innova!"
+      },
+      {
+        date: "NOV 2022",
+        content: "Started working as a Data Scientist at",
+        link: {
+          text: "Innova",
+          url: "https://www.innova.com.tr/en/about"
+        }
+      },
+      {
+        date: "NOV 2021",
+        content: "Completed first software project (Restful API) at KAVAK.com!"
+      },
+      {
+        date: "NOV 2021",
+        content: "Started my first job as Software Engineer I at",
+        link: {
+          text: "KAVAK.com",
+          url: "https://www.carvak.com/tr/hakkimizda"
+        }
+      },
+      {
+        date: "SEP 2021",
+        content: "Graduated from Computer Engineering department at",
+        link: {
+          text: "Gazi University",
+          url: "https://mf.gazi.edu.tr/"
+        }
+      },
+      {
+        date: "OCT 2020",
+        content: "Completed Deep Learning Specialization at",
+        link: {
+          text: "DeepLearning.AI",
+          url: "https://coursera.org/share/bdeac01dd42ca9ed10df72fd6b6baaec"
+        }
+      }
+    ];
 
-    class NewsSlider {
-      constructor(data) {
-        this.data = data;
+    const newsSlider = new NewsSlider(newsData);
+  });
+
+  class NewsSlider {
+    constructor(data) {
+      this.data = data;
+      this.currentIndex = 0;
+      this.itemsPerView = 3;
+      this.minus = 2;
+      this.autoplayInterval = 3000;
+      this.autoplayTimer = null;
+
+      console.log("Initializing NewsSlider with data:", this.data);
+      this.init();
+      this.startAutoplay();
+    }
+
+    init() {
+      this.sliderTrack = document.getElementById("sliderTrack");
+      this.prevBtn = document.getElementById("prevBtn");
+      this.nextBtn = document.getElementById("nextBtn");
+      this.dotsContainer = document.getElementById("sliderDots");
+
+      console.log("Slider elements initialized:", {
+        sliderTrack: this.sliderTrack,
+        prevBtn: this.prevBtn,
+        nextBtn: this.nextBtn,
+        dotsContainer: this.dotsContainer
+      });
+
+      this.renderItems();
+      this.renderDots();
+      this.attachEventListeners();
+      this.updateSlide();
+      this.updateButtons();
+    }
+
+    renderItems() {
+      if (this.data.length === 0) {
+        this.sliderTrack.innerHTML =
+          '<div class="news-item">No news available</div>';
+        console.log("No news available.");
+        return;
+      }
+
+      this.sliderTrack.innerHTML = this.data
+        .map(
+          (item, index) => `
+              <div class="news-item ${
+                index < this.itemsPerView ? "active" : ""
+              }" data-index="${index}">
+                <div class="news-date">
+                  <span class="date-badge">${item.date}</span>
+                </div>
+                <div class="news-content">
+                  ${item.content}
+                  ${
+                    item.link
+                      ? `<a href="${item.link.url}" target="_blank">${item.link.text}</a>`
+                      : ""
+                  }
+                </div>
+              </div>
+            `
+        )
+        .join("");
+
+      console.log("News items rendered:", this.data);
+    }
+
+    renderDots() {
+      const dotsCount = Math.ceil(this.data.length / this.itemsPerView);
+      this.dotsContainer.innerHTML = Array(dotsCount)
+        .fill(0)
+        .map(
+          (_, index) => `
+              <div class="dot ${
+                index === 0 ? "active" : ""
+              }" data-index="${index}"></div>
+            `
+        )
+        .join("");
+
+      console.log(`Rendered ${dotsCount} dots.`);
+    }
+
+    attachEventListeners() {
+      this.prevBtn.addEventListener("click", () => this.prev());
+      this.nextBtn.addEventListener("click", () => this.next());
+
+      this.dotsContainer.addEventListener("click", (e) => {
+        if (e.target.classList.contains("dot")) {
+          const index = parseInt(e.target.dataset.index);
+          console.log("Dot clicked, navigating to slide:", index);
+          this.goToSlide(index * this.itemsPerView);
+        }
+      });
+
+      this.sliderTrack.addEventListener("mouseenter", () =>
+        this.pauseAutoplay()
+      );
+      this.sliderTrack.addEventListener("mouseleave", () =>
+        this.startAutoplay()
+      );
+    }
+
+    updateSlide() {
+      if (this.data.length === 0) {
+        console.log("No data to update slides.");
+        return;
+      }
+
+      const translateY = -(
+        this.currentIndex *
+        (100 / Math.min(this.itemsPerView, this.data.length))
+      );
+      this.sliderTrack.style.transform = `translateY(${translateY}%)`;
+
+      document.querySelectorAll(".news-item").forEach((item, index) => {
+        item.classList.toggle(
+          "active",
+          index >= this.currentIndex &&
+            index < this.currentIndex + this.itemsPerView
+        );
+      });
+
+      const activeDotIndex = Math.floor(this.currentIndex / this.itemsPerView);
+      document.querySelectorAll(".dot").forEach((dot, index) => {
+        dot.classList.toggle("active", index === activeDotIndex);
+      });
+
+      this.updateButtons();
+    }
+
+    updateButtons() {
+      const maxIndex = this.data.length - this.itemsPerView - this.minus;
+      this.prevBtn.disabled = this.currentIndex <= 0;
+      this.nextBtn.disabled = this.currentIndex >= maxIndex;
+
+      console.log(
+        "Update buttons: prevBtn.disabled =",
+        this.prevBtn.disabled,
+        "nextBtn.disabled =",
+        this.nextBtn.disabled
+      );
+    }
+
+    next() {
+      if (this.data.length === 0) {
+        console.log("No data to move next.");
+        return;
+      }
+
+      const maxIndex = this.data.length - this.itemsPerView;
+      if (this.currentIndex < maxIndex) {
+        this.currentIndex++;
+        console.log("Moving to next slide:", this.currentIndex);
+        this.updateSlide();
+      } else {
         this.currentIndex = 0;
-        this.itemsPerView = 3;
-        this.minus = 2;
-        this.autoplayInterval = 3000;
-        this.autoplayTimer = null;
-
-        console.log("Initializing NewsSlider with data:", this.data);
-        this.init();
-        this.startAutoplay();
-      }
-
-      init() {
-        this.sliderTrack = document.getElementById("sliderTrack");
-        this.prevBtn = document.getElementById("prevBtn");
-        this.nextBtn = document.getElementById("nextBtn");
-        this.dotsContainer = document.getElementById("sliderDots");
-
-        console.log("Slider elements initialized:", {
-          sliderTrack: this.sliderTrack,
-          prevBtn: this.prevBtn,
-          nextBtn: this.nextBtn,
-          dotsContainer: this.dotsContainer
-        });
-
-        this.renderItems();
-        this.renderDots();
-        this.attachEventListeners();
+        console.log("Reaching the end, starting from the beginning.");
         this.updateSlide();
-        this.updateButtons();
-      }
-
-      renderItems() {
-        if (this.data.length === 0) {
-          this.sliderTrack.innerHTML = '<div class="news-item">No news available</div>';
-          console.log("No news available.");
-          return;
-        }
-
-        this.sliderTrack.innerHTML = this.data
-          .map(
-            (item, index) => `
-            <div class="news-item ${index < this.itemsPerView ? "active" : ""}" data-index="${index}">
-              <div class="news-date">
-                <span class="date-badge">${item.date}</span>
-              </div>
-              <div class="news-content">
-                ${item.content}
-                ${item.link ? `<a href="${item.link.url}" target="_blank">${item.link.text}</a>` : ""}
-              </div>
-            </div>
-          `
-          )
-          .join("");
-
-        console.log("News items rendered:", this.data);
-      }
-
-      renderDots() {
-        const dotsCount = Math.ceil(this.data.length / this.itemsPerView);
-        this.dotsContainer.innerHTML = Array(dotsCount)
-          .fill(0)
-          .map(
-            (_, index) => `
-            <div class="dot ${index === 0 ? "active" : ""}" data-index="${index}"></div>
-          `
-          )
-          .join("");
-
-        console.log(`Rendered ${dotsCount} dots.`);
-      }
-
-      attachEventListeners() {
-        this.prevBtn.addEventListener("click", () => this.prev());
-        this.nextBtn.addEventListener("click", () => this.next());
-
-        this.dotsContainer.addEventListener("click", (e) => {
-          if (e.target.classList.contains("dot")) {
-            const index = parseInt(e.target.dataset.index);
-            console.log("Dot clicked, navigating to slide:", index);
-            this.goToSlide(index * this.itemsPerView);
-          }
-        });
-
-        this.sliderTrack.addEventListener("mouseenter", () => this.pauseAutoplay());
-        this.sliderTrack.addEventListener("mouseleave", () => this.startAutoplay());
-      }
-
-      updateSlide() {
-        if (this.data.length === 0) {
-          console.log("No data to update slides.");
-          return;
-        }
-
-        const translateY = -(this.currentIndex * (100 / Math.min(this.itemsPerView, this.data.length)));
-        this.sliderTrack.style.transform = `translateY(${translateY}%)`;
-
-        document.querySelectorAll(".news-item").forEach((item, index) => {
-          item.classList.toggle(
-            "active",
-            index >= this.currentIndex && index < this.currentIndex + this.itemsPerView
-          );
-        });
-
-        const activeDotIndex = Math.floor(this.currentIndex / this.itemsPerView);
-        document.querySelectorAll(".dot").forEach((dot, index) => {
-          dot.classList.toggle("active", index === activeDotIndex);
-        });
-
-        this.updateButtons();
-      }
-
-      updateButtons() {
-        const maxIndex = this.data.length - this.itemsPerView - this.minus;
-        this.prevBtn.disabled = this.currentIndex <= 0;
-        this.nextBtn.disabled = this.currentIndex >= maxIndex;
-
-        console.log("Update buttons: prevBtn.disabled =", this.prevBtn.disabled, "nextBtn.disabled =", this.nextBtn.disabled);
-      }
-
-      next() {
-        if (this.data.length === 0) {
-          console.log("No data to move next.");
-          return;
-        }
-
-        const maxIndex = this.data.length - this.itemsPerView;
-        if (this.currentIndex < maxIndex) {
-          this.currentIndex++;
-          console.log("Moving to next slide:", this.currentIndex);
-          this.updateSlide();
-        } else {
-          this.currentIndex = 0;
-          console.log("Reaching the end, starting from the beginning.");
-          this.updateSlide();
-        }
-      }
-
-      prev() {
-        if (this.data.length === 0) {
-          console.log("No data to move previous.");
-          return;
-        }
-
-        if (this.currentIndex > 0) {
-          this.currentIndex--;
-          console.log("Moving to previous slide:", this.currentIndex);
-          this.updateSlide();
-        } else {
-          this.currentIndex = 0;
-          console.log("Already at the first slide.");
-          this.updateSlide();
-        }
-      }
-
-      goToSlide(index) {
-        if (this.data.length === 0) {
-          console.log("No data to go to specific slide.");
-          return;
-        }
-
-        this.currentIndex = Math.min(index, this.data.length - this.itemsPerView);
-        console.log("Going to slide:", this.currentIndex);
-        this.updateSlide();
-      }
-
-      startAutoplay() {
-        if (this.data.length === 0) {
-          console.log("No data to start autoplay.");
-          return;
-        }
-
-        console.log("Starting autoplay.");
-        this.autoplayTimer = setInterval(() => {
-          if (!this.nextBtn.disabled) {
-            console.log("Autoplay: Moving to next slide.");
-            this.next();
-          } else {
-            console.log("Autoplay: Reached the end, resetting.");
-            this.currentIndex = 0;
-            this.updateSlide();
-          }
-        }, this.autoplayInterval);
-      }
-
-      pauseAutoplay() {
-        console.log("Pausing autoplay.");
-        clearInterval(this.autoplayTimer);
       }
     }
 
-    // Initialize the news slider with data from the YAML file
-    console.log("Initializing NewsSlider with newsData:", newsData);
-    const newsSlider = new NewsSlider(newsData);
-  });
+    prev() {
+      if (this.data.length === 0) {
+        console.log("No data to move previous.");
+        return;
+      }
+
+      if (this.currentIndex > 0) {
+        this.currentIndex--;
+        console.log("Moving to previous slide:", this.currentIndex);
+        this.updateSlide();
+      } else {
+        this.currentIndex = 0;
+        console.log("Already at the first slide.");
+        this.updateSlide();
+      }
+    }
+
+    goToSlide(index) {
+      if (this.data.length === 0) {
+        console.log("No data to go to specific slide.");
+        return;
+      }
+
+      this.currentIndex = Math.min(index, this.data.length - this.itemsPerView);
+      console.log("Going to slide:", this.currentIndex);
+      this.updateSlide();
+    }
+
+    startAutoplay() {
+      if (this.data.length === 0) {
+        console.log("No data to start autoplay.");
+        return;
+      }
+
+      console.log("Starting autoplay.");
+      this.autoplayTimer = setInterval(() => {
+        if (!this.nextBtn.disabled) {
+          console.log("Autoplay: Moving to next slide.");
+          this.next();
+        } else {
+          console.log("Autoplay: Reached the end, resetting.");
+          this.currentIndex = 0;
+          this.updateSlide();
+        }
+      }, this.autoplayInterval);
+    }
+
+    pauseAutoplay() {
+      console.log("Pausing autoplay.");
+      clearInterval(this.autoplayTimer);
+    }
+  }
 </script>

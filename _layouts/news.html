@@ -1,0 +1,445 @@
+---
+layout: default
+---
+
+<style>
+  .news-container {
+    position: relative;
+    border-radius: 16px;
+  }
+
+  .news-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    padding: 0 12px;
+  }
+
+  .slider-container {
+    position: relative;
+    overflow: hidden;
+    height: 300px; /* Adjusted to fit exactly 3 items */
+  }
+
+  .slider-track {
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease-in-out;
+    gap: 15px; /* Reduced gap between items */
+  }
+
+  .news-item {
+    flex: 0 0 30px; /* Fixed height for each item */
+    padding: 16px 20px;
+    background: var(--news-item-bg);
+    border-radius: 12px;
+    box-shadow: 0 2px 12px var(--card-shadow);
+    transition: all 0.3s ease;
+    opacity: 1;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    border: 1px solid var(--bs-border-color-translucent);
+  }
+
+  .news-item:hover {
+    box-shadow: 0 8px 24px var(--card-shadow);
+    transform: translateY(-2px);
+  }
+
+  .news-date {
+    flex: 0 0 130px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .date-badge {
+    display: inline-block;
+    width: 5.2rem;
+    padding: 6px 12px;
+    background: var(--heading-color);
+    color: var(--main-bg);
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .news-content {
+    flex: 1;
+    color: var(--text-color);
+    line-height: 1.6;
+    font-size: 15px;
+    padding-top: 6px;
+  }
+
+  .news-content a {
+    color: var(--heading-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+  }
+
+  .news-content a:hover {
+    color: var(--link-color);
+    text-decoration: underline;
+  }
+
+  .slider-controls {
+    position: absolute;
+    right: -64px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .slider-btn {
+    background: var(--bg-color);
+    color: var(--text-color);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    width: 33px;
+    height: 33px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  }
+
+  .slider-btn:hover {
+    background: var(--heading-color);
+    color: var(--mask-bg);
+    transform: translateY(-2px);
+  }
+
+  .slider-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  .slider-btn i {
+    font-size: 18px;
+  }
+
+  .slider-dots {
+    position: absolute;
+    left: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #e2e8f0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .dot.active {
+    height: 20px;
+    border-radius: 3px;
+    background: var(--heading-color);
+  }
+
+  @media (max-width: 992px) {
+    .news-container {
+      max-width: 100%;
+      margin: 0 15px;
+    }
+
+    .slider-controls {
+      right: 15px;
+      top: -60px;
+      transform: none;
+      flex-direction: row;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .news-container {
+      padding: 16px;
+    }
+
+    .slider-container {
+      height: 450px; /* Adjusted for mobile layout */
+    }
+
+    .news-item {
+      flex-direction: column;
+      height: 140px;
+      padding: 16px;
+      gap: 12px;
+    }
+
+    .news-date {
+      flex: none;
+      width: 100%;
+    }
+
+    .date-badge {
+      width: fit-content;
+    }
+
+    .news-content {
+      padding-top: 0;
+    }
+
+    .slider-dots {
+      display: none; /* Hide dots on mobile */
+    }
+  }
+
+  @media (max-width: 576px) {
+    .slider-container {
+      height: 500px;
+    }
+
+    .news-item {
+      height: 160px;
+    }
+  }
+</style>
+
+<div class="container-fluid">
+  <div class="news-container">
+    <div class="news-header">
+      <h2 class="h4 mb-0">
+        <i class="fa-solid fa-newspaper"></i> Latest Updates
+      </h2>
+    </div>
+
+    <div class="slider-container">
+      <div class="slider-track" id="sliderTrack">
+        <!-- News items will be inserted here by JavaScript -->
+      </div>
+    </div>
+
+    <div class="slider-controls">
+      <button class="slider-btn" id="prevBtn">
+        <i class="fa-solid fa-angle-up"></i>
+      </button>
+      <button class="slider-btn" id="nextBtn">
+        <i class="fa-solid fa-angle-down"></i>
+      </button>
+    </div>
+
+    <div class="slider-dots" id="sliderDots">
+      <!-- Dots will be inserted here by JavaScript -->
+    </div>
+  </div>
+</div>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    console.log("Trying to NewsSlider with newsData..");
+    // Assuming `newsData` is rendered correctly as a valid JSON object
+    const newsData = {{ site.data.news | jsonify }};
+
+    class NewsSlider {
+      constructor(data) {
+        this.data = data;
+        this.currentIndex = 0;
+        this.itemsPerView = 3;
+        this.minus = 2;
+        this.autoplayInterval = 3000;
+        this.autoplayTimer = null;
+
+        console.log("Initializing NewsSlider with data:", this.data);
+        this.init();
+        this.startAutoplay();
+      }
+
+      init() {
+        this.sliderTrack = document.getElementById("sliderTrack");
+        this.prevBtn = document.getElementById("prevBtn");
+        this.nextBtn = document.getElementById("nextBtn");
+        this.dotsContainer = document.getElementById("sliderDots");
+
+        console.log("Slider elements initialized:", {
+          sliderTrack: this.sliderTrack,
+          prevBtn: this.prevBtn,
+          nextBtn: this.nextBtn,
+          dotsContainer: this.dotsContainer
+        });
+
+        this.renderItems();
+        this.renderDots();
+        this.attachEventListeners();
+        this.updateSlide();
+        this.updateButtons();
+      }
+
+      renderItems() {
+        if (this.data.length === 0) {
+          this.sliderTrack.innerHTML = '<div class="news-item">No news available</div>';
+          console.log("No news available.");
+          return;
+        }
+
+        this.sliderTrack.innerHTML = this.data
+          .map(
+            (item, index) => `
+            <div class="news-item ${index < this.itemsPerView ? "active" : ""}" data-index="${index}">
+              <div class="news-date">
+                <span class="date-badge">${item.date}</span>
+              </div>
+              <div class="news-content">
+                ${item.content}
+                ${item.link ? `<a href="${item.link.url}" target="_blank">${item.link.text}</a>` : ""}
+              </div>
+            </div>
+          `
+          )
+          .join("");
+
+        console.log("News items rendered:", this.data);
+      }
+
+      renderDots() {
+        const dotsCount = Math.ceil(this.data.length / this.itemsPerView);
+        this.dotsContainer.innerHTML = Array(dotsCount)
+          .fill(0)
+          .map(
+            (_, index) => `
+            <div class="dot ${index === 0 ? "active" : ""}" data-index="${index}"></div>
+          `
+          )
+          .join("");
+
+        console.log(`Rendered ${dotsCount} dots.`);
+      }
+
+      attachEventListeners() {
+        this.prevBtn.addEventListener("click", () => this.prev());
+        this.nextBtn.addEventListener("click", () => this.next());
+
+        this.dotsContainer.addEventListener("click", (e) => {
+          if (e.target.classList.contains("dot")) {
+            const index = parseInt(e.target.dataset.index);
+            console.log("Dot clicked, navigating to slide:", index);
+            this.goToSlide(index * this.itemsPerView);
+          }
+        });
+
+        this.sliderTrack.addEventListener("mouseenter", () => this.pauseAutoplay());
+        this.sliderTrack.addEventListener("mouseleave", () => this.startAutoplay());
+      }
+
+      updateSlide() {
+        if (this.data.length === 0) {
+          console.log("No data to update slides.");
+          return;
+        }
+
+        const translateY = -(this.currentIndex * (100 / Math.min(this.itemsPerView, this.data.length)));
+        this.sliderTrack.style.transform = `translateY(${translateY}%)`;
+
+        document.querySelectorAll(".news-item").forEach((item, index) => {
+          item.classList.toggle(
+            "active",
+            index >= this.currentIndex && index < this.currentIndex + this.itemsPerView
+          );
+        });
+
+        const activeDotIndex = Math.floor(this.currentIndex / this.itemsPerView);
+        document.querySelectorAll(".dot").forEach((dot, index) => {
+          dot.classList.toggle("active", index === activeDotIndex);
+        });
+
+        this.updateButtons();
+      }
+
+      updateButtons() {
+        const maxIndex = this.data.length - this.itemsPerView - this.minus;
+        this.prevBtn.disabled = this.currentIndex <= 0;
+        this.nextBtn.disabled = this.currentIndex >= maxIndex;
+
+        console.log("Update buttons: prevBtn.disabled =", this.prevBtn.disabled, "nextBtn.disabled =", this.nextBtn.disabled);
+      }
+
+      next() {
+        if (this.data.length === 0) {
+          console.log("No data to move next.");
+          return;
+        }
+
+        const maxIndex = this.data.length - this.itemsPerView;
+        if (this.currentIndex < maxIndex) {
+          this.currentIndex++;
+          console.log("Moving to next slide:", this.currentIndex);
+          this.updateSlide();
+        } else {
+          this.currentIndex = 0;
+          console.log("Reaching the end, starting from the beginning.");
+          this.updateSlide();
+        }
+      }
+
+      prev() {
+        if (this.data.length === 0) {
+          console.log("No data to move previous.");
+          return;
+        }
+
+        if (this.currentIndex > 0) {
+          this.currentIndex--;
+          console.log("Moving to previous slide:", this.currentIndex);
+          this.updateSlide();
+        } else {
+          this.currentIndex = 0;
+          console.log("Already at the first slide.");
+          this.updateSlide();
+        }
+      }
+
+      goToSlide(index) {
+        if (this.data.length === 0) {
+          console.log("No data to go to specific slide.");
+          return;
+        }
+
+        this.currentIndex = Math.min(index, this.data.length - this.itemsPerView);
+        console.log("Going to slide:", this.currentIndex);
+        this.updateSlide();
+      }
+
+      startAutoplay() {
+        if (this.data.length === 0) {
+          console.log("No data to start autoplay.");
+          return;
+        }
+
+        console.log("Starting autoplay.");
+        this.autoplayTimer = setInterval(() => {
+          if (!this.nextBtn.disabled) {
+            console.log("Autoplay: Moving to next slide.");
+            this.next();
+          } else {
+            console.log("Autoplay: Reached the end, resetting.");
+            this.currentIndex = 0;
+            this.updateSlide();
+          }
+        }, this.autoplayInterval);
+      }
+
+      pauseAutoplay() {
+        console.log("Pausing autoplay.");
+        clearInterval(this.autoplayTimer);
+      }
+    }
+
+    // Initialize the news slider with data from the YAML file
+    console.log("Initializing NewsSlider with newsData:", newsData);
+    const newsSlider = new NewsSlider(newsData);
+  });
+</script>
