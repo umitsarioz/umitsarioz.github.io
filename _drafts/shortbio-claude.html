@@ -1,7 +1,10 @@
 <style>
   .news-container {
+    margin: 0 auto;
     position: relative;
     border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    padding: 24px;
   }
 
   .news-header {
@@ -25,17 +28,22 @@
   }
 
   .news-item {
-    flex: 0 0 30px; /* Fixed height for each item */
+    flex: 0 0 120px; /* Fixed height for each item */
     padding: 16px 20px;
-    background: var(--bs-body-bg);
+    background: var(--card-bg);
     border-radius: 12px;
     box-shadow: 0 2px 12px var(--card-shadow);
     transition: all 0.3s ease;
     opacity: 0.7;
     display: flex;
     align-items: flex-start;
-    gap: 10px;
-    border: 1px solid var(--bs-border-color-translucent);
+    gap: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .news-item.active {
+    opacity: 1;
+    background: var(--card-bg);
   }
 
   .news-item:hover {
@@ -47,11 +55,11 @@
     flex: 0 0 130px;
     display: flex;
     flex-direction: column;
+    gap: 8px;
   }
 
   .date-badge {
     display: inline-block;
-    width: 5.2rem;
     padding: 6px 12px;
     background: var(--heading-color);
     color: var(--main-bg);
@@ -211,9 +219,7 @@
 <div class="container-fluid">
   <div class="news-container">
     <div class="news-header">
-      <h2 class="h4 mb-0">
-        <i class="fa-solid fa-newspaper"> Latest Updates </i>
-      </h2>
+      <h2 class="h4 mb-0">📰 Latest Updates</h2>
     </div>
 
     <div class="slider-container">
@@ -240,7 +246,7 @@
 <script>
   const newsData = [
     {
-      date: "JUL 2024",
+      date: "July 2024",
       content: "Completed Natural Language Processing Specialization at ",
       link: {
         text: "DeepLearning.AI",
@@ -248,12 +254,12 @@
       }
     },
     {
-      date: "JAN 2023",
+      date: "January 2023",
       content:
         "Completed first data science project (Anomaly Detection) at Innova!"
     },
     {
-      date: "NOV 2022",
+      date: "November 2022",
       content: "Started working as a Data Scientist at ",
       link: {
         text: "Innova",
@@ -261,11 +267,11 @@
       }
     },
     {
-      date: "NOV 2021",
+      date: "November 2021",
       content: "Completed first software project (Restful API) at KAVAK.com!"
     },
     {
-      date: "NOV 2021",
+      date: "November 2021",
       content: "Started my first job as Software Engineer I at ",
       link: {
         text: "KAVAK.com",
@@ -273,7 +279,7 @@
       }
     },
     {
-      date: "SEP 2021",
+      date: "September 2021",
       content: "Graduated from Computer Engineering department at ",
       link: {
         text: "Gazi University",
@@ -281,7 +287,7 @@
       }
     },
     {
-      date: "OCT 2020",
+      date: "October 2020",
       content: "Completed Deep Learning Specialization at ",
       link: {
         text: "DeepLearning.AI",
@@ -295,7 +301,7 @@
       this.data = data;
       this.currentIndex = 0;
       this.itemsPerView = 3; // Maksimum 3 haber gösterilecek
-      this.autoplayInterval = 3000; // Her 1 saniyede bir kayacak
+      this.autoplayInterval = 1000; // Her 1 saniyede bir kayacak
       this.autoplayTimer = null;
 
       this.init();
@@ -406,8 +412,7 @@
     }
 
     updateButtons() {
-      const maxIndex =
-        this.data.length - this.itemsPerView - (this.itemsPerView - 1);
+      const maxIndex = this.data.length - this.itemsPerView;
       this.prevBtn.disabled = this.currentIndex <= 0;
       this.nextBtn.disabled = this.currentIndex >= maxIndex;
     }
