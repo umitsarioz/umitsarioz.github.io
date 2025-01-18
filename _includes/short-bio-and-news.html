@@ -27,11 +27,11 @@
   .news-item {
     flex: 0 0 30px; /* Fixed height for each item */
     padding: 16px 20px;
-    background: var(--bs-body-bg);
+    background: var(--news-item-bg);
     border-radius: 12px;
     box-shadow: 0 2px 12px var(--card-shadow);
     transition: all 0.3s ease;
-    opacity: 0.7;
+    opacity: 1;
     display: flex;
     align-items: flex-start;
     gap: 10px;
@@ -60,7 +60,6 @@
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    box-shadow: 0 2px 4px rgba(34, 134, 234, 0.2);
   }
 
   .news-content {
@@ -212,7 +211,7 @@
   <div class="news-container">
     <div class="news-header">
       <h2 class="h4 mb-0">
-        <i class="fa-solid fa-newspaper"> Latest Updates </i>
+        <i class="fa-solid fa-newspaper"></i> Latest Updates
       </h2>
     </div>
 
@@ -238,63 +237,14 @@
 </div>
 
 <script>
-  const newsData = [
-    {
-      date: "JUL 2024",
-      content: "Completed Natural Language Processing Specialization at ",
-      link: {
-        text: "DeepLearning.AI",
-        url: "https://coursera.org/share/6612d2ac3251f34bf23d73055a3d8cbd"
-      }
-    },
-    {
-      date: "JAN 2023",
-      content:
-        "Completed first data science project (Anomaly Detection) at Innova!"
-    },
-    {
-      date: "NOV 2022",
-      content: "Started working as a Data Scientist at ",
-      link: {
-        text: "Innova",
-        url: "https://www.innova.com.tr/en/about"
-      }
-    },
-    {
-      date: "NOV 2021",
-      content: "Completed first software project (Restful API) at KAVAK.com!"
-    },
-    {
-      date: "NOV 2021",
-      content: "Started my first job as Software Engineer I at ",
-      link: {
-        text: "KAVAK.com",
-        url: "https://www.carvak.com/tr/hakkimizda"
-      }
-    },
-    {
-      date: "SEP 2021",
-      content: "Graduated from Computer Engineering department at ",
-      link: {
-        text: "Gazi University",
-        url: "https://mf.gazi.edu.tr/"
-      }
-    },
-    {
-      date: "OCT 2020",
-      content: "Completed Deep Learning Specialization at ",
-      link: {
-        text: "DeepLearning.AI",
-        url: "https://coursera.org/share/bdeac01dd42ca9ed10df72fd6b6baaec"
-      }
-    }
-  ];
+  const newsData = {{ site.data.news | jsonify }};
 
   class NewsSlider {
     constructor(data) {
       this.data = data;
       this.currentIndex = 0;
       this.itemsPerView = 3; // Maksimum 3 haber gösterilecek
+      this.minus = 2
       this.autoplayInterval = 3000; // Her 1 saniyede bir kayacak
       this.autoplayTimer = null;
 
@@ -407,7 +357,7 @@
 
     updateButtons() {
       const maxIndex =
-        this.data.length - this.itemsPerView - (this.itemsPerView - 1);
+        this.data.length - this.itemsPerView - this.minus ;
       this.prevBtn.disabled = this.currentIndex <= 0;
       this.nextBtn.disabled = this.currentIndex >= maxIndex;
     }
@@ -470,11 +420,6 @@
     }
   }
 
-  // Initialize the slider
-  const slider = new NewsSlider(newsData);
-
-  // Handle window resize
-  window.addEventListener("resize", () => {
-    slider.updateSlide();
-  });
+  // Initialize the news slider with data from the YAML file
+  const newsSlider = new NewsSlider(newsData);
 </script>

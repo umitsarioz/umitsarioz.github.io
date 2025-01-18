@@ -1,0 +1,35 @@
+- date: "JUL 2024"
+  content: "Completed Natural Language Processing Specialization at"
+  link:
+    text: "DeepLearning.AI"
+    url: "https://coursera.org/share/6612d2ac3251f34bf23d73055a3d8cbd"
+
+- date: "JAN 2023"
+  content: "Completed first data science project (Anomaly Detection) at Innova!"
+
+- date: "NOV 2022"
+  content: "Started working as a Data Scientist at"
+  link:
+    text: "Innova"
+    url: "https://www.innova.com.tr/en/about"
+
+- date: "NOV 2021"
+  content: "Completed first software project (Restful API) at KAVAK.com!"
+
+- date: "NOV 2021"
+  content: "Started my first job as Software Engineer I at"
+  link:
+    text: "KAVAK.com"
+    url: "https://www.carvak.com/tr/hakkimizda"
+
+- date: "SEP 2021"
+  content: "Graduated from Computer Engineering department at"
+  link:
+    text: "Gazi University"
+    url: "https://mf.gazi.edu.tr/"
+
+- date: "OCT 2020"
+  content: "Completed Deep Learning Specialization at"
+  link:
+    text: "DeepLearning.AI"
+    url: "https://coursera.org/share/bdeac01dd42ca9ed10df72fd6b6baaec"
