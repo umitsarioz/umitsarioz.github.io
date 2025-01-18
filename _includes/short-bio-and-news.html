@@ -1,220 +1,205 @@
 <script>
-  const newsData = {{ site.data.news | jsonify }};
+  document.addEventListener("DOMContentLoaded", function() {
+    // Assuming `newsData` is rendered correctly as a valid JSON object
+    const newsData = {{ site.data.news | jsonify }};
 
-  class NewsSlider {
-    constructor(data) {
-      this.data = data;
-      this.currentIndex = 0;
-      this.itemsPerView = 3; // Maksimum 3 haber gösterilecek
-      this.minus = 2;
-      this.autoplayInterval = 3000; // Her 1 saniyede bir kayacak
-      this.autoplayTimer = null;
+    class NewsSlider {
+      constructor(data) {
+        this.data = data;
+        this.currentIndex = 0;
+        this.itemsPerView = 3;
+        this.minus = 2;
+        this.autoplayInterval = 3000;
+        this.autoplayTimer = null;
 
-      console.log("Initializing NewsSlider with data:", this.data);
-      this.init();
-      this.startAutoplay();
-    }
-
-    init() {
-      this.sliderTrack = document.getElementById("sliderTrack");
-      this.prevBtn = document.getElementById("prevBtn");
-      this.nextBtn = document.getElementById("nextBtn");
-      this.dotsContainer = document.getElementById("sliderDots");
-
-      console.log("Slider elements initialized: ", {
-        sliderTrack: this.sliderTrack,
-        prevBtn: this.prevBtn,
-        nextBtn: this.nextBtn,
-        dotsContainer: this.dotsContainer
-      });
-
-      this.renderItems();
-      this.renderDots();
-      this.attachEventListeners();
-      this.updateSlide();
-      this.updateButtons();
-    }
-
-    renderItems() {
-      if (this.data.length === 0) {
-        this.sliderTrack.innerHTML =
-          '<div class="news-item">No news available</div>';
-        console.log("No news available.");
-        return;
+        console.log("Initializing NewsSlider with data:", this.data);
+        this.init();
+        this.startAutoplay();
       }
 
-      this.sliderTrack.innerHTML = this.data
-        .map(
-          (item, index) => `
-          <div class="news-item ${
-            index < this.itemsPerView ? "active" : ""
-          }" data-index="${index}">
-            <div class="news-date">
-              <span class="date-badge">${item.date}</span>
-            </div>
-            <div class="news-content">
-              ${item.content}
-              ${
-                item.link
-                  ? `<a href="${item.link.url}" target="_blank">${item.link.text}</a>`
-                  : ""
-              }
-            </div>
-          </div>
-        `
-        )
-        .join("");
+      init() {
+        this.sliderTrack = document.getElementById("sliderTrack");
+        this.prevBtn = document.getElementById("prevBtn");
+        this.nextBtn = document.getElementById("nextBtn");
+        this.dotsContainer = document.getElementById("sliderDots");
 
-      console.log("News items rendered: ", this.data);
-    }
+        console.log("Slider elements initialized:", {
+          sliderTrack: this.sliderTrack,
+          prevBtn: this.prevBtn,
+          nextBtn: this.nextBtn,
+          dotsContainer: this.dotsContainer
+        });
 
-    renderDots() {
-      const dotsCount = Math.ceil(this.data.length / this.itemsPerView);
-      this.dotsContainer.innerHTML = Array(dotsCount)
-        .fill(0)
-        .map(
-          (_, index) => `
-          <div class="dot ${
-            index === 0 ? "active" : ""
-          }" data-index="${index}"></div>
-        `
-        )
-        .join("");
+        this.renderItems();
+        this.renderDots();
+        this.attachEventListeners();
+        this.updateSlide();
+        this.updateButtons();
+      }
 
-      console.log(`Rendered ${dotsCount} dots.`);
-    }
-
-    attachEventListeners() {
-      this.prevBtn.addEventListener("click", () => this.prev());
-      this.nextBtn.addEventListener("click", () => this.next());
-
-      this.dotsContainer.addEventListener("click", (e) => {
-        if (e.target.classList.contains("dot")) {
-          const index = parseInt(e.target.dataset.index);
-          console.log("Dot clicked, navigating to slide:", index);
-          this.goToSlide(index * this.itemsPerView);
+      renderItems() {
+        if (this.data.length === 0) {
+          this.sliderTrack.innerHTML = '<div class="news-item">No news available</div>';
+          console.log("No news available.");
+          return;
         }
-      });
 
-      this.sliderTrack.addEventListener("mouseenter", () =>
-        this.pauseAutoplay()
-      );
-      this.sliderTrack.addEventListener("mouseleave", () =>
-        this.startAutoplay()
-      );
-    }
+        this.sliderTrack.innerHTML = this.data
+          .map(
+            (item, index) => `
+            <div class="news-item ${index < this.itemsPerView ? "active" : ""}" data-index="${index}">
+              <div class="news-date">
+                <span class="date-badge">${item.date}</span>
+              </div>
+              <div class="news-content">
+                ${item.content}
+                ${item.link ? `<a href="${item.link.url}" target="_blank">${item.link.text}</a>` : ""}
+              </div>
+            </div>
+          `
+          )
+          .join("");
 
-    updateSlide() {
-      if (this.data.length === 0) {
-        console.log("No data to update slides.");
-        return;
+        console.log("News items rendered:", this.data);
       }
 
-      const translateY = -(
-        this.currentIndex *
-        (100 / Math.min(this.itemsPerView, this.data.length))
-      );
-      this.sliderTrack.style.transform = `translateY(${translateY}%)`;
+      renderDots() {
+        const dotsCount = Math.ceil(this.data.length / this.itemsPerView);
+        this.dotsContainer.innerHTML = Array(dotsCount)
+          .fill(0)
+          .map(
+            (_, index) => `
+            <div class="dot ${index === 0 ? "active" : ""}" data-index="${index}"></div>
+          `
+          )
+          .join("");
 
-      document.querySelectorAll(".news-item").forEach((item, index) => {
-        item.classList.toggle(
-          "active",
-          index >= this.currentIndex &&
-            index < this.currentIndex + this.itemsPerView
-        );
-      });
-
-      const activeDotIndex = Math.floor(this.currentIndex / this.itemsPerView);
-      document.querySelectorAll(".dot").forEach((dot, index) => {
-        dot.classList.toggle("active", index === activeDotIndex);
-      });
-
-      this.updateButtons();
-    }
-
-    updateButtons() {
-      const maxIndex =
-        this.data.length - this.itemsPerView - this.minus;
-      this.prevBtn.disabled = this.currentIndex <= 0;
-      this.nextBtn.disabled = this.currentIndex >= maxIndex;
-
-      console.log("Update buttons: prevBtn.disabled =", this.prevBtn.disabled, "nextBtn.disabled =", this.nextBtn.disabled);
-    }
-
-    next() {
-      if (this.data.length === 0) {
-        console.log("No data to move next.");
-        return;
+        console.log(`Rendered ${dotsCount} dots.`);
       }
 
-      const maxIndex = this.data.length - this.itemsPerView;
-      if (this.currentIndex < maxIndex) {
-        this.currentIndex++;
-        console.log("Moving to next slide:", this.currentIndex);
-        this.updateSlide();
-      } else {
-        this.currentIndex = 0;
-        console.log("Reaching the end, starting from the beginning.");
-        this.updateSlide();
-      }
-    }
+      attachEventListeners() {
+        this.prevBtn.addEventListener("click", () => this.prev());
+        this.nextBtn.addEventListener("click", () => this.next());
 
-    prev() {
-      if (this.data.length === 0) {
-        console.log("No data to move previous.");
-        return;
+        this.dotsContainer.addEventListener("click", (e) => {
+          if (e.target.classList.contains("dot")) {
+            const index = parseInt(e.target.dataset.index);
+            console.log("Dot clicked, navigating to slide:", index);
+            this.goToSlide(index * this.itemsPerView);
+          }
+        });
+
+        this.sliderTrack.addEventListener("mouseenter", () => this.pauseAutoplay());
+        this.sliderTrack.addEventListener("mouseleave", () => this.startAutoplay());
       }
 
-      if (this.currentIndex > 0) {
-        this.currentIndex--;
-        console.log("Moving to previous slide:", this.currentIndex);
-        this.updateSlide();
-      } else {
-        this.currentIndex = 0;
-        console.log("Already at the first slide.");
-        this.updateSlide();
-      }
-    }
+      updateSlide() {
+        if (this.data.length === 0) {
+          console.log("No data to update slides.");
+          return;
+        }
 
-    goToSlide(index) {
-      if (this.data.length === 0) {
-        console.log("No data to go to specific slide.");
-        return;
-      }
+        const translateY = -(this.currentIndex * (100 / Math.min(this.itemsPerView, this.data.length)));
+        this.sliderTrack.style.transform = `translateY(${translateY}%)`;
 
-      this.currentIndex = Math.min(index, this.data.length - this.itemsPerView);
-      console.log("Going to slide:", this.currentIndex);
-      this.updateSlide();
-    }
+        document.querySelectorAll(".news-item").forEach((item, index) => {
+          item.classList.toggle(
+            "active",
+            index >= this.currentIndex && index < this.currentIndex + this.itemsPerView
+          );
+        });
 
-    startAutoplay() {
-      if (this.data.length === 0) {
-        console.log("No data to start autoplay.");
-        return;
+        const activeDotIndex = Math.floor(this.currentIndex / this.itemsPerView);
+        document.querySelectorAll(".dot").forEach((dot, index) => {
+          dot.classList.toggle("active", index === activeDotIndex);
+        });
+
+        this.updateButtons();
       }
 
-      console.log("Starting autoplay.");
-      this.autoplayTimer = setInterval(() => {
-        if (!this.nextBtn.disabled) {
-          console.log("Autoplay: Moving to next slide.");
-          this.next();
+      updateButtons() {
+        const maxIndex = this.data.length - this.itemsPerView - this.minus;
+        this.prevBtn.disabled = this.currentIndex <= 0;
+        this.nextBtn.disabled = this.currentIndex >= maxIndex;
+
+        console.log("Update buttons: prevBtn.disabled =", this.prevBtn.disabled, "nextBtn.disabled =", this.nextBtn.disabled);
+      }
+
+      next() {
+        if (this.data.length === 0) {
+          console.log("No data to move next.");
+          return;
+        }
+
+        const maxIndex = this.data.length - this.itemsPerView;
+        if (this.currentIndex < maxIndex) {
+          this.currentIndex++;
+          console.log("Moving to next slide:", this.currentIndex);
+          this.updateSlide();
         } else {
-          console.log("Autoplay: Reached the end, resetting.");
           this.currentIndex = 0;
+          console.log("Reaching the end, starting from the beginning.");
           this.updateSlide();
         }
-      }, this.autoplayInterval);
+      }
+
+      prev() {
+        if (this.data.length === 0) {
+          console.log("No data to move previous.");
+          return;
+        }
+
+        if (this.currentIndex > 0) {
+          this.currentIndex--;
+          console.log("Moving to previous slide:", this.currentIndex);
+          this.updateSlide();
+        } else {
+          this.currentIndex = 0;
+          console.log("Already at the first slide.");
+          this.updateSlide();
+        }
+      }
+
+      goToSlide(index) {
+        if (this.data.length === 0) {
+          console.log("No data to go to specific slide.");
+          return;
+        }
+
+        this.currentIndex = Math.min(index, this.data.length - this.itemsPerView);
+        console.log("Going to slide:", this.currentIndex);
+        this.updateSlide();
+      }
+
+      startAutoplay() {
+        if (this.data.length === 0) {
+          console.log("No data to start autoplay.");
+          return;
+        }
+
+        console.log("Starting autoplay.");
+        this.autoplayTimer = setInterval(() => {
+          if (!this.nextBtn.disabled) {
+            console.log("Autoplay: Moving to next slide.");
+            this.next();
+          } else {
+            console.log("Autoplay: Reached the end, resetting.");
+            this.currentIndex = 0;
+            this.updateSlide();
+          }
+        }, this.autoplayInterval);
+      }
+
+      pauseAutoplay() {
+        console.log("Pausing autoplay.");
+        clearInterval(this.autoplayTimer);
+      }
     }
 
-    pauseAutoplay() {
-      console.log("Pausing autoplay.");
-      clearInterval(this.autoplayTimer);
-    }
-  }
-
-  // Initialize the news slider with data from the YAML file
-  console.log("Initializing NewsSlider with newsData:", newsData);
-  const newsSlider = new NewsSlider(newsData);
+    // Initialize the news slider with data from the YAML file
+    console.log("Initializing NewsSlider with newsData:", newsData);
+    const newsSlider = new NewsSlider(newsData);
+  });
 </script>
 
 <style>
