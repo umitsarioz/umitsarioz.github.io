@@ -9,7 +9,8 @@ icon: fa-regular fa-address-card
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1rem;
+            padding: 0.1rem;
+            width: 92%;
             flex-wrap: wrap; /* Make the layout responsive */
         }
 
@@ -82,21 +83,27 @@ icon: fa-regular fa-address-card
 ## Professional Experience
 
 <div class="container">
+ <div class="my-badge-title"> Data Scientist at <a href="https://www.turktelekom.com.tr/en/about-us/details?p=tab8"><b>Türk Telekom </b></a></div>
+  <div class="my-badge"> Ankara, Turkey (Remote)<br>Jan 2025 - Present </div>
+  
+  <ul>
+    <li>Chatbot with Local LLMs and RAG was developed and optimized the workflows and response times.</li>
+    <li>Code Review Committee Member</li>
+  </ul>
+
   <div class="my-badge-title"> Data Scientist at <a href="https://www.innova.com.tr/en/about"><b>Innova Bilişim </b></a></div>
   <div class="my-badge"> Ankara, Turkey (Remote)<br>Dec 2022 - Jan 2025 </div>
-
+  
   <ul>
-    <li>Chatbot with Local LLMs and RAG was developed to improve efficiency for over 2,000 personnel, streamlining
-    workflows and response times.</li>
     <li>Clustering for Network Topology Optimization was implemented using graph neural network embeddings,
     optimizing resource allocation for over 12,000 devices and benefiting 50 million customers. High performance
     was achieved supporting more strategic investment decisions. (Silhouette:0.72; F1: 0.87; Accuracy: 0.92)</li>
     <li>Forecasting model for traffic saturation was built using deep learning, achieving 0.84 accuracy and enabling
     proactive network management to prevent overloads and enhance customer experience.</li>
     <li>Predictive system for mobile cell tower battery life was developed, achieving 0.89 accuracy and saving €2 million
-    annually, benefiting 50 million customers by enabling timely maintenance and extending equipment lifespan.</li>
-    <li>Code reviews were conducted as a member of the Türk Telekom AI team’s Code Review Committee, reducing
-    bugs by 80% and improving resolution times by 90%, enhancing system reliability and customer satisfaction.</li>
+    annually, benefiting 50 million customers by enabling timely maintenance and extending equipment lifespan.</li> 
+        <li>Chatbot with Local LLMs and RAG was developed to improve efficiency for over 2,000 personnel, streamlining
+    workflows and response times.</li>
   </ul>
 
   <div class="my-badge-title"> Software Engineer I at <a href="https://www.kavak.com/ae/about-us"><b>KAVAK TR | CARVAK </b></a></div>
