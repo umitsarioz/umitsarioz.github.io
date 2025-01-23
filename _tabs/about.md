@@ -84,7 +84,7 @@ icon: fa-regular fa-address-card
 
 <div class="container">
  <div class="my-badge-title"> Data Scientist at <a href="https://www.turktelekom.com.tr/en/about-us/details?p=tab8"><b>Türk Telekom </b></a></div>
-  <div class="my-badge"> Ankara, Turkey (Remote)<br>Jan 2025 - Present </div>
+  <div class="my-badge"> Ankara, Turkey (Hybrid)<br>Jan 2025 - Present </div>
   
   <ul>
     <li>Chatbot with Local LLMs and RAG was developed and optimized the workflows and response times.</li>
