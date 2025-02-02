@@ -5,7 +5,7 @@ image: /assets/img/ss/2024-08-30-apache-kafka/first.png
 #categories: [Big Data]
 tags: [basics, tutorials, devops, big-data, streaming, apache]
 published: true
-pin: true 
+pin: false 
 mermaid : true 
 toc: true 
 comments: true
@@ -501,12 +501,12 @@ Kafka is widely used in scenarios like **ETL pipelines, event streaming, real-ti
 
 There are some similar technologies like RabbitMQ, Apache Flink, Apache, Pulsar or Apache Kinesis etc. 
 
-| Technology | Comparison with Kafka |
-| --- | --- |
-| **RabbitMQ** | Lightweight, built for message queueing. |
-| **Apache Pulsar** | Similar to Kafka but offers multi-tenancy and more flexible topic models. |
-| **Amazon Kinesis** | Fully managed and integrated with AWS but lacks Kafka's flexibility. |
-| **Apache Flink** | Focused on stateful computations, often paired with Kafka for stream processing. |
+| Technology         | Comparison with Kafka                                                            |
+| ------------------ | -------------------------------------------------------------------------------- |
+| **RabbitMQ**       | Lightweight, built for message queueing.                                         |
+| **Apache Pulsar**  | Similar to Kafka but offers multi-tenancy and more flexible topic models.        |
+| **Amazon Kinesis** | Fully managed and integrated with AWS but lacks Kafka's flexibility.             |
+| **Apache Flink**   | Focused on stateful computations, often paired with Kafka for stream processing. |
 
 While **RabbitMQ** is suited for message queuing, Kafka excels at distributed data streaming. **Pulsar** is another contender with advantages like multi-tenancy, but Kafka’s extensive ecosystem and maturity make it a preferred choice for many enterprises.
 

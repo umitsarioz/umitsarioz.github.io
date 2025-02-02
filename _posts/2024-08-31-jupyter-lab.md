@@ -5,7 +5,7 @@ image: /assets/img/ss/2024-08-31-jupyter-lab/first.png
 #categories: [DevOps]
 tags: [tutorials, setup, devops, big-data]
 published: true
-pin: true 
+pin: false 
 mermaid : false 
 toc: true 
 comments: true
