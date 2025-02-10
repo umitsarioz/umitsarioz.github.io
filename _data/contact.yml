@@ -11,7 +11,7 @@
   noblank: true # open link in current tab
 
 - type: medium
-  icon: "fa fa-medium"
+  icon: "fa-brands fa-medium"
   url: "https://umitsarioz.medium.com/"
   
 - type: rss
