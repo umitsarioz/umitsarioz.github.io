@@ -1,7 +1,7 @@
 #  The contact options.
 - type: linkedin
-  icon: 'fab fa-linkedin'
-  url: "https://www.linkedin.com/in/umitsarioz"                    
+  icon: "fab fa-linkedin"
+  url: "https://www.linkedin.com/in/umitsarioz"
 
 - type: github
   icon: "fab fa-github"
@@ -10,14 +10,13 @@
   icon: "fas fa-envelope"
   noblank: true # open link in current tab
 
-- type: medium
-  icon: "fa-brands fa-medium"
-  url: "https://umitsarioz.medium.com/"
-  
+#- type: medium
+#  icon: "fa-brands fa-medium"
+#  url: "https://umitsarioz.medium.com/"
+
 - type: rss
   icon: "fas fa-rss"
   noblank: true
-
 # Uncomment and complete the url below to enable more contact options
 #
 # - type: mastodon

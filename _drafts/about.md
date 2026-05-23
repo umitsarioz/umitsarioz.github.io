@@ -61,7 +61,7 @@ icon: fa-regular fa-address-card
     <a href="https://www.linkedin.com/in/umitsarioz"
       ><strong>Ümit Sarıöz</strong></a>
       <br>
-      Machine Learning Engineer, Data Scientist & Data/AI Enthusiast
+      AI Engineer 
   </h2>
   <hr>
 <div style='float:right; margin:1rem;'>

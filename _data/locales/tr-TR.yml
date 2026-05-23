@@ -20,7 +20,7 @@ tabs:
 search:
   hint: Ara...
   cancel: İptal
-  no_results: Hop! Öyle bir şey bulamadım.
+  no_results: Upsss! Öyle bir şey bulamadım.
 
 panel:
   lastmod: Son Güncellenenler
@@ -55,7 +55,7 @@ post:
   written_by: Yazan
   posted: Gönderim
   updated: Güncelleme
-  words: sözcük
+  words: kelime
   pageview_measure: görüntülenme
   read_time:
     unit: dakikada
