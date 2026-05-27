@@ -1,8 +1,8 @@
 ---
 date: 2025-02-24
-title: Agentic AI, Agents,Tools ve MCP Kavramları
+title: Agentic AI Kavramları
 
-image: /assets/img/ss/2025-02-24-agents-tools-mcp/agent-tool-mcp.jpg
+image: /assets/img/ss/2025-02-24-agents-tools-mcp/agentic-ai-cover.jpg
 #categories: [nlp]
 tags: [machine-learning,agentic-ai,agent,mcp]
 mermaid: true
@@ -18,6 +18,8 @@ Son zamanlarda nereye baksak "Agentic AI", "AI Agents", "MCP" gibi kısaltmalar 
 Ama bu kavramlar birbirine çok karışabiliyor. "Ajan dediğin şey zaten kod değil mi?", "Tool ile ajan arasındaki sınır nerede başlıyor?", "Anthropic'in çıkardığı şu MCP aslında ne işe yarıyor?" gibi soruları bir süredir ben de kendi içimde karıştırmadan netleştirmeye çalışıyordum.
 
 Kafadaki o spagetti görüntüyü çözmek için en güzel yöntem, bunları modern, dikey hiyerarşisi olan bir teknoloji şirketinin çalışma modeline benzeterek somutlaştırmak. Gelin terimleri bir kenara bırakıp mutfağa girelim.
+
+![alt text](/assets/img/ss/2025-02-24-agents-tools-mcp/agent-tool-mcp.jpg) 
 
 ## Sorun: Her şeyi ben bilirim
 
